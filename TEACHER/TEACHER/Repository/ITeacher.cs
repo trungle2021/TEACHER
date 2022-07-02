@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace TEACHER.Repository
 {
-    internal class ITeacher
-    {
-    }
+
 }
