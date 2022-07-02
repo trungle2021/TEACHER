@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TEACHER.Repository
+namespace TEACHER.Data
 {
-
+    internal class ApplicationDbConnect
+    {
+    }
 }
