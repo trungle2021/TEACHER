@@ -27,8 +27,9 @@ namespace TEACHER.Service
         {
             using (QLGVEntities db = new QLGVEntities())
             {
-
-                return db.tblNhanviens.Include("tblDSDonvi").Include("tblTolamviec").ToList();
+                var _teacherList = db.tblNhanviens.Join(Donvi_tolamviec_junction,p=>p.MaDV_To )
+                
+                return _teacherList;
             }
         }
 
@@ -67,59 +68,6 @@ namespace TEACHER.Service
             throw new NotImplementedException();
         }
 
-        //public TeacherServiceImp()
-        //{
-        //    _connection = connect.setConnect();
-        //}
-
-        //public tblNhanvien SearchByCMND(string cmnd)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public tblNhanvien SearchByEmpID(int ID)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public tblNhanvien SearchByName(string name)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public void Update(tblNhanvien teacher)
-        //{
-        //    var _teacher = _db.tblNhanviens.FirstOrDefault(t => t.Manv.Equals(teacher.Manv));
-        //    if(_teacher != null)
-        //    {
-        //        _db.Entry(teacher).State = EntityState.Modified;
-        //        _db.SaveChangesAsync();
-        //    }
-        //}
-
-        //public tblNhanvien GetFirstOrDefault(Expression<Func<tblNhanvien, bool>> filter)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public IEnumerable<tblNhanvien> GetAll()
-        //{
-        //    return _db.tblNhanviens.ToList();
-        //}
-
-        //public void Add(tblNhanvien entity)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public void Remove(tblNhanvien entity)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public void RemoveRange(IEnumerable<tblNhanvien> entities)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        
     }
 }
