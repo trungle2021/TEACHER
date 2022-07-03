@@ -18,7 +18,6 @@ namespace TEACHER.Model
         public tblDantoc()
         {
             this.tblNhanviens = new HashSet<tblNhanvien>();
-            this.tblNhanviens1 = new HashSet<tblNhanvien>();
         }
     
         public string Madantoc { get; set; }
@@ -26,7 +25,5 @@ namespace TEACHER.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblNhanvien> tblNhanviens { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblNhanvien> tblNhanviens1 { get; set; }
     }
 }
