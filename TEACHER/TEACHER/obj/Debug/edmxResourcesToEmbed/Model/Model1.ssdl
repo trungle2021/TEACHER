@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLGVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Donvi_tolamviec_junction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaDV" Type="varchar" MaxLength="10" />
+    <Property Name="Mato" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tblBangcap">
+    <Key>
+      <PropertyRef Name="Mabangcap" />
+    </Key>
+    <Property Name="Mabangcap" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tenbangcap" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblChucvu">
+    <Key>
+      <PropertyRef Name="Machucvu" />
+    </Key>
+    <Property Name="Machucvu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tenchucvu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Hesochucvu" Type="real" />
+    <Property Name="Ghichu" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblDantoc">
+    <Key>
+      <PropertyRef Name="Madantoc" />
+    </Key>
+    <Property Name="Madantoc" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tendantoc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblDSDonvi">
+    <Key>
+      <PropertyRef Name="MaDV" />
+    </Key>
+    <Property Name="MaDV" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenDV" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ghichu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblHopdong">
+    <Key>
+      <PropertyRef Name="Mahopdong" />
+    </Key>
+    <Property Name="Mahopdong" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaNV" Type="int" Nullable="false" />
+    <Property Name="Ngaybatdau" Type="datetime" />
+    <Property Name="Ngayketthuc" Type="datetime" />
+    <Property Name="Lanky" Type="int" />
+    <Property Name="Noidung" Type="nvarchar(max)" />
+    <Property Name="Ngayky" Type="datetime" />
+    <Property Name="Tennguoiky" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ghichu" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblNgoaingu">
+    <Key>
+      <PropertyRef Name="Mangoaingu" />
+    </Key>
+    <Property Name="Mangoaingu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tenngoaingu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblNguoidung">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Pass" Type="varchar" MaxLength="20" />
+    <Property Name="Chophepthaotac" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblNhanvien">
+    <Key>
+      <PropertyRef Name="Manv" />
+    </Key>
+    <Property Name="Manv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenNV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CMND" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Ngaycap" Type="datetime" />
+    <Property Name="Tinhthanh" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ngaysinh" Type="datetime" />
+    <Property Name="Gioitinh" Type="nvarchar" MaxLength="10" />
+    <Property Name="Nguyenquan" Type="nvarchar" MaxLength="10" />
+    <Property Name="Dctamtru" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDTrieng" Type="varchar" MaxLength="15" />
+    <Property Name="SDTnha" Type="varchar" MaxLength="15" />
+    <Property Name="Tinhtranghonnhan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tinhtranglamviec" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaDV_To" Type="int" />
+    <Property Name="Machucvu" Type="varchar" MaxLength="10" />
+    <Property Name="Ngayvaolam" Type="datetime" />
+    <Property Name="Thamnien" Type="int" />
+    <Property Name="Matinhoc" Type="varchar" MaxLength="10" />
+    <Property Name="Mangoaingu" Type="varchar" MaxLength="10" />
+    <Property Name="Mabangcap" Type="varchar" MaxLength="10" />
+    <Property Name="SoBHXH" Type="varchar" MaxLength="20" />
+    <Property Name="SoBHYT" Type="varchar" MaxLength="20" />
+    <Property Name="Matongiao" Type="varchar" MaxLength="10" />
+    <Property Name="Madantoc" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tblTinhoc">
+    <Key>
+      <PropertyRef Name="Matinhoc" />
+    </Key>
+    <Property Name="Matinhoc" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tentinhoc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTolamviec">
+    <Key>
+      <PropertyRef Name="Mato" />
+    </Key>
+    <Property Name="Mato" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tento" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ghichu" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblTongiao">
+    <Key>
+      <PropertyRef Name="Matongiao" />
+    </Key>
+    <Property Name="Matongiao" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tentongiao" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__Donvi_tola__MaDV__3A81B327">
+    <End Role="tblDSDonvi" Type="Self.tblDSDonvi" Multiplicity="0..1" />
+    <End Role="Donvi_tolamviec_junction" Type="Self.Donvi_tolamviec_junction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDSDonvi">
+        <PropertyRef Name="MaDV" />
+      </Principal>
+      <Dependent Role="Donvi_tolamviec_junction">
+        <PropertyRef Name="MaDV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Donvi_tola__Mato__3B75D760">
+    <End Role="tblTolamviec" Type="Self.tblTolamviec" Multiplicity="0..1" />
+    <End Role="Donvi_tolamviec_junction" Type="Self.Donvi_tolamviec_junction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTolamviec">
+        <PropertyRef Name="Mato" />
+      </Principal>
+      <Dependent Role="Donvi_tolamviec_junction">
+        <PropertyRef Name="Mato" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblNhanvi__Maban__3D5E1FD2">
+    <End Role="tblBangcap" Type="Self.tblBangcap" Multiplicity="0..1" />
+    <End Role="tblNhanvien" Type="Self.tblNhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBangcap">
+        <PropertyRef Name="Mabangcap" />
+      </Principal>
+      <Dependent Role="tblNhanvien">
+        <PropertyRef Name="Mabangcap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblNhanvi__Machu__3E52440B">
+    <End Role="tblChucvu" Type="Self.tblChucvu" Multiplicity="0..1" />
+    <End Role="tblNhanvien" Type="Self.tblNhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblChucvu">
+        <PropertyRef Name="Machucvu" />
+      </Principal>
+      <Dependent Role="tblNhanvien">
+        <PropertyRef Name="Machucvu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblNhanvi__Madan__3F466844">
+    <End Role="tblDantoc" Type="Self.tblDantoc" Multiplicity="0..1" />
+    <End Role="tblNhanvien" Type="Self.tblNhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDantoc">
+        <PropertyRef Name="Madantoc" />
+      </Principal>
+      <Dependent Role="tblNhanvien">
+        <PropertyRef Name="Madantoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblNhanvi__MaDV___403A8C7D">
+    <End Role="Donvi_tolamviec_junction" Type="Self.Donvi_tolamviec_junction" Multiplicity="0..1" />
+    <End Role="tblNhanvien" Type="Self.tblNhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Donvi_tolamviec_junction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblNhanvien">
+        <PropertyRef Name="MaDV_To" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblNhanvi__Mango__412EB0B6">
+    <End Role="tblNgoaingu" Type="Self.tblNgoaingu" Multiplicity="0..1" />
+    <End Role="tblNhanvien" Type="Self.tblNhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblNgoaingu">
+        <PropertyRef Name="Mangoaingu" />
+      </Principal>
+      <Dependent Role="tblNhanvien">
+        <PropertyRef Name="Mangoaingu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblNhanvi__Matin__4222D4EF">
+    <End Role="tblTinhoc" Type="Self.tblTinhoc" Multiplicity="0..1" />
+    <End Role="tblNhanvien" Type="Self.tblNhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTinhoc">
+        <PropertyRef Name="Matinhoc" />
+      </Principal>
+      <Dependent Role="tblNhanvien">
+        <PropertyRef Name="Matinhoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblNhanvi__Maton__4316F928">
+    <End Role="tblTongiao" Type="Self.tblTongiao" Multiplicity="0..1" />
+    <End Role="tblNhanvien" Type="Self.tblNhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTongiao">
+        <PropertyRef Name="Matongiao" />
+      </Principal>
+      <Dependent Role="tblNhanvien">
+        <PropertyRef Name="Matongiao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHopdong_tblNhanvien">
+    <End Role="tblNhanvien" Type="Self.tblNhanvien" Multiplicity="1" />
+    <End Role="tblHopdong" Type="Self.tblHopdong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblNhanvien">
+        <PropertyRef Name="Manv" />
+      </Principal>
+      <Dependent Role="tblHopdong">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLGVModelStoreContainer">
+    <EntitySet Name="Donvi_tolamviec_junction" EntityType="Self.Donvi_tolamviec_junction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBangcap" EntityType="Self.tblBangcap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblChucvu" EntityType="Self.tblChucvu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDantoc" EntityType="Self.tblDantoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDSDonvi" EntityType="Self.tblDSDonvi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHopdong" EntityType="Self.tblHopdong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNgoaingu" EntityType="Self.tblNgoaingu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNguoidung" EntityType="Self.tblNguoidung" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNhanvien" EntityType="Self.tblNhanvien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTinhoc" EntityType="Self.tblTinhoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTolamviec" EntityType="Self.tblTolamviec" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTongiao" EntityType="Self.tblTongiao" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Donvi_tola__MaDV__3A81B327" Association="Self.FK__Donvi_tola__MaDV__3A81B327">
+      <End Role="tblDSDonvi" EntitySet="tblDSDonvi" />
+      <End Role="Donvi_tolamviec_junction" EntitySet="Donvi_tolamviec_junction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Donvi_tola__Mato__3B75D760" Association="Self.FK__Donvi_tola__Mato__3B75D760">
+      <End Role="tblTolamviec" EntitySet="tblTolamviec" />
+      <End Role="Donvi_tolamviec_junction" EntitySet="Donvi_tolamviec_junction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblNhanvi__Maban__3D5E1FD2" Association="Self.FK__tblNhanvi__Maban__3D5E1FD2">
+      <End Role="tblBangcap" EntitySet="tblBangcap" />
+      <End Role="tblNhanvien" EntitySet="tblNhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblNhanvi__Machu__3E52440B" Association="Self.FK__tblNhanvi__Machu__3E52440B">
+      <End Role="tblChucvu" EntitySet="tblChucvu" />
+      <End Role="tblNhanvien" EntitySet="tblNhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblNhanvi__Madan__3F466844" Association="Self.FK__tblNhanvi__Madan__3F466844">
+      <End Role="tblDantoc" EntitySet="tblDantoc" />
+      <End Role="tblNhanvien" EntitySet="tblNhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblNhanvi__MaDV___403A8C7D" Association="Self.FK__tblNhanvi__MaDV___403A8C7D">
+      <End Role="Donvi_tolamviec_junction" EntitySet="Donvi_tolamviec_junction" />
+      <End Role="tblNhanvien" EntitySet="tblNhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblNhanvi__Mango__412EB0B6" Association="Self.FK__tblNhanvi__Mango__412EB0B6">
+      <End Role="tblNgoaingu" EntitySet="tblNgoaingu" />
+      <End Role="tblNhanvien" EntitySet="tblNhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblNhanvi__Matin__4222D4EF" Association="Self.FK__tblNhanvi__Matin__4222D4EF">
+      <End Role="tblTinhoc" EntitySet="tblTinhoc" />
+      <End Role="tblNhanvien" EntitySet="tblNhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblNhanvi__Maton__4316F928" Association="Self.FK__tblNhanvi__Maton__4316F928">
+      <End Role="tblTongiao" EntitySet="tblTongiao" />
+      <End Role="tblNhanvien" EntitySet="tblNhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHopdong_tblNhanvien" Association="Self.FK_tblHopdong_tblNhanvien">
+      <End Role="tblNhanvien" EntitySet="tblNhanvien" />
+      <End Role="tblHopdong" EntitySet="tblHopdong" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

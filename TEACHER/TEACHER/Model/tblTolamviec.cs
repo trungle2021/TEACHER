@@ -17,7 +17,7 @@ namespace TEACHER.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tblTolamviec()
         {
-            this.tblNhanviens = new HashSet<tblNhanvien>();
+            this.Donvi_tolamviec_junction = new HashSet<Donvi_tolamviec_junction>();
         }
     
         public string Mato { get; set; }
@@ -25,6 +25,6 @@ namespace TEACHER.Model
         public string Ghichu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblNhanvien> tblNhanviens { get; set; }
+        public virtual ICollection<Donvi_tolamviec_junction> Donvi_tolamviec_junction { get; set; }
     }
 }

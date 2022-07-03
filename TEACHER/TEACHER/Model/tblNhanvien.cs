@@ -34,8 +34,7 @@ namespace TEACHER.Model
         public string SDTnha { get; set; }
         public string Tinhtranghonnhan { get; set; }
         public string Tinhtranglamviec { get; set; }
-        public string MaDV { get; set; }
-        public string Mato { get; set; }
+        public Nullable<int> MaDV_To { get; set; }
         public string Machucvu { get; set; }
         public Nullable<System.DateTime> Ngayvaolam { get; set; }
         public Nullable<int> Thamnien { get; set; }
@@ -47,17 +46,14 @@ namespace TEACHER.Model
         public string Matongiao { get; set; }
         public string Madantoc { get; set; }
     
+        public virtual Donvi_tolamviec_junction Donvi_tolamviec_junction { get; set; }
         public virtual tblBangcap tblBangcap { get; set; }
         public virtual tblChucvu tblChucvu { get; set; }
         public virtual tblDantoc tblDantoc { get; set; }
-        public virtual tblDantoc tblDantoc1 { get; set; }
-        public virtual tblDSDonvi tblDSDonvi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblHopdong> tblHopdongs { get; set; }
         public virtual tblNgoaingu tblNgoaingu { get; set; }
         public virtual tblTinhoc tblTinhoc { get; set; }
-        public virtual tblTolamviec tblTolamviec { get; set; }
         public virtual tblTongiao tblTongiao { get; set; }
-        public virtual tblTongiao tblTongiao1 { get; set; }
     }
 }
