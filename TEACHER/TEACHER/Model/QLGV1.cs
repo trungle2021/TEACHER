@@ -13,7 +13,7 @@ namespace TEACHER.Model
         }
 
         public virtual DbSet<Donvi_tolamviec_junction> Donvi_tolamviec_junction { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+
         public virtual DbSet<tblBangcap> tblBangcaps { get; set; }
         public virtual DbSet<tblChucvu> tblChucvus { get; set; }
         public virtual DbSet<tblDantoc> tblDantocs { get; set; }

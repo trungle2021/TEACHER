@@ -6,7 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using TEACHER.Data;
+
 using TEACHER.Model;
 using TEACHER.Repository;
 
@@ -17,20 +17,12 @@ namespace TEACHER.Service
       
         public tblNhanvien GetOne(int MaNV)
         {
-            using(var db = new QLGVEntities())
-            {
-                return db.tblNhanviens.FirstOrDefault(t => t.Manv.Equals(MaNV));
-            }
+            throw new NotImplementedException();
         }
 
         public IEnumerable<tblNhanvien> GetAll()
         {
-            using (QLGVEntities db = new QLGVEntities())
-            {
-                var _teacherList = db.tblNhanviens.Join(Donvi_tolamviec_junction,p=>p.MaDV_To )
-                
-                return _teacherList;
-            }
+            throw new NotImplementedException();
         }
 
         public void Add(tblNhanvien entity)
