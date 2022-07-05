@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TEACHER.Model;
 using TEACHER.Service;
 
 namespace TEACHER.TeacherManagementForm
@@ -102,11 +103,37 @@ namespace TEACHER.TeacherManagementForm
 
         private void Search_PrimaryInfo_TXT_KeyUp(object sender, KeyEventArgs e)
         {
-            string text_Search = Search_PrimaryInfo_TXT.Text.ToString();
-            bool parseTextSearch = int.TryParse(text_Search,out int result);
+            try
+            {
+                IEnumerable<tblNhanvien> teacher;
+                string text_Search = Search_PrimaryInfo_TXT.Text.ToString();
+                if (string.IsNullOrEmpty(text_Search))
+                {
+                    teacher = service.GetAll();
+                }
+                else
+                {
+                    bool parseTextSearch = int.TryParse(text_Search, out int result);
+                    teacher = service.SearchByEmpID(result);
+                    if(teacher.Count() < 1 )
+                    {
+                        teacher = service.GetAll();
+                        MessageBox.Show("Không Tìm Thấy Dữ Liệu Phù Hợp");
+                        
+                    }
+                }
+                
+                TeacherList_PrimaryInfo_dataGridView.DataSource = teacher;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-            var teacher = service.GetOne(result);
-            TeacherList_PrimaryInfo_dataGridView.DataSource = teacher;
+
+
+
+
 
         }
     }
