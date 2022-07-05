@@ -106,20 +106,12 @@ namespace TEACHER
         {
         }
 
-     
-      
-
-      
-
-    
-
-        
 
         private void tsExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+       
         private void tsChangpass_Click(object sender, EventArgs e)
         {
             ChangePass changePass = new ChangePass() {  TopLevel = false, TopMost = true }; ;
