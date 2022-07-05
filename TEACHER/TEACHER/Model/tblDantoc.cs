@@ -9,11 +9,7 @@ namespace TEACHER.Model
     [Table("tblDantoc")]
     public partial class tblDantoc
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblDantoc()
-        {
-            tblNhanviens = new HashSet<tblNhanvien>();
-        }
+       
 
         [Key]
         [StringLength(10)]
@@ -22,7 +18,6 @@ namespace TEACHER.Model
         [StringLength(50)]
         public string Tendantoc { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblNhanvien> tblNhanviens { get; set; }
+        
     }
 }

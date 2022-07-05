@@ -9,12 +9,7 @@ namespace TEACHER.Model
     [Table("tblNhanvien")]
     public partial class tblNhanvien
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblNhanvien()
-        {
-            tblHopdongs = new HashSet<tblHopdong>();
-        }
-
+      
         [Key]
         public int Manv { get; set; }
 
@@ -75,33 +70,12 @@ namespace TEACHER.Model
         [StringLength(10)]
         public string Mabangcap { get; set; }
 
-        [StringLength(20)]
-        public string SoBHXH { get; set; }
-
-        [StringLength(20)]
-        public string SoBHYT { get; set; }
-
         [StringLength(10)]
         public string Matongiao { get; set; }
 
         [StringLength(10)]
         public string Madantoc { get; set; }
 
-        public virtual Donvi_tolamviec_junction Donvi_tolamviec_junction { get; set; }
-
-        public virtual tblBangcap tblBangcap { get; set; }
-
-        public virtual tblChucvu tblChucvu { get; set; }
-
-        public virtual tblDantoc tblDantoc { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblHopdong> tblHopdongs { get; set; }
-
-        public virtual tblNgoaingu tblNgoaingu { get; set; }
-
-        public virtual tblTinhoc tblTinhoc { get; set; }
-
-        public virtual tblTongiao tblTongiao { get; set; }
+        
     }
 }

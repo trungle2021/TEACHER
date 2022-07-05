@@ -153,6 +153,16 @@ namespace TEACHER.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap multi_user_man_and_girl_27082 {
+            get {
+                object obj = ResourceManager.GetObject("multi-user-man-and-girl-27082", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MultiEmp {
             get {
                 object obj = ResourceManager.GetObject("MultiEmp", resourceCulture);

@@ -59,6 +59,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePass.Designer.cs">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donvi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donvi.Designer.cs">
+      <DependentUpon>Donvi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
+    <Compile Include="HopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HopDong.Designer.cs">
+      <DependentUpon>HopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,7 +97,6 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Donvi_tolamviec_junction.cs" />
-    <Compile Include="Model\QLGV1.cs" />
     <Compile Include="Model\tblBangcap.cs" />
     <Compile Include="Model\tblChucvu.cs" />
     <Compile Include="Model\tblDantoc.cs" />
@@ -91,6 +108,12 @@
     <Compile Include="Model\tblTinhoc.cs" />
     <Compile Include="Model\tblTolamviec.cs" />
     <Compile Include="Model\tblTongiao.cs" />
+    <Compile Include="NewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAccount.Designer.cs">
+      <DependentUpon>NewAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,19 +124,40 @@
     </Compile>
     <Compile Include="Repository\ITeacher.cs" />
     <Compile Include="Service\TeacherServiceImp.cs" />
+    <Compile Include="TeacherManagementForm\TeacherManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherManagementForm\TeacherManageForm.Designer.cs">
+      <DependentUpon>TeacherManageForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChangePass.resx">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donvi.resx">
+      <DependentUpon>Donvi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HopDong.resx">
+      <DependentUpon>HopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAccount.resx">
+      <DependentUpon>NewAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherManagementForm\TeacherManageForm.resx">
+      <DependentUpon>TeacherManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\TEACHER.exe.config" />
     <None Include="packages.config" />
@@ -155,6 +199,7 @@
     <Content Include="bin\Debug\images\login-big %282%29.png" />
     <Content Include="bin\Debug\images\login-big.png" />
     <Content Include="bin\Debug\images\login.png" />
+    <None Include="bin\Debug\images\multi-user-man-and-girl-27082.jpg" />
     <Content Include="bin\Debug\images\MultiEmp.jpg" />
     <Content Include="bin\Debug\images\Position_Level.png" />
     <Content Include="bin\Debug\images\user_add.png" />

@@ -33,3 +33,8 @@ C:\Users\Lance\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.csproj.CopyComp
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER\TEACHER\TEACHER\bin\Debug\Dapper.xml
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.Form2.resources
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.Login.resources
+C:\Users\Trung Le\OneDrive\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.ChangePass.resources
+C:\Users\Trung Le\OneDrive\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.Donvi.resources
+C:\Users\Trung Le\OneDrive\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.HopDong.resources
+C:\Users\Trung Le\OneDrive\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.NewAccount.resources
+C:\Users\Trung Le\OneDrive\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.TeacherManagementForm.TeacherManageForm.resources

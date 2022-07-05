@@ -17,12 +17,19 @@ namespace TEACHER.Service
       
         public tblNhanvien GetOne(int MaNV)
         {
-            throw new NotImplementedException();
+            var pa = new
+            {
+                MaNV = MaNV
+            };
+            return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.GetOneTeacher", pa).FirstOrDefault();
         }
 
         public IEnumerable<tblNhanvien> GetAll()
         {
-            throw new NotImplementedException();
+
+            return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.GetAllTeacher").ToList();
+            
+            
         }
 
         public void Add(tblNhanvien entity)

@@ -30,6 +30,6 @@ namespace TEACHER.Model
 
         public string Ghichu { get; set; }
 
-        public virtual tblNhanvien tblNhanvien { get; set; }
+      
     }
 }
