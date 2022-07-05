@@ -40,19 +40,17 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pContainer = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timerSystemDropDown = new System.Windows.Forms.Timer(this.components);
             this.SystemDropDownPanel = new System.Windows.Forms.Panel();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.tsAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.tsExit = new System.Windows.Forms.ToolStripButton();
             this.toolStrip5 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.tsChangpass = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tsLogin = new System.Windows.Forms.ToolStripButton();
             this.SystemBtnLeftPanel = new System.Windows.Forms.Button();
             this.InfoDropDownPanel = new System.Windows.Forms.Panel();
             this.toolStrip6 = new System.Windows.Forms.ToolStrip();
@@ -74,13 +72,15 @@
             this.toolStrip13 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
             this.SearchBtnLeftPanel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timerSystemDropDown = new System.Windows.Forms.Timer(this.components);
             this.timerInfoDropDown = new System.Windows.Forms.Timer(this.components);
             this.timerSearchDropDown = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pContainer)).BeginInit();
+            this.pContainer.Panel1.SuspendLayout();
+            this.pContainer.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SystemDropDownPanel.SuspendLayout();
             this.toolStrip3.SuspendLayout();
@@ -194,19 +194,19 @@
             this.toolStripButton3.Text = "Hợp Đồng";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // splitContainer1
+            // pContainer
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 82);
-            this.splitContainer1.Name = "splitContainer1";
+            this.pContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pContainer.Location = new System.Drawing.Point(0, 82);
+            this.pContainer.Name = "pContainer";
             // 
-            // splitContainer1.Panel1
+            // pContainer.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 581);
-            this.splitContainer1.SplitterDistance = 164;
-            this.splitContainer1.TabIndex = 2;
+            this.pContainer.Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.pContainer.Panel1.Controls.Add(this.label1);
+            this.pContainer.Size = new System.Drawing.Size(800, 581);
+            this.pContainer.SplitterDistance = 164;
+            this.pContainer.TabIndex = 2;
             // 
             // flowLayoutPanel1
             // 
@@ -217,22 +217,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(161, 548);
             this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thanh Chức Năng";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // timerSystemDropDown
-            // 
-            this.timerSystemDropDown.Enabled = true;
-            this.timerSystemDropDown.Interval = 15;
-            this.timerSystemDropDown.Tick += new System.EventHandler(this.timerSystemDropDown_Tick);
             // 
             // SystemDropDownPanel
             // 
@@ -247,7 +231,7 @@
             this.SystemDropDownPanel.MaximumSize = new System.Drawing.Size(158, 448);
             this.SystemDropDownPanel.MinimumSize = new System.Drawing.Size(158, 23);
             this.SystemDropDownPanel.Name = "SystemDropDownPanel";
-            this.SystemDropDownPanel.Size = new System.Drawing.Size(158, 23);
+            this.SystemDropDownPanel.Size = new System.Drawing.Size(158, 448);
             this.SystemDropDownPanel.TabIndex = 9;
             // 
             // toolStrip3
@@ -255,92 +239,96 @@
             this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton5});
+            this.tsAdd});
             this.toolStrip3.Location = new System.Drawing.Point(34, 124);
             this.toolStrip3.Name = "toolStrip3";
             this.toolStrip3.Size = new System.Drawing.Size(93, 93);
             this.toolStrip3.TabIndex = 9;
             this.toolStrip3.Text = "toolStrip3";
             // 
-            // toolStripButton5
+            // tsAdd
             // 
-            this.toolStripButton5.AutoSize = false;
-            this.toolStripButton5.Image = global::TEACHER.Properties.Resources.user_add;
-            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(90, 90);
-            this.toolStripButton5.Text = "Thêm Tài Khoản";
-            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsAdd.AutoSize = false;
+            this.tsAdd.Image = global::TEACHER.Properties.Resources.user_add;
+            this.tsAdd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAdd.Name = "tsAdd";
+            this.tsAdd.Size = new System.Drawing.Size(90, 90);
+            this.tsAdd.Text = "Thêm Tài Khoản";
+            this.tsAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsAdd.Click += new System.EventHandler(this.tsAdd_Click);
             // 
             // toolStrip4
             // 
             this.toolStrip4.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton6});
+            this.tsExit});
             this.toolStrip4.Location = new System.Drawing.Point(34, 328);
             this.toolStrip4.Name = "toolStrip4";
             this.toolStrip4.Size = new System.Drawing.Size(93, 93);
             this.toolStrip4.TabIndex = 10;
             this.toolStrip4.Text = "toolStrip4";
             // 
-            // toolStripButton6
+            // tsExit
             // 
-            this.toolStripButton6.AutoSize = false;
-            this.toolStripButton6.Image = global::TEACHER.Properties.Resources.windows_error_icon_24;
-            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(90, 90);
-            this.toolStripButton6.Text = "Đổi Mật Khẩu";
-            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsExit.AutoSize = false;
+            this.tsExit.Image = global::TEACHER.Properties.Resources.windows_error_icon_24;
+            this.tsExit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsExit.Name = "tsExit";
+            this.tsExit.Size = new System.Drawing.Size(90, 90);
+            this.tsExit.Text = "Đổi Mật Khẩu";
+            this.tsExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsExit.Click += new System.EventHandler(this.tsExit_Click);
             // 
             // toolStrip5
             // 
             this.toolStrip5.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip5.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton7});
+            this.tsChangpass});
             this.toolStrip5.Location = new System.Drawing.Point(36, 225);
             this.toolStrip5.Name = "toolStrip5";
             this.toolStrip5.Size = new System.Drawing.Size(87, 92);
             this.toolStrip5.TabIndex = 11;
             this.toolStrip5.Text = "toolStrip5";
             // 
-            // toolStripButton7
+            // tsChangpass
             // 
-            this.toolStripButton7.AutoSize = false;
-            this.toolStripButton7.Image = global::TEACHER.Properties.Resources._61957001;
-            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(84, 89);
-            this.toolStripButton7.Text = "Đổi Mật Khẩu";
-            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsChangpass.AutoSize = false;
+            this.tsChangpass.Image = global::TEACHER.Properties.Resources._61957001;
+            this.tsChangpass.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsChangpass.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsChangpass.Name = "tsChangpass";
+            this.tsChangpass.Size = new System.Drawing.Size(84, 89);
+            this.tsChangpass.Text = "Đổi Mật Khẩu";
+            this.tsChangpass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsChangpass.Click += new System.EventHandler(this.tsChangpass_Click);
             // 
             // toolStrip2
             // 
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton4});
+            this.tsLogin});
             this.toolStrip2.Location = new System.Drawing.Point(33, 32);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(93, 83);
             this.toolStrip2.TabIndex = 8;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton4
+            // tsLogin
             // 
-            this.toolStripButton4.AutoSize = false;
-            this.toolStripButton4.Image = global::TEACHER.Properties.Resources.login_big__2_;
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(90, 80);
-            this.toolStripButton4.Text = "Đăng Nhập";
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsLogin.AutoSize = false;
+            this.tsLogin.Image = global::TEACHER.Properties.Resources.login_big__2_;
+            this.tsLogin.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsLogin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsLogin.Name = "tsLogin";
+            this.tsLogin.Size = new System.Drawing.Size(90, 80);
+            this.tsLogin.Text = "Đăng Nhập";
+            this.tsLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsLogin.Click += new System.EventHandler(this.tsLogin_Click);
             // 
             // SystemBtnLeftPanel
             // 
@@ -362,7 +350,7 @@
             this.InfoDropDownPanel.Controls.Add(this.toolStrip8);
             this.InfoDropDownPanel.Controls.Add(this.toolStrip9);
             this.InfoDropDownPanel.Controls.Add(this.InfoBtnLeftPanel);
-            this.InfoDropDownPanel.Location = new System.Drawing.Point(3, 32);
+            this.InfoDropDownPanel.Location = new System.Drawing.Point(3, 457);
             this.InfoDropDownPanel.MaximumSize = new System.Drawing.Size(158, 448);
             this.InfoDropDownPanel.MinimumSize = new System.Drawing.Size(158, 23);
             this.InfoDropDownPanel.Name = "InfoDropDownPanel";
@@ -474,14 +462,12 @@
             // 
             // SearchDropDownPanel
             // 
-            this.SearchDropDownPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchDropDownPanel.Controls.Add(this.toolStrip10);
             this.SearchDropDownPanel.Controls.Add(this.toolStrip11);
             this.SearchDropDownPanel.Controls.Add(this.toolStrip12);
             this.SearchDropDownPanel.Controls.Add(this.toolStrip13);
             this.SearchDropDownPanel.Controls.Add(this.SearchBtnLeftPanel);
-            this.SearchDropDownPanel.Location = new System.Drawing.Point(3, 61);
+            this.SearchDropDownPanel.Location = new System.Drawing.Point(3, 486);
             this.SearchDropDownPanel.MaximumSize = new System.Drawing.Size(158, 448);
             this.SearchDropDownPanel.MinimumSize = new System.Drawing.Size(158, 23);
             this.SearchDropDownPanel.Name = "SearchDropDownPanel";
@@ -591,6 +577,22 @@
             this.SearchBtnLeftPanel.UseVisualStyleBackColor = true;
             this.SearchBtnLeftPanel.Click += new System.EventHandler(this.SearchBtnLeftPanel_Click);
             // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thanh Chức Năng";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timerSystemDropDown
+            // 
+            this.timerSystemDropDown.Enabled = true;
+            this.timerSystemDropDown.Interval = 15;
+            this.timerSystemDropDown.Tick += new System.EventHandler(this.timerSystemDropDown_Tick);
+            // 
             // timerInfoDropDown
             // 
             this.timerInfoDropDown.Enabled = true;
@@ -608,7 +610,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 663);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.pContainer);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -619,9 +621,9 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.pContainer.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pContainer)).EndInit();
+            this.pContainer.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.SystemDropDownPanel.ResumeLayout(false);
             this.SystemDropDownPanel.PerformLayout();
@@ -671,18 +673,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer pContainer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel SystemDropDownPanel;
-        private System.Windows.Forms.ToolStrip toolStrip3;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStrip toolStrip4;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStrip toolStrip5;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.Button SystemBtnLeftPanel;
         private System.Windows.Forms.Panel InfoDropDownPanel;
         private System.Windows.Forms.ToolStrip toolStrip6;
@@ -707,5 +701,13 @@
         private System.Windows.Forms.Timer timerSystemDropDown;
         private System.Windows.Forms.Timer timerInfoDropDown;
         private System.Windows.Forms.Timer timerSearchDropDown;
+        private System.Windows.Forms.ToolStrip toolStrip3;
+        private System.Windows.Forms.ToolStripButton tsAdd;
+        private System.Windows.Forms.ToolStrip toolStrip4;
+        private System.Windows.Forms.ToolStripButton tsExit;
+        private System.Windows.Forms.ToolStrip toolStrip5;
+        private System.Windows.Forms.ToolStripButton tsChangpass;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton tsLogin;
     }
 }

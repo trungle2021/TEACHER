@@ -105,5 +105,34 @@ namespace TEACHER
         private void Form2_Load(object sender, EventArgs e)
         {
         }
+
+
+        private void tsExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+       
+        private void tsChangpass_Click(object sender, EventArgs e)
+        {
+            ChangePass changePass = new ChangePass() {  TopLevel = false, TopMost = true }; ;
+            this.pContainer.Panel2.Controls.Add(changePass);
+            changePass.Show();
+
+        }
+
+        private void tsAdd_Click(object sender, EventArgs e)
+        {
+            NewAccount newaccount = new NewAccount() {  TopLevel = false, TopMost = true };
+
+            this.pContainer.Panel2.Controls.Add(newaccount);
+            newaccount.Show();
+        }
+
+        private void tsLogin_Click(object sender, EventArgs e)
+        {
+            Login login = new Login() {TopLevel=false,TopMost=true};
+            this.pContainer.Panel2.Controls.Add(login);
+            login.Show();
+        }
     }
 }
