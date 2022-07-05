@@ -115,6 +115,7 @@ namespace TEACHER
         private void tsChangpass_Click(object sender, EventArgs e)
         {
             ChangePass changePass = new ChangePass() {  TopLevel = false, TopMost = true }; ;
+            this.pContainer.Panel2.Controls.Clear();
             this.pContainer.Panel2.Controls.Add(changePass);
             changePass.Show();
 
@@ -123,7 +124,7 @@ namespace TEACHER
         private void tsAdd_Click(object sender, EventArgs e)
         {
             NewAccount newaccount = new NewAccount() {  TopLevel = false, TopMost = true };
-
+            this.pContainer.Panel2.Controls.Clear();
             this.pContainer.Panel2.Controls.Add(newaccount);
             newaccount.Show();
         }
@@ -131,8 +132,17 @@ namespace TEACHER
         private void tsLogin_Click(object sender, EventArgs e)
         {
             Login login = new Login() {TopLevel=false,TopMost=true};
+            this.pContainer.Panel2.Controls.Clear() ;
             this.pContainer.Panel2.Controls.Add(login);
             login.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            HopDong hopdong = new HopDong() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(hopdong);
+            hopdong.Show();
         }
     }
 }
