@@ -13,8 +13,13 @@ namespace TEACHER.Repository
     {
 
         bool CheckLogin(tblNguoidung user);
-        
-    
+        void newaccount(tblNguoidung user);
+
+        void ChangePass(tblNguoidung user);
+
+        void GetAllAccount(DataGridView dgv);
+        void GetAllUserName(ComboBox cbb);
     }
+    
 
 }

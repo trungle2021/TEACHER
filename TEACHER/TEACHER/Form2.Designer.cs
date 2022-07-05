@@ -193,6 +193,7 @@
             this.toolStripButton3.Size = new System.Drawing.Size(65, 55);
             this.toolStripButton3.Text = "Hợp Đồng";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // pContainer
             // 
