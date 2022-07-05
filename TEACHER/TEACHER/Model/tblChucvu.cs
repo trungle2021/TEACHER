@@ -9,11 +9,7 @@ namespace TEACHER.Model
     [Table("tblChucvu")]
     public partial class tblChucvu
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblChucvu()
-        {
-            tblNhanviens = new HashSet<tblNhanvien>();
-        }
+       
 
         [Key]
         [StringLength(10)]
@@ -26,7 +22,6 @@ namespace TEACHER.Model
 
         public string Ghichu { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblNhanvien> tblNhanviens { get; set; }
+       
     }
 }

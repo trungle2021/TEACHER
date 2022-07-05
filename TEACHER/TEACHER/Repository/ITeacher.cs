@@ -17,8 +17,8 @@ namespace TEACHER.Repository
         void RemoveRange(IEnumerable<tblNhanvien> entities);
 
         void Update(tblNhanvien teacher);
-        tblNhanvien SearchByCMND(string cmnd);
-        tblNhanvien SearchByName(string name);
-        tblNhanvien SearchByEmpID(int ID);
+        IEnumerable<tblNhanvien> SearchByCMND(string cmnd);
+        IEnumerable<tblNhanvien> SearchByName(string name);
+        IEnumerable<tblNhanvien> SearchByEmpID(int ID);
     }
 }

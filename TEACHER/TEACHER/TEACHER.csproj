@@ -77,6 +77,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="HopDong.cs">
       <SubType>Form</SubType>
@@ -91,7 +97,6 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Donvi_tolamviec_junction.cs" />
-    <Compile Include="Model\QLGV1.cs" />
     <Compile Include="Model\tblBangcap.cs" />
     <Compile Include="Model\tblChucvu.cs" />
     <Compile Include="Model\tblDantoc.cs" />
@@ -112,8 +117,19 @@
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Repository\ITeacher.cs" />
     <Compile Include="Service\TeacherServiceImp.cs" />
+    <Compile Include="TeacherManagementForm\TeacherManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherManagementForm\TeacherManageForm.Designer.cs">
+      <DependentUpon>TeacherManageForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChangePass.resx">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HopDong.resx">
       <DependentUpon>HopDong.cs</DependentUpon>
@@ -134,13 +153,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="TeacherManagementForm\TeacherManageForm.resx">
+      <DependentUpon>TeacherManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\TEACHER.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -159,8 +178,35 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\6195700.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Dapper.dll" />
+    <Content Include="bin\Debug\Dapper.xml" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <None Include="bin\Debug\images\6195700 %281%29.png" />
+    <Content Include="bin\Debug\images\AddUser.jpg" />
+    <Content Include="bin\Debug\images\Contract.png" />
+    <None Include="bin\Debug\images\delete-icon-16x16-8.jpg" />
+    <Content Include="bin\Debug\images\Exit.png" />
+    <Content Include="bin\Debug\images\login-big %281%29.png" />
+    <Content Include="bin\Debug\images\login-big %282%29.png" />
+    <Content Include="bin\Debug\images\login-big.png" />
+    <Content Include="bin\Debug\images\login.png" />
+    <None Include="bin\Debug\images\multi-user-man-and-girl-27082.jpg" />
+    <Content Include="bin\Debug\images\MultiEmp.jpg" />
+    <Content Include="bin\Debug\images\Position_Level.png" />
+    <Content Include="bin\Debug\images\user_add.png" />
+    <None Include="bin\Debug\images\windows-error-icon.jpg" />
+    <None Include="bin\Debug\images\windows-error-icon-24.jpg" />
+    <Content Include="bin\Debug\TEACHER.exe" />
+    <Content Include="bin\Debug\TEACHER.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

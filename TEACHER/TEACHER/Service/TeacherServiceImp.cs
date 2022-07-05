@@ -17,12 +17,19 @@ namespace TEACHER.Service
       
         public tblNhanvien GetOne(int MaNV)
         {
-            throw new NotImplementedException();
+            var pa = new
+            {
+                MaNV = MaNV
+            };
+            return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.GetOneTeacher", pa).FirstOrDefault();
         }
 
         public IEnumerable<tblNhanvien> GetAll()
         {
-            throw new NotImplementedException();
+
+            return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.GetAllTeacher").ToList();
+            
+            
         }
 
         public void Add(tblNhanvien entity)
@@ -45,19 +52,23 @@ namespace TEACHER.Service
             throw new NotImplementedException();
         }
 
-        public tblNhanvien SearchByCMND(string cmnd)
+        public IEnumerable<tblNhanvien> SearchByCMND(string cmnd)
         {
             throw new NotImplementedException();
         }
 
-        public tblNhanvien SearchByName(string name)
+        public IEnumerable<tblNhanvien> SearchByName(string name)
         {
             throw new NotImplementedException();
         }
 
-        public tblNhanvien SearchByEmpID(int ID)
+        public IEnumerable<tblNhanvien> SearchByEmpID(int MaNV)
         {
-            throw new NotImplementedException();
+            var pa = new
+            {
+                MaNV = MaNV
+            };
+            return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.SearchEmpByID", pa).ToList();
         }
 
         
