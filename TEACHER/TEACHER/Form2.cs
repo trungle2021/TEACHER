@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TEACHER.Service;
 
 namespace TEACHER
 {
@@ -15,12 +16,20 @@ namespace TEACHER
         private bool SystemIsCollapsed;
         private bool InfoIsCollapsed;
         private bool SearchIsCollapsed;
+        public string name;
+        private LoginImp service = new LoginImp();
         public Form2()
         {
             WindowState = FormWindowState.Maximized;
             InitializeComponent();
-        }
 
+        }
+        public Form2(string user)
+        {
+            WindowState = FormWindowState.Maximized;
+            InitializeComponent();
+            lblUserName.Text = user;
+        }
         private void SystemBtnLeftPanel_Click(object sender, EventArgs e)
         {
             timerSystemDropDown.Start();
@@ -102,8 +111,101 @@ namespace TEACHER
             }
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+
+
+        //getname phan quyen
+        internal void getName()
         {
+            lblUserName.Text = name;
+            if (string.IsNullOrEmpty(lblUserName.Text))
+            {
+                MessageBox.Show("Xảy Ra Lỗi Khi Truyền Dữ Liệu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                try
+                {
+                    var user = service.GetUser(name);
+                    tsLogin.Enabled = false;
+                    if (user.Chophepthaotac.Equals("Admin"))
+                    {
+                        tsNhanVien.Enabled = true;
+                        tsChucVu.Enabled = true;
+                        tsHopDong.Enabled = true;
+                        tsThongtin1.Enabled = true;
+                        tsThongtin2.Enabled = true;
+                        tsThongtin3.Enabled = true;
+                        tsThongtin4.Enabled = true;
+                    }
+                    else {
+                        tsNhanVien.Enabled = true;
+                        tsChucVu.Enabled = false;
+                        tsHopDong.Enabled = false;
+                        tsThongtin1.Enabled = false;
+                        tsThongtin2.Enabled = false;
+                        tsThongtin3.Enabled = false;
+                        tsThongtin4.Enabled = false;
+                    }
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("xảy ra lỗi khi Liên Kết dữ Liệu!");
+                }
+
+            }
+
+        }
+
+
+        private void tsExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void tsChangpass_Click(object sender, EventArgs e)
+        {
+            ChangePass changePass = new ChangePass() { TopLevel = false, TopMost = true }; ;
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(changePass);
+            changePass.Show();
+
+        }
+
+        private void tsAdd_Click(object sender, EventArgs e)
+        {
+            NewAccount newaccount = new NewAccount() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(newaccount);
+            newaccount.Show();
+        }
+
+        private void tsLogin_Click(object sender, EventArgs e)
+        {
+            Login login = new Login(this) { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(login);
+            login.Show();
+
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            HopDong hopdong = new HopDong() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(hopdong);
+            hopdong.Show();
+        }
+
+        private void pContainer_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

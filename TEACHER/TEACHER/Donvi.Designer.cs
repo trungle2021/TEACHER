@@ -46,6 +46,8 @@ namespace TEACHER
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -54,6 +56,7 @@ namespace TEACHER
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -68,6 +71,8 @@ namespace TEACHER
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.label6);
+            this.splitContainer1.Panel2.Controls.Add(this.dataGridView2);
             this.splitContainer1.Panel2.Controls.Add(this.textBox3);
             this.splitContainer1.Panel2.Controls.Add(this.label5);
             this.splitContainer1.Panel2.Controls.Add(this.textBox2);
@@ -210,7 +215,7 @@ namespace TEACHER
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(178, 183);
+            this.textBox3.Location = new System.Drawing.Point(178, 169);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(207, 86);
@@ -219,11 +224,27 @@ namespace TEACHER
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 190);
+            this.label5.Location = new System.Drawing.Point(49, 172);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Ghi Chú";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(178, 261);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(207, 84);
+            this.dataGridView2.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(49, 271);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 43);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Danh Sách Các Tổ Chuyên Môn";
             // 
             // Donvi
             // 
@@ -244,6 +265,7 @@ namespace TEACHER
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -267,5 +289,7 @@ namespace TEACHER
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
