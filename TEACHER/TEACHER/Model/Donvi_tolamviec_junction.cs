@@ -17,6 +17,12 @@ namespace TEACHER.Model
         [StringLength(10)]
         public string Mato { get; set; }
 
-    
+        [StringLength(10)]
+        public string TenTo { get; set; }
+
+        [StringLength(10)]
+        public string TenDV { get; set; }
+
+
     }
 }

@@ -122,7 +122,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repository\IDonVi_To.cs" />
+    <Compile Include="Repository\IDonVi.cs" />
     <Compile Include="Repository\ITeacher.cs" />
+    <Compile Include="Service\DonViServiceImp.cs" />
     <Compile Include="Service\TeacherServiceImp.cs" />
     <Compile Include="TeacherManagementForm\TeacherManageForm.cs">
       <SubType>Form</SubType>

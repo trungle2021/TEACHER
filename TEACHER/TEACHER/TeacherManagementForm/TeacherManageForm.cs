@@ -14,7 +14,9 @@ namespace TEACHER.TeacherManagementForm
 {
     public partial class TeacherManageForm : Form
     {
-        private TeacherServiceImp service = new TeacherServiceImp();
+        private TeacherServiceImp teacher_service = new TeacherServiceImp();
+        private DonViServiceImp donvi_service = new DonViServiceImp();
+        private ToServiceImp to_service = new ToServiceImp();
         public TeacherManageForm()
         {
             WindowState = FormWindowState.Maximized;
@@ -23,26 +25,40 @@ namespace TEACHER.TeacherManagementForm
 
         private void TeacherManageForm_Load(object sender, EventArgs e)
         {
-           var result = service.GetAll();
-            TeacherList_RelevantInfo_dataGridView.DataSource = result;
-            TeacherList_PrimaryInfo_dataGridView.DataSource = result;
-            TeacherList_Relative_Datagridview.DataSource = result;
-            
+            var teacher_list = teacher_service.GetAll();
+            var donvi_list = donvi_service.GetAll();
+
+            TeacherList_PrimaryInfo_dataGridView.DataSource = teacher_list;
+            TeacherList_RelevantInfo_dataGridView.DataSource = teacher_list;
+            TeacherList_Relative_Datagridview.DataSource = teacher_list;
+
+
+
+            LoadDataToCBX(TeacherDV_Relevant_CBX, donvi_list,"TenDV","MaDV");
+        }
+
+        public void LoadDataToCBX<T>(ComboBox combobox, IEnumerable<T> list, string displayMember, string valueMember)
+        {
+            combobox.DataSource = list;
+            combobox.DisplayMember = displayMember;
+            combobox.ValueMember = valueMember;
+
+
         }
 
         public void LoadDataFromDGVToPrimaryInfo(DataGridView dgvPrimaryInfo,
             TextBox Manv,
-            TextBox Tennv, 
+            TextBox Tennv,
             TextBox CMND,
             DateTimePicker NgayCap,
             TextBox Tinhthanh,
             DateTimePicker Ngaysinh,
             RadioButton Gioitinh,
-            TextBox NguyenQuan, 
+            TextBox NguyenQuan,
             TextBox DCTamTru,
-            TextBox Email, 
-            TextBox SDTRieng, 
-            TextBox SDTNha, 
+            TextBox Email,
+            TextBox SDTRieng,
+            TextBox SDTNha,
             TextBox TinhTrangHonNhan,
             TextBox TinhTrangLamViec)
         {
@@ -61,11 +77,11 @@ namespace TEACHER.TeacherManagementForm
             string _SDTNha = dgvPrimaryInfo.Rows[row].Cells[11].Value.ToString();
             string _TinhTrangHonNhan = dgvPrimaryInfo.Rows[row].Cells[12].Value.ToString();
             string _TinhTrangLamViec = dgvPrimaryInfo.Rows[row].Cells[13].Value.ToString();
-     
+
             Manv.Text = _Manv;
             Tennv.Text = _Tennv;
             CMND.Text = _CMND;
-            NgayCap.Text = _NgayCap ;
+            NgayCap.Text = _NgayCap;
             Tinhthanh.Text = _Tinhthanh;
             Ngaysinh.Text = _Ngaysinh;
             Gioitinh.Text = _Gioitinh;
@@ -76,10 +92,10 @@ namespace TEACHER.TeacherManagementForm
             SDTNha.Text = _SDTNha;
             TinhTrangHonNhan.Text = _TinhTrangHonNhan;
             TinhTrangLamViec.Text = _TinhTrangLamViec;
-          
+
         }
 
-       
+
 
         private void TeacherList_PrimaryInfo_dataGridView_MouseClick(object sender, MouseEventArgs e)
         {
@@ -101,40 +117,162 @@ namespace TEACHER.TeacherManagementForm
               );
         }
 
-        private void Search_PrimaryInfo_TXT_KeyUp(object sender, KeyEventArgs e)
+        private void Search_PrimaryInfo_TXT_TextChanged(object sender, EventArgs e)
         {
             try
             {
                 IEnumerable<tblNhanvien> teacher;
                 string text_Search = Search_PrimaryInfo_TXT.Text.ToString();
-                if (string.IsNullOrEmpty(text_Search))
+                if (string.IsNullOrEmpty(text_Search) && string.IsNullOrWhiteSpace(text_Search))
                 {
-                    teacher = service.GetAll();
+                    teacher = teacher_service.GetAll();
                 }
                 else
                 {
                     bool parseTextSearch = int.TryParse(text_Search, out int result);
-                    teacher = service.SearchByEmpID(result);
-                    if(teacher.Count() < 1 )
+                    teacher = teacher_service.SearchByEmpID(result);
+                    if (teacher.Count() < 1)
                     {
-                        teacher = service.GetAll();
+                        teacher = teacher_service.GetAll();
                         MessageBox.Show("Không Tìm Thấy Dữ Liệu Phù Hợp");
-                        
+
                     }
                 }
-                
+
                 TeacherList_PrimaryInfo_dataGridView.DataSource = teacher;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
 
+        private void btnAdd_PrimaryInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var teacher = new tblNhanvien
+                {
+                    TenNV = TeacherName_PrimaryInfo_TXT.Text,
+                    CMND = CMND_PrimaryInfo_TXT.Text,
+                    Ngaycap = CMND_PrimaryInfo_DateCreated_TXT.Value,
+                    Tinhthanh = CMNDLocation_PrimaryInfo_TXT.Text,
+                    Ngaysinh = Teacher_PrimaryInfo_BirthdayPicker.Value,
+                    Gioitinh = rdMale_PrimaryInfo.Text,
+                    Nguyenquan = BornLocation_PrimaryInfo_TXT.Text,
+                    Dctamtru = Address_PrimaryInfo_TXT.Text,
+                    Email = Email_PrimaryInfo_TXT.Text,
+                    SDTrieng = PersonalPhone_PrimaryInfo_TXT.Text,
+                    SDTnha = HomePhone_PrimaryInfo_TXT.Text,
+                    Tinhtranghonnhan = Relationship_PrimaryInfo_TXT.Text,
+                    Tinhtranglamviec = WorkingState_PrimaryInfo_TXT.Text,
+                    MaDV_To = null,
+                    Machucvu = null,
+                    Ngayvaolam = null,
+                    Thamnien = null,
+                    Heso = null,
+                    Matinhoc = null,
+                    Mangoaingu = null,
+                    Mabangcap = null,
+                    Matongiao = null,
+                    Madantoc = null
+                };
+                teacher_service.Add(teacher);
+                MessageBox.Show("Thêm mới thành công");
+                var result = teacher_service.GetAll();
+                TeacherList_PrimaryInfo_dataGridView.DataSource = result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
 
+            }
+        }
 
+        private void btnEdit_PrimaryInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var teacher = new tblNhanvien
+                {
+                    Manv = int.Parse(TeacherID_PrimaryInfo_TXT.Text),
+                    MaDV_To = null,
+                    Machucvu = null,
+                    Ngayvaolam = null,
+                    Thamnien = null,
+                    Heso = null,
+                    Matinhoc = null,
+                    Mangoaingu = null,
+                    Mabangcap = null,
+                    Matongiao = null,
+                    Madantoc = null
+                };
+                teacher_service.Update(teacher);
+                MessageBox.Show("Sửa Thông Tin Thành Công");
+                var result = teacher_service.GetAll();
+                TeacherList_PrimaryInfo_dataGridView.DataSource = result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void btnDelete_PrimaryInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
 
+                int Manv = int.Parse(TeacherID_PrimaryInfo_TXT.Text);
+                
+                teacher_service.Remove(Manv);
+                MessageBox.Show("Xóa Giáo Viên Thành Công");
+                var result = teacher_service.GetAll();
+                TeacherList_PrimaryInfo_dataGridView.DataSource = result;
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnExit_PrimaryInfo_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnEdit_Relevant_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Relevant_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Relevant_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TeacherDV_Relevant_CBX_SelectedValueChanged(object sender, EventArgs e)
+        {
+            var pa = new
+            {
+                MaDV = TeacherDV_Relevant_CBX.SelectedValue.ToString(),
+            };
+
+            var toByDonVi = Helper.Query<Donvi_tolamviec_junction>(Helper.ConnectionString(), "QLGV.dbo.FindAllToByDonVi", pa).ToList();
+
+            LoadDataToCBX(TeacherTO_Relevant_CBX, toByDonVi, "Tento", "Mato");
+
+        }
+
+        private void TeacherDV_Relevant_CBX_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+           
         }
     }
 }

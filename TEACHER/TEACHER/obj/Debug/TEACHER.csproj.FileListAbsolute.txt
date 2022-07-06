@@ -55,3 +55,4 @@ C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.cs
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.csproj.CopyComplete
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.exe
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.pdb
+C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.csproj.AssemblyReference.cache
