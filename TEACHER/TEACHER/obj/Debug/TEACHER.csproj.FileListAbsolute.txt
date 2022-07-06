@@ -43,7 +43,6 @@ C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\bin\Debug\TEACHER.ex
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\bin\Debug\TEACHER.pdb
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.ChangePass.resources
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.Donvi.resources
-C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.Form1.resources
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.Form2.resources
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.HopDong.resources
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.Login.resources
