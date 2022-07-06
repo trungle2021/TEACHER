@@ -29,6 +29,7 @@ namespace TEACHER
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HopDong));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtLanKy = new System.Windows.Forms.NumericUpDown();
@@ -50,6 +51,7 @@ namespace TEACHER
             this.label1 = new System.Windows.Forms.Label();
             this.txtMahopdong = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -57,7 +59,6 @@ namespace TEACHER
             this.label10 = new System.Windows.Forms.Label();
             this.txtManv = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtLanKy)).BeginInit();
             this.panel2.SuspendLayout();
@@ -260,43 +261,64 @@ namespace TEACHER
             this.panel2.Size = new System.Drawing.Size(801, 53);
             this.panel2.TabIndex = 1;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(600, 10);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 35);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Làm Mới";
+            this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(708, 10);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(696, 10);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 35);
+            this.button4.Size = new System.Drawing.Size(74, 35);
             this.button4.TabIndex = 22;
             this.button4.Text = "Thoát";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(522, 10);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(502, 10);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(62, 35);
+            this.button3.Size = new System.Drawing.Size(75, 35);
             this.button3.TabIndex = 21;
             this.button3.Text = "Xóa";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(436, 10);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(409, 10);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 35);
+            this.button2.Size = new System.Drawing.Size(74, 35);
             this.button2.TabIndex = 20;
             this.button2.Text = "Sửa";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(339, 10);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(313, 10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 35);
+            this.button1.Size = new System.Drawing.Size(75, 35);
             this.button1.TabIndex = 19;
             this.button1.Text = "Thêm";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -325,16 +347,6 @@ namespace TEACHER
             this.dataGridView1.Size = new System.Drawing.Size(797, 149);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(613, 10);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(62, 35);
-            this.btnRefresh.TabIndex = 23;
-            this.btnRefresh.Text = "Làm Mới";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // HopDong
             // 
