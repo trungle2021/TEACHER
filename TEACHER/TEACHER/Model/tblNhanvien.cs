@@ -58,7 +58,7 @@ namespace TEACHER.Model
         public string Machucvu { get; set; }
 
         public DateTime? Ngayvaolam { get; set; }
-
+        public int? Heso { get; set; }
         public int? Thamnien { get; set; }
 
         [StringLength(10)]

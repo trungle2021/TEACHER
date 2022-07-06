@@ -69,11 +69,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.RelevantInfo = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnExit_Relevant = new System.Windows.Forms.Button();
+            this.btnDelete_Relevant = new System.Windows.Forms.Button();
+            this.btnEdit_Relevant = new System.Windows.Forms.Button();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.TeacherList_RelevantInfo_dataGridView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -171,6 +169,7 @@
             this.btnExit_PrimaryInfo.TabIndex = 38;
             this.btnExit_PrimaryInfo.Text = "Thoát";
             this.btnExit_PrimaryInfo.UseVisualStyleBackColor = true;
+            this.btnExit_PrimaryInfo.Click += new System.EventHandler(this.btnExit_PrimaryInfo_Click);
             // 
             // btnDelete_PrimaryInfo
             // 
@@ -180,6 +179,7 @@
             this.btnDelete_PrimaryInfo.TabIndex = 37;
             this.btnDelete_PrimaryInfo.Text = "Xóa";
             this.btnDelete_PrimaryInfo.UseVisualStyleBackColor = true;
+            this.btnDelete_PrimaryInfo.Click += new System.EventHandler(this.btnDelete_PrimaryInfo_Click);
             // 
             // btnEdit_PrimaryInfo
             // 
@@ -189,6 +189,7 @@
             this.btnEdit_PrimaryInfo.TabIndex = 35;
             this.btnEdit_PrimaryInfo.Text = "Sửa";
             this.btnEdit_PrimaryInfo.UseVisualStyleBackColor = true;
+            this.btnEdit_PrimaryInfo.Click += new System.EventHandler(this.btnEdit_PrimaryInfo_Click);
             // 
             // btnAdd_PrimaryInfo
             // 
@@ -198,6 +199,7 @@
             this.btnAdd_PrimaryInfo.TabIndex = 34;
             this.btnAdd_PrimaryInfo.Text = "Thêm";
             this.btnAdd_PrimaryInfo.UseVisualStyleBackColor = true;
+            this.btnAdd_PrimaryInfo.Click += new System.EventHandler(this.btnAdd_PrimaryInfo_Click);
             // 
             // Search_PrimaryInfo_TXT
             // 
@@ -205,7 +207,7 @@
             this.Search_PrimaryInfo_TXT.Name = "Search_PrimaryInfo_TXT";
             this.Search_PrimaryInfo_TXT.Size = new System.Drawing.Size(212, 20);
             this.Search_PrimaryInfo_TXT.TabIndex = 33;
-            this.Search_PrimaryInfo_TXT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Search_PrimaryInfo_TXT_KeyUp);
+            this.Search_PrimaryInfo_TXT.TextChanged += new System.EventHandler(this.Search_PrimaryInfo_TXT_TextChanged);
             // 
             // TeacherList_PrimaryInfo_dataGridView
             // 
@@ -516,11 +518,9 @@
             // 
             // RelevantInfo
             // 
-            this.RelevantInfo.Controls.Add(this.button1);
-            this.RelevantInfo.Controls.Add(this.button2);
-            this.RelevantInfo.Controls.Add(this.button3);
-            this.RelevantInfo.Controls.Add(this.button4);
-            this.RelevantInfo.Controls.Add(this.button5);
+            this.RelevantInfo.Controls.Add(this.btnExit_Relevant);
+            this.RelevantInfo.Controls.Add(this.btnDelete_Relevant);
+            this.RelevantInfo.Controls.Add(this.btnEdit_Relevant);
             this.RelevantInfo.Controls.Add(this.textBox14);
             this.RelevantInfo.Controls.Add(this.TeacherList_RelevantInfo_dataGridView);
             this.RelevantInfo.Controls.Add(this.panel2);
@@ -532,50 +532,35 @@
             this.RelevantInfo.Text = "Thông Tin Liên Quan";
             this.RelevantInfo.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnExit_Relevant
             // 
-            this.button1.Location = new System.Drawing.Point(725, 665);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExit_Relevant.Location = new System.Drawing.Point(554, 666);
+            this.btnExit_Relevant.Name = "btnExit_Relevant";
+            this.btnExit_Relevant.Size = new System.Drawing.Size(75, 23);
+            this.btnExit_Relevant.TabIndex = 45;
+            this.btnExit_Relevant.Text = "Thoát";
+            this.btnExit_Relevant.UseVisualStyleBackColor = true;
+            this.btnExit_Relevant.Click += new System.EventHandler(this.btnExit_Relevant_Click);
             // 
-            // button2
+            // btnDelete_Relevant
             // 
-            this.button2.Location = new System.Drawing.Point(629, 665);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelete_Relevant.Location = new System.Drawing.Point(453, 666);
+            this.btnDelete_Relevant.Name = "btnDelete_Relevant";
+            this.btnDelete_Relevant.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete_Relevant.TabIndex = 44;
+            this.btnDelete_Relevant.Text = "Xóa";
+            this.btnDelete_Relevant.UseVisualStyleBackColor = true;
+            this.btnDelete_Relevant.Click += new System.EventHandler(this.btnDelete_Relevant_Click);
             // 
-            // button3
+            // btnEdit_Relevant
             // 
-            this.button3.Location = new System.Drawing.Point(533, 665);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 43;
-            this.button3.Text = "Lưu";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(437, 665);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "Sửa";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(341, 665);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 41;
-            this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnEdit_Relevant.Location = new System.Drawing.Point(347, 665);
+            this.btnEdit_Relevant.Name = "btnEdit_Relevant";
+            this.btnEdit_Relevant.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit_Relevant.TabIndex = 42;
+            this.btnEdit_Relevant.Text = "Sửa";
+            this.btnEdit_Relevant.UseVisualStyleBackColor = true;
+            this.btnEdit_Relevant.Click += new System.EventHandler(this.btnEdit_Relevant_Click);
             // 
             // textBox14
             // 
@@ -715,6 +700,8 @@
             this.TeacherDV_Relevant_CBX.Name = "TeacherDV_Relevant_CBX";
             this.TeacherDV_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherDV_Relevant_CBX.TabIndex = 35;
+            this.TeacherDV_Relevant_CBX.SelectionChangeCommitted += new System.EventHandler(this.TeacherDV_Relevant_CBX_SelectionChangeCommitted);
+            this.TeacherDV_Relevant_CBX.SelectedValueChanged += new System.EventHandler(this.TeacherDV_Relevant_CBX_SelectedValueChanged);
             // 
             // label15
             // 
@@ -1076,11 +1063,9 @@
         private System.Windows.Forms.Button btnAdd_PrimaryInfo;
         private System.Windows.Forms.TextBox Search_PrimaryInfo_TXT;
         private System.Windows.Forms.DataGridView TeacherList_PrimaryInfo_dataGridView;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnExit_Relevant;
+        private System.Windows.Forms.Button btnDelete_Relevant;
+        private System.Windows.Forms.Button btnEdit_Relevant;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.DataGridView TeacherList_RelevantInfo_dataGridView;
         private System.Windows.Forms.Panel panel2;

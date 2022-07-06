@@ -35,22 +35,87 @@ namespace TEACHER.Service
 
         public void Add(tblNhanvien entity)
         {
-            throw new NotImplementedException();
+            var pa = new {
+                TenNV = entity.TenNV,
+                CMND = entity.CMND,
+                Ngaycap = entity.Ngaycap,
+                Tinhthanh = entity.Tinhthanh,
+                Ngaysinh = entity.Ngaysinh,
+                Gioitinh = entity.Gioitinh,
+                Nguyenquan = entity.Nguyenquan,
+                Dctamtru = entity.Dctamtru,
+                Email = entity.Email,
+                SDTrieng = entity.SDTrieng,
+                SDTnha = entity.SDTnha,
+                Tinhtranghonnhan = entity.Tinhtranghonnhan,
+                Tinhtranglamviec = entity.Tinhtranglamviec,
+                MaDV_To = entity.MaDV_To,
+                Machucvu = entity.Machucvu,
+                Ngayvaolam = entity.Ngayvaolam,
+                Thamnien = entity.Thamnien,
+                Matinhoc= entity.Matinhoc, 
+                Mangoaingu = entity.Mangoaingu,
+                Mabangcap = entity.Mabangcap,
+                Matongiao = entity.Matongiao,
+                Madantoc= entity.Madantoc
+
+            };
+
+            Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.AddTeacher", pa);
         }
 
-        public void Remove(tblNhanvien entity)
+        public void Remove(int Manv)
         {
-            throw new NotImplementedException();
+            var pa = new
+            {
+                Manv = Manv
+            };
+
+            Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.DeleteTeacher", pa);
         }
 
-        public void RemoveRange(IEnumerable<tblNhanvien> entities)
+
+        public void Update(tblNhanvien entity)
         {
-            throw new NotImplementedException();
+            var pa = new
+            {
+                Manv = entity.Manv,
+                TenNV = entity.TenNV,
+                CMND = entity.CMND,
+                Ngaycap = entity.Ngaycap,
+                Tinhthanh = entity.Tinhthanh,
+                Ngaysinh = entity.Ngaysinh,
+                Gioitinh = entity.Gioitinh,
+                Nguyenquan = entity.Nguyenquan,
+                Dctamtru = entity.Dctamtru,
+                Email = entity.Email,
+                SDTrieng = entity.SDTrieng,
+                SDTnha = entity.SDTnha,
+                Tinhtranghonnhan = entity.Tinhtranghonnhan,
+                Tinhtranglamviec = entity.Tinhtranglamviec,
+                MaDV_To = entity.MaDV_To,
+                Machucvu = entity.Machucvu,
+                Ngayvaolam = entity.Ngayvaolam,
+                Thamnien = entity.Thamnien,
+                Matinhoc = entity.Matinhoc,
+                Mangoaingu = entity.Mangoaingu,
+                Mabangcap = entity.Mabangcap,
+                Matongiao = entity.Matongiao,
+                Madantoc = entity.Madantoc
+
+            };
+
+            Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.UpdateTeacher", pa);
         }
 
-        public void Update(tblNhanvien teacher)
+
+        public IEnumerable<tblNhanvien> SearchByEmpID(int MaNV)
         {
-            throw new NotImplementedException();
+            var pa = new
+            {
+                MaNV = MaNV
+            };
+            return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.SearchEmpByID", pa).ToList();
         }
 
         public IEnumerable<tblNhanvien> SearchByCMND(string cmnd)
@@ -63,15 +128,7 @@ namespace TEACHER.Service
             throw new NotImplementedException();
         }
 
-        public IEnumerable<tblNhanvien> SearchByEmpID(int MaNV)
-        {
-            var pa = new
-            {
-                MaNV = MaNV
-            };
-            return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.SearchEmpByID", pa).ToList();
-        }
-
+       
         
     }
 }
