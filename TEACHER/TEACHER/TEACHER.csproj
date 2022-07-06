@@ -122,7 +122,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Repository\IDonVi.cs" />
     <Compile Include="Repository\IHopdong.cs" />
     <Compile Include="Repository\ILogin.cs" />
     <Compile Include="Repository\ITeacher.cs" />

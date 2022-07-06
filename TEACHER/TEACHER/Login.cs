@@ -14,12 +14,18 @@ namespace TEACHER
 {
     public partial class Login : Form
     {
-        public Login()
+
+        //pass du lieu qua main form
+        Form2 originalForm2;
+        public Login(Form2 incomingForm2)
         {
+            originalForm2 = incomingForm2;
             InitializeComponent();
         }
         private LoginImp service = new LoginImp();
+   
         private void button1_Click(object sender, EventArgs e)
+     
         {
             try
             {
@@ -38,9 +44,10 @@ namespace TEACHER
                     if (service.CheckLogin(user))
                     {
                         this.Hide();
-                        Form2 main = new Form2();
-                        main.ShowDialog();
-
+                        //phân Quyền
+                 
+                        originalForm2.name = user.Username;
+                        originalForm2.getName();
                     }
                     else
                     {

@@ -19,6 +19,8 @@ namespace TEACHER.Repository
 
         void GetAllAccount(DataGridView dgv);
         void GetAllUserName(ComboBox cbb);
+
+        tblNguoidung GetUser(string username);
     }
     
 
