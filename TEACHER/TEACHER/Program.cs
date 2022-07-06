@@ -7,7 +7,7 @@ using TEACHER.TeacherManagementForm;
 
 namespace TEACHER
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -17,6 +17,7 @@ namespace TEACHER
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             Application.Run(new Form2());
         }
     }

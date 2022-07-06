@@ -64,6 +64,15 @@ namespace TEACHER.Service
 
         }
 
+        public tblNguoidung GetUser(string username)
+        {
+            var dp = new DynamicParameters();
+
+            dp.Add("@Username", username);
+
+           return  Helper.Query<tblNguoidung>(Helper.ConnectionString(), "QLGV.dbo.getAccount", dp).FirstOrDefault();
+        }
+
         public void newaccount(tblNguoidung user)
         {
             var dp = new DynamicParameters();
