@@ -87,10 +87,11 @@ namespace TEACHER
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(325, 111);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 23);
+            this.button2.Size = new System.Drawing.Size(111, 35);
             this.button2.TabIndex = 6;
             this.button2.Text = "Hủy Bỏ";
             this.button2.UseVisualStyleBackColor = false;
@@ -99,12 +100,14 @@ namespace TEACHER
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(187, 111);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 23);
+            this.button1.Size = new System.Drawing.Size(98, 35);
             this.button1.TabIndex = 5;
             this.button1.Text = "Đăng Nhập";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

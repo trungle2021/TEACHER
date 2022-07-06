@@ -16,5 +16,26 @@ namespace TEACHER
         {
             InitializeComponent();
         }
+
+        Service.TeacherServiceImp service = new Service.TeacherServiceImp();
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                service.Search(radioMaNV, radioTenNV, radioCMND, dataGridView1, txtSearch, lblNotice);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

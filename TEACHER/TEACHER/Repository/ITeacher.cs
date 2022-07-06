@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TEACHER.Model;
+using System.Windows.Forms;
 
 
 namespace TEACHER.Repository
@@ -15,8 +16,9 @@ namespace TEACHER.Repository
         void Add(tblNhanvien entity);
         void Remove(int MaNV);
         void Update(tblNhanvien entity);
-        IEnumerable<tblNhanvien> SearchByCMND(string cmnd);
-        IEnumerable<tblNhanvien> SearchByName(string name);
+      
         IEnumerable<tblNhanvien> SearchByEmpID(int ID);
+
+        void Search(RadioButton raMaNV, RadioButton raTenNV, RadioButton raCMND, DataGridView dgv, TextBox search, Label notice);
     }
 }
