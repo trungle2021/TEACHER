@@ -6,8 +6,8 @@ namespace TEACHER.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("tblNhanvien")]
-    public partial class tblNhanvien
+
+    public partial class AllField
     {
       
         [Key]
@@ -52,29 +52,15 @@ namespace TEACHER.Model
         [StringLength(50)]
         public string Tinhtranglamviec { get; set; }
 
-        public int? MaDV_To { get; set; }
-
-        [StringLength(10)]
-        public string Machucvu { get; set; }
-
-        public DateTime? Ngayvaolam { get; set; }
-        public int? Thamnien { get; set; }
-
-        [StringLength(10)]
-        public string Matinhoc { get; set; }
-
-        [StringLength(10)]
-        public string Mangoaingu { get; set; }
-
-        [StringLength(10)]
-        public string Mabangcap { get; set; }
-
-        [StringLength(10)]
-        public string Matongiao { get; set; }
-
-        [StringLength(10)]
-        public string Madantoc { get; set; }
-
-        
+        public string Tentongiao { get; set; } = "";
+        public string Tenchucvu { get; set; } = "";
+        public string Tendantoc { get; set; } = "";
+        public string Tenbangcap { get; set; } = "";
+        public string TenDV { get; set; } = "";
+        public string Tento { get; set; } = "";
+        public string Tenngoaingu { get; set; } = "";
+        public string Tentinhoc { get; set; } = "";
+        public DateTime? Ngayvaolam { get; set; } = DateTime.Now;
+        public int? Thamnien { get; set; } = 0;
     }
 }

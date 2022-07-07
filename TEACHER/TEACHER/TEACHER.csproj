@@ -71,12 +71,6 @@
     <Compile Include="Donvi.Designer.cs">
       <DependentUpon>Donvi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +98,7 @@
     <Compile Include="Model\tblHopdong.cs" />
     <Compile Include="Model\tblNgoaingu.cs" />
     <Compile Include="Model\tblNguoidung.cs" />
+    <Compile Include="Model\tblAllField.cs" />
     <Compile Include="Model\tblNhanvien.cs" />
     <Compile Include="Model\tblTinhoc.cs" />
     <Compile Include="Model\tblTolamviec.cs" />
@@ -122,9 +117,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repository\IDonVi.cs" />
+    <Compile Include="Repository\IDonVi_To.cs" />
     <Compile Include="Repository\IHopdong.cs" />
     <Compile Include="Repository\ILogin.cs" />
     <Compile Include="Repository\ITeacher.cs" />
+    <Compile Include="Service\DonViServiceImp.cs" />
     <Compile Include="Service\HopdongImp.cs" />
     <Compile Include="Service\LoginImp.cs" />
     <Compile Include="Service\TeacherServiceImp.cs" />
@@ -139,9 +137,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Donvi.resx">
       <DependentUpon>Donvi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -165,6 +160,7 @@
     </EmbeddedResource>
     <None Include="bin\Debug\TEACHER.exe.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\TEACHER.Model.AllField.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

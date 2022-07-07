@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PrimaryInfo = new System.Windows.Forms.TabPage();
             this.btnExit_PrimaryInfo = new System.Windows.Forms.Button();
@@ -89,35 +90,43 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.TeacherWorkNum_Relevant_TXT = new System.Windows.Forms.TextBox();
             this.TeacherWorkAge_Relevant_TXT = new System.Windows.Forms.TextBox();
             this.TeacherName_Relevant_TXT = new System.Windows.Forms.TextBox();
             this.TeacherID_Relevant_TXT = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.RelativePerson = new System.Windows.Forms.TabPage();
-            this.TeacherList_Relative_Datagridview = new System.Windows.Forms.DataGridView();
-            this.RelativeList_Relative_Datagridview = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.RelativeName_Relative_TXT = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnSearchRelative = new System.Windows.Forms.Button();
-            this.btnDeleteRelative = new System.Windows.Forms.Button();
-            this.SearchRelativeName_Relative_TXT = new System.Windows.Forms.TextBox();
-            this.TeacherName_Relative_TXT = new System.Windows.Forms.TextBox();
-            this.TeacherID_Relative_TXT = new System.Windows.Forms.TextBox();
-            this.btnEditRelative = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.btnAddRelative = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
+            this.manvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cMNDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaycapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhthanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nguyenquanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dctamtruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTriengDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTnhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhtranghonnhanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhtranglamviecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tentongiaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenchucvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendantocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenbangcapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenngoainguDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tentinhocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayvaolamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thamnienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.PrimaryInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_PrimaryInfo_dataGridView)).BeginInit();
@@ -127,22 +136,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_RelevantInfo_dataGridView)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.RelativePerson.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TeacherList_Relative_Datagridview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RelativeList_Relative_Datagridview)).BeginInit();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.PrimaryInfo);
             this.tabControl1.Controls.Add(this.RelevantInfo);
-            this.tabControl1.Controls.Add(this.RelativePerson);
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(986, 727);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // PrimaryInfo
             // 
@@ -297,13 +303,13 @@
             this.rdFemale_PrimaryInfo.Name = "rdFemale_PrimaryInfo";
             this.rdFemale_PrimaryInfo.Size = new System.Drawing.Size(39, 17);
             this.rdFemale_PrimaryInfo.TabIndex = 28;
-            this.rdFemale_PrimaryInfo.TabStop = true;
             this.rdFemale_PrimaryInfo.Text = "Nữ";
             this.rdFemale_PrimaryInfo.UseVisualStyleBackColor = true;
             // 
             // rdMale_PrimaryInfo
             // 
             this.rdMale_PrimaryInfo.AutoSize = true;
+            this.rdMale_PrimaryInfo.Checked = true;
             this.rdMale_PrimaryInfo.Location = new System.Drawing.Point(119, 140);
             this.rdMale_PrimaryInfo.Name = "rdMale_PrimaryInfo";
             this.rdMale_PrimaryInfo.Size = new System.Drawing.Size(47, 17);
@@ -571,11 +577,40 @@
             // 
             // TeacherList_RelevantInfo_dataGridView
             // 
+            this.TeacherList_RelevantInfo_dataGridView.AllowUserToOrderColumns = true;
+            this.TeacherList_RelevantInfo_dataGridView.AutoGenerateColumns = false;
             this.TeacherList_RelevantInfo_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TeacherList_RelevantInfo_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.manvDataGridViewTextBoxColumn,
+            this.tenNVDataGridViewTextBoxColumn,
+            this.cMNDDataGridViewTextBoxColumn,
+            this.ngaycapDataGridViewTextBoxColumn,
+            this.tinhthanhDataGridViewTextBoxColumn,
+            this.ngaysinhDataGridViewTextBoxColumn,
+            this.gioitinhDataGridViewTextBoxColumn,
+            this.nguyenquanDataGridViewTextBoxColumn,
+            this.dctamtruDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.sDTriengDataGridViewTextBoxColumn,
+            this.sDTnhaDataGridViewTextBoxColumn,
+            this.tinhtranghonnhanDataGridViewTextBoxColumn,
+            this.tinhtranglamviecDataGridViewTextBoxColumn,
+            this.tentongiaoDataGridViewTextBoxColumn,
+            this.tenchucvuDataGridViewTextBoxColumn,
+            this.tendantocDataGridViewTextBoxColumn,
+            this.tenbangcapDataGridViewTextBoxColumn,
+            this.tenDVDataGridViewTextBoxColumn,
+            this.tentoDataGridViewTextBoxColumn,
+            this.tenngoainguDataGridViewTextBoxColumn,
+            this.tentinhocDataGridViewTextBoxColumn,
+            this.ngayvaolamDataGridViewTextBoxColumn,
+            this.thamnienDataGridViewTextBoxColumn});
+            this.TeacherList_RelevantInfo_dataGridView.DataSource = this.allFieldBindingSource;
             this.TeacherList_RelevantInfo_dataGridView.Location = new System.Drawing.Point(3, 330);
             this.TeacherList_RelevantInfo_dataGridView.Name = "TeacherList_RelevantInfo_dataGridView";
             this.TeacherList_RelevantInfo_dataGridView.Size = new System.Drawing.Size(972, 317);
             this.TeacherList_RelevantInfo_dataGridView.TabIndex = 39;
+            this.TeacherList_RelevantInfo_dataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TeacherList_RelevantInfo_dataGridView_MouseClick);
             // 
             // panel2
             // 
@@ -593,14 +628,12 @@
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.TeacherWorkNum_Relevant_TXT);
             this.panel2.Controls.Add(this.TeacherWorkAge_Relevant_TXT);
             this.panel2.Controls.Add(this.TeacherName_Relevant_TXT);
             this.panel2.Controls.Add(this.TeacherID_Relevant_TXT);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label25);
@@ -623,7 +656,7 @@
             // TeacherEthnic_Relevant_CBX
             // 
             this.TeacherEthnic_Relevant_CBX.FormattingEnabled = true;
-            this.TeacherEthnic_Relevant_CBX.Location = new System.Drawing.Point(491, 278);
+            this.TeacherEthnic_Relevant_CBX.Location = new System.Drawing.Point(491, 243);
             this.TeacherEthnic_Relevant_CBX.Name = "TeacherEthnic_Relevant_CBX";
             this.TeacherEthnic_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherEthnic_Relevant_CBX.TabIndex = 45;
@@ -631,7 +664,7 @@
             // TeacherOfficeSkillCer_Relevant_CBX
             // 
             this.TeacherOfficeSkillCer_Relevant_CBX.FormattingEnabled = true;
-            this.TeacherOfficeSkillCer_Relevant_CBX.Location = new System.Drawing.Point(491, 198);
+            this.TeacherOfficeSkillCer_Relevant_CBX.Location = new System.Drawing.Point(491, 163);
             this.TeacherOfficeSkillCer_Relevant_CBX.Name = "TeacherOfficeSkillCer_Relevant_CBX";
             this.TeacherOfficeSkillCer_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherOfficeSkillCer_Relevant_CBX.TabIndex = 44;
@@ -639,7 +672,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(381, 203);
+            this.label24.Location = new System.Drawing.Point(381, 168);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(45, 13);
             this.label24.TabIndex = 43;
@@ -664,7 +697,7 @@
             // TeacherReligion_Relevant_CBX
             // 
             this.TeacherReligion_Relevant_CBX.FormattingEnabled = true;
-            this.TeacherReligion_Relevant_CBX.Location = new System.Drawing.Point(491, 234);
+            this.TeacherReligion_Relevant_CBX.Location = new System.Drawing.Point(491, 199);
             this.TeacherReligion_Relevant_CBX.Name = "TeacherReligion_Relevant_CBX";
             this.TeacherReligion_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherReligion_Relevant_CBX.TabIndex = 39;
@@ -672,7 +705,7 @@
             // TeacherCer_Relevant_CBX
             // 
             this.TeacherCer_Relevant_CBX.FormattingEnabled = true;
-            this.TeacherCer_Relevant_CBX.Location = new System.Drawing.Point(491, 156);
+            this.TeacherCer_Relevant_CBX.Location = new System.Drawing.Point(491, 121);
             this.TeacherCer_Relevant_CBX.Name = "TeacherCer_Relevant_CBX";
             this.TeacherCer_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherCer_Relevant_CBX.TabIndex = 38;
@@ -680,7 +713,7 @@
             // TeacherLanguageCer_Relevant_CBX
             // 
             this.TeacherLanguageCer_Relevant_CBX.FormattingEnabled = true;
-            this.TeacherLanguageCer_Relevant_CBX.Location = new System.Drawing.Point(491, 120);
+            this.TeacherLanguageCer_Relevant_CBX.Location = new System.Drawing.Point(491, 85);
             this.TeacherLanguageCer_Relevant_CBX.Name = "TeacherLanguageCer_Relevant_CBX";
             this.TeacherLanguageCer_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherLanguageCer_Relevant_CBX.TabIndex = 37;
@@ -701,7 +734,6 @@
             this.TeacherDV_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherDV_Relevant_CBX.TabIndex = 35;
             this.TeacherDV_Relevant_CBX.SelectionChangeCommitted += new System.EventHandler(this.TeacherDV_Relevant_CBX_SelectionChangeCommitted);
-            this.TeacherDV_Relevant_CBX.SelectedValueChanged += new System.EventHandler(this.TeacherDV_Relevant_CBX_SelectedValueChanged);
             // 
             // label15
             // 
@@ -731,13 +763,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
-            // 
-            // TeacherWorkNum_Relevant_TXT
-            // 
-            this.TeacherWorkNum_Relevant_TXT.Location = new System.Drawing.Point(491, 83);
-            this.TeacherWorkNum_Relevant_TXT.Name = "TeacherWorkNum_Relevant_TXT";
-            this.TeacherWorkNum_Relevant_TXT.Size = new System.Drawing.Size(124, 20);
-            this.TeacherWorkNum_Relevant_TXT.TabIndex = 21;
             // 
             // TeacherWorkAge_Relevant_TXT
             // 
@@ -787,19 +812,10 @@
             this.label20.TabIndex = 8;
             this.label20.Text = "Thâm niên";
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(381, 86);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(37, 13);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Hệ Số";
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(381, 125);
+            this.label22.Location = new System.Drawing.Point(381, 90);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(58, 13);
             this.label22.TabIndex = 6;
@@ -808,7 +824,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(381, 164);
+            this.label23.Location = new System.Drawing.Point(381, 129);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(54, 13);
             this.label23.TabIndex = 5;
@@ -817,7 +833,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(381, 281);
+            this.label25.Location = new System.Drawing.Point(381, 246);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(49, 13);
             this.label25.TabIndex = 3;
@@ -826,7 +842,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(381, 242);
+            this.label26.Location = new System.Drawing.Point(381, 207);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(51, 13);
             this.label26.TabIndex = 2;
@@ -850,143 +866,153 @@
             this.label28.TabIndex = 0;
             this.label28.Text = "Mã nhân viên";
             // 
-            // RelativePerson
+            // manvDataGridViewTextBoxColumn
             // 
-            this.RelativePerson.Controls.Add(this.TeacherList_Relative_Datagridview);
-            this.RelativePerson.Controls.Add(this.RelativeList_Relative_Datagridview);
-            this.RelativePerson.Controls.Add(this.panel3);
-            this.RelativePerson.Location = new System.Drawing.Point(4, 22);
-            this.RelativePerson.Name = "RelativePerson";
-            this.RelativePerson.Padding = new System.Windows.Forms.Padding(3);
-            this.RelativePerson.Size = new System.Drawing.Size(978, 701);
-            this.RelativePerson.TabIndex = 2;
-            this.RelativePerson.Text = "Thân Nhân";
-            this.RelativePerson.UseVisualStyleBackColor = true;
+            this.manvDataGridViewTextBoxColumn.DataPropertyName = "Manv";
+            this.manvDataGridViewTextBoxColumn.HeaderText = "Manv";
+            this.manvDataGridViewTextBoxColumn.Name = "manvDataGridViewTextBoxColumn";
             // 
-            // TeacherList_Relative_Datagridview
+            // tenNVDataGridViewTextBoxColumn
             // 
-            this.TeacherList_Relative_Datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TeacherList_Relative_Datagridview.Location = new System.Drawing.Point(394, 9);
-            this.TeacherList_Relative_Datagridview.Name = "TeacherList_Relative_Datagridview";
-            this.TeacherList_Relative_Datagridview.Size = new System.Drawing.Size(581, 318);
-            this.TeacherList_Relative_Datagridview.TabIndex = 54;
+            this.tenNVDataGridViewTextBoxColumn.DataPropertyName = "TenNV";
+            this.tenNVDataGridViewTextBoxColumn.HeaderText = "TenNV";
+            this.tenNVDataGridViewTextBoxColumn.Name = "tenNVDataGridViewTextBoxColumn";
             // 
-            // RelativeList_Relative_Datagridview
+            // cMNDDataGridViewTextBoxColumn
             // 
-            this.RelativeList_Relative_Datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RelativeList_Relative_Datagridview.Location = new System.Drawing.Point(3, 333);
-            this.RelativeList_Relative_Datagridview.Name = "RelativeList_Relative_Datagridview";
-            this.RelativeList_Relative_Datagridview.Size = new System.Drawing.Size(972, 317);
-            this.RelativeList_Relative_Datagridview.TabIndex = 47;
+            this.cMNDDataGridViewTextBoxColumn.DataPropertyName = "CMND";
+            this.cMNDDataGridViewTextBoxColumn.HeaderText = "CMND";
+            this.cMNDDataGridViewTextBoxColumn.Name = "cMNDDataGridViewTextBoxColumn";
             // 
-            // panel3
+            // ngaycapDataGridViewTextBoxColumn
             // 
-            this.panel3.Controls.Add(this.RelativeName_Relative_TXT);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.btnSearchRelative);
-            this.panel3.Controls.Add(this.btnDeleteRelative);
-            this.panel3.Controls.Add(this.SearchRelativeName_Relative_TXT);
-            this.panel3.Controls.Add(this.TeacherName_Relative_TXT);
-            this.panel3.Controls.Add(this.TeacherID_Relative_TXT);
-            this.panel3.Controls.Add(this.btnEditRelative);
-            this.panel3.Controls.Add(this.label35);
-            this.panel3.Controls.Add(this.btnAddRelative);
-            this.panel3.Controls.Add(this.label36);
-            this.panel3.Location = new System.Drawing.Point(3, 9);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(385, 318);
-            this.panel3.TabIndex = 46;
+            this.ngaycapDataGridViewTextBoxColumn.DataPropertyName = "Ngaycap";
+            this.ngaycapDataGridViewTextBoxColumn.HeaderText = "Ngaycap";
+            this.ngaycapDataGridViewTextBoxColumn.Name = "ngaycapDataGridViewTextBoxColumn";
             // 
-            // RelativeName_Relative_TXT
+            // tinhthanhDataGridViewTextBoxColumn
             // 
-            this.RelativeName_Relative_TXT.Location = new System.Drawing.Point(119, 125);
-            this.RelativeName_Relative_TXT.Name = "RelativeName_Relative_TXT";
-            this.RelativeName_Relative_TXT.Size = new System.Drawing.Size(200, 20);
-            this.RelativeName_Relative_TXT.TabIndex = 17;
+            this.tinhthanhDataGridViewTextBoxColumn.DataPropertyName = "Tinhthanh";
+            this.tinhthanhDataGridViewTextBoxColumn.HeaderText = "Tinhthanh";
+            this.tinhthanhDataGridViewTextBoxColumn.Name = "tinhthanhDataGridViewTextBoxColumn";
             // 
-            // label16
+            // ngaysinhDataGridViewTextBoxColumn
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(25, 128);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 13);
-            this.label16.TabIndex = 16;
-            this.label16.Text = "Tên Thân Nhân";
+            this.ngaysinhDataGridViewTextBoxColumn.DataPropertyName = "Ngaysinh";
+            this.ngaysinhDataGridViewTextBoxColumn.HeaderText = "Ngaysinh";
+            this.ngaysinhDataGridViewTextBoxColumn.Name = "ngaysinhDataGridViewTextBoxColumn";
             // 
-            // btnSearchRelative
+            // gioitinhDataGridViewTextBoxColumn
             // 
-            this.btnSearchRelative.Location = new System.Drawing.Point(232, 238);
-            this.btnSearchRelative.Name = "btnSearchRelative";
-            this.btnSearchRelative.Size = new System.Drawing.Size(133, 23);
-            this.btnSearchRelative.TabIndex = 51;
-            this.btnSearchRelative.Text = "Tìm Kiếm Theo Tên";
-            this.btnSearchRelative.UseVisualStyleBackColor = true;
+            this.gioitinhDataGridViewTextBoxColumn.DataPropertyName = "Gioitinh";
+            this.gioitinhDataGridViewTextBoxColumn.HeaderText = "Gioitinh";
+            this.gioitinhDataGridViewTextBoxColumn.Name = "gioitinhDataGridViewTextBoxColumn";
             // 
-            // btnDeleteRelative
+            // nguyenquanDataGridViewTextBoxColumn
             // 
-            this.btnDeleteRelative.Location = new System.Drawing.Point(265, 181);
-            this.btnDeleteRelative.Name = "btnDeleteRelative";
-            this.btnDeleteRelative.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteRelative.TabIndex = 52;
-            this.btnDeleteRelative.Text = "Xóa";
-            this.btnDeleteRelative.UseVisualStyleBackColor = true;
+            this.nguyenquanDataGridViewTextBoxColumn.DataPropertyName = "Nguyenquan";
+            this.nguyenquanDataGridViewTextBoxColumn.HeaderText = "Nguyenquan";
+            this.nguyenquanDataGridViewTextBoxColumn.Name = "nguyenquanDataGridViewTextBoxColumn";
             // 
-            // SearchRelativeName_Relative_TXT
+            // dctamtruDataGridViewTextBoxColumn
             // 
-            this.SearchRelativeName_Relative_TXT.Location = new System.Drawing.Point(28, 241);
-            this.SearchRelativeName_Relative_TXT.Name = "SearchRelativeName_Relative_TXT";
-            this.SearchRelativeName_Relative_TXT.Size = new System.Drawing.Size(198, 20);
-            this.SearchRelativeName_Relative_TXT.TabIndex = 48;
+            this.dctamtruDataGridViewTextBoxColumn.DataPropertyName = "Dctamtru";
+            this.dctamtruDataGridViewTextBoxColumn.HeaderText = "Dctamtru";
+            this.dctamtruDataGridViewTextBoxColumn.Name = "dctamtruDataGridViewTextBoxColumn";
             // 
-            // TeacherName_Relative_TXT
+            // emailDataGridViewTextBoxColumn
             // 
-            this.TeacherName_Relative_TXT.Location = new System.Drawing.Point(119, 83);
-            this.TeacherName_Relative_TXT.Name = "TeacherName_Relative_TXT";
-            this.TeacherName_Relative_TXT.Size = new System.Drawing.Size(200, 20);
-            this.TeacherName_Relative_TXT.TabIndex = 15;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
-            // TeacherID_Relative_TXT
+            // sDTriengDataGridViewTextBoxColumn
             // 
-            this.TeacherID_Relative_TXT.Location = new System.Drawing.Point(119, 47);
-            this.TeacherID_Relative_TXT.Name = "TeacherID_Relative_TXT";
-            this.TeacherID_Relative_TXT.Size = new System.Drawing.Size(121, 20);
-            this.TeacherID_Relative_TXT.TabIndex = 14;
+            this.sDTriengDataGridViewTextBoxColumn.DataPropertyName = "SDTrieng";
+            this.sDTriengDataGridViewTextBoxColumn.HeaderText = "SDTrieng";
+            this.sDTriengDataGridViewTextBoxColumn.Name = "sDTriengDataGridViewTextBoxColumn";
             // 
-            // btnEditRelative
+            // sDTnhaDataGridViewTextBoxColumn
             // 
-            this.btnEditRelative.Location = new System.Drawing.Point(163, 181);
-            this.btnEditRelative.Name = "btnEditRelative";
-            this.btnEditRelative.Size = new System.Drawing.Size(75, 23);
-            this.btnEditRelative.TabIndex = 50;
-            this.btnEditRelative.Text = "Sửa";
-            this.btnEditRelative.UseVisualStyleBackColor = true;
+            this.sDTnhaDataGridViewTextBoxColumn.DataPropertyName = "SDTnha";
+            this.sDTnhaDataGridViewTextBoxColumn.HeaderText = "SDTnha";
+            this.sDTnhaDataGridViewTextBoxColumn.Name = "sDTnhaDataGridViewTextBoxColumn";
             // 
-            // label35
+            // tinhtranghonnhanDataGridViewTextBoxColumn
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(25, 86);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(76, 13);
-            this.label35.TabIndex = 1;
-            this.label35.Text = "Tên nhân viên";
+            this.tinhtranghonnhanDataGridViewTextBoxColumn.DataPropertyName = "Tinhtranghonnhan";
+            this.tinhtranghonnhanDataGridViewTextBoxColumn.HeaderText = "Tinhtranghonnhan";
+            this.tinhtranghonnhanDataGridViewTextBoxColumn.Name = "tinhtranghonnhanDataGridViewTextBoxColumn";
             // 
-            // btnAddRelative
+            // tinhtranglamviecDataGridViewTextBoxColumn
             // 
-            this.btnAddRelative.Location = new System.Drawing.Point(61, 181);
-            this.btnAddRelative.Name = "btnAddRelative";
-            this.btnAddRelative.Size = new System.Drawing.Size(75, 23);
-            this.btnAddRelative.TabIndex = 49;
-            this.btnAddRelative.Text = "Thêm";
-            this.btnAddRelative.UseVisualStyleBackColor = true;
+            this.tinhtranglamviecDataGridViewTextBoxColumn.DataPropertyName = "Tinhtranglamviec";
+            this.tinhtranglamviecDataGridViewTextBoxColumn.HeaderText = "Tinhtranglamviec";
+            this.tinhtranglamviecDataGridViewTextBoxColumn.Name = "tinhtranglamviecDataGridViewTextBoxColumn";
             // 
-            // label36
+            // tentongiaoDataGridViewTextBoxColumn
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(25, 47);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(72, 13);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Mã nhân viên";
+            this.tentongiaoDataGridViewTextBoxColumn.DataPropertyName = "Tentongiao";
+            this.tentongiaoDataGridViewTextBoxColumn.HeaderText = "Tentongiao";
+            this.tentongiaoDataGridViewTextBoxColumn.Name = "tentongiaoDataGridViewTextBoxColumn";
+            // 
+            // tenchucvuDataGridViewTextBoxColumn
+            // 
+            this.tenchucvuDataGridViewTextBoxColumn.DataPropertyName = "Tenchucvu";
+            this.tenchucvuDataGridViewTextBoxColumn.HeaderText = "Tenchucvu";
+            this.tenchucvuDataGridViewTextBoxColumn.Name = "tenchucvuDataGridViewTextBoxColumn";
+            // 
+            // tendantocDataGridViewTextBoxColumn
+            // 
+            this.tendantocDataGridViewTextBoxColumn.DataPropertyName = "Tendantoc";
+            this.tendantocDataGridViewTextBoxColumn.HeaderText = "Tendantoc";
+            this.tendantocDataGridViewTextBoxColumn.Name = "tendantocDataGridViewTextBoxColumn";
+            // 
+            // tenbangcapDataGridViewTextBoxColumn
+            // 
+            this.tenbangcapDataGridViewTextBoxColumn.DataPropertyName = "Tenbangcap";
+            this.tenbangcapDataGridViewTextBoxColumn.HeaderText = "Tenbangcap";
+            this.tenbangcapDataGridViewTextBoxColumn.Name = "tenbangcapDataGridViewTextBoxColumn";
+            // 
+            // tenDVDataGridViewTextBoxColumn
+            // 
+            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
+            this.tenDVDataGridViewTextBoxColumn.HeaderText = "TenDV";
+            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
+            // 
+            // tentoDataGridViewTextBoxColumn
+            // 
+            this.tentoDataGridViewTextBoxColumn.DataPropertyName = "Tento";
+            this.tentoDataGridViewTextBoxColumn.HeaderText = "Tento";
+            this.tentoDataGridViewTextBoxColumn.Name = "tentoDataGridViewTextBoxColumn";
+            // 
+            // tenngoainguDataGridViewTextBoxColumn
+            // 
+            this.tenngoainguDataGridViewTextBoxColumn.DataPropertyName = "Tenngoaingu";
+            this.tenngoainguDataGridViewTextBoxColumn.HeaderText = "Tenngoaingu";
+            this.tenngoainguDataGridViewTextBoxColumn.Name = "tenngoainguDataGridViewTextBoxColumn";
+            // 
+            // tentinhocDataGridViewTextBoxColumn
+            // 
+            this.tentinhocDataGridViewTextBoxColumn.DataPropertyName = "Tentinhoc";
+            this.tentinhocDataGridViewTextBoxColumn.HeaderText = "Tentinhoc";
+            this.tentinhocDataGridViewTextBoxColumn.Name = "tentinhocDataGridViewTextBoxColumn";
+            // 
+            // ngayvaolamDataGridViewTextBoxColumn
+            // 
+            this.ngayvaolamDataGridViewTextBoxColumn.DataPropertyName = "Ngayvaolam";
+            this.ngayvaolamDataGridViewTextBoxColumn.HeaderText = "Ngayvaolam";
+            this.ngayvaolamDataGridViewTextBoxColumn.Name = "ngayvaolamDataGridViewTextBoxColumn";
+            // 
+            // thamnienDataGridViewTextBoxColumn
+            // 
+            this.thamnienDataGridViewTextBoxColumn.DataPropertyName = "Thamnien";
+            this.thamnienDataGridViewTextBoxColumn.HeaderText = "Thamnien";
+            this.thamnienDataGridViewTextBoxColumn.Name = "thamnienDataGridViewTextBoxColumn";
+            // 
+            // allFieldBindingSource
+            // 
+            this.allFieldBindingSource.DataSource = typeof(TEACHER.Model.AllField);
             // 
             // TeacherManageForm
             // 
@@ -1010,11 +1036,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.RelativePerson.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TeacherList_Relative_Datagridview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RelativeList_Relative_Datagridview)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1024,7 +1046,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage PrimaryInfo;
         private System.Windows.Forms.TabPage RelevantInfo;
-        private System.Windows.Forms.TabPage RelativePerson;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1077,39 +1098,49 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox TeacherWorkNum_Relevant_TXT;
         private System.Windows.Forms.TextBox TeacherWorkAge_Relevant_TXT;
         private System.Windows.Forms.TextBox TeacherName_Relevant_TXT;
         private System.Windows.Forms.TextBox TeacherID_Relevant_TXT;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.DataGridView TeacherList_Relative_Datagridview;
-        private System.Windows.Forms.Button btnDeleteRelative;
-        private System.Windows.Forms.Button btnSearchRelative;
-        private System.Windows.Forms.Button btnEditRelative;
-        private System.Windows.Forms.Button btnAddRelative;
-        private System.Windows.Forms.TextBox SearchRelativeName_Relative_TXT;
-        private System.Windows.Forms.DataGridView RelativeList_Relative_Datagridview;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox TeacherName_Relative_TXT;
-        private System.Windows.Forms.TextBox TeacherID_Relative_TXT;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox RelativeName_Relative_TXT;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DateTimePicker Teacher_Relevant_DateStartWork_Datetime;
         private System.Windows.Forms.ComboBox TeacherOfficeSkillCer_Relevant_CBX;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox TeacherEthnic_Relevant_CBX;
         private System.Windows.Forms.ComboBox TeacherPosition_Relevant_CBX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manvDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cMNDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaycapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tinhthanhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nguyenquanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dctamtruDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDTriengDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDTnhaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tinhtranghonnhanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tinhtranglamviecDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tentongiaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenchucvuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tendantocDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenbangcapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenDVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenngoainguDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tentinhocDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayvaolamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hesoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thamnienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource allFieldBindingSource;
     }
 }

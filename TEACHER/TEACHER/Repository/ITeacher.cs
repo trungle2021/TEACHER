@@ -11,10 +11,10 @@ namespace TEACHER.Repository
     public interface ITeacher 
     {
         tblNhanvien GetOne(int MaNV);
-        IEnumerable<tblNhanvien> GetAll();
+        IEnumerable<AllField> GetAll();
         void Add(tblNhanvien entity);
         void Remove(int MaNV);
-        void Update(tblNhanvien entity);
+        void Update(tblNhanvien entity); 
         IEnumerable<tblNhanvien> SearchByCMND(string cmnd);
         IEnumerable<tblNhanvien> SearchByName(string name);
         IEnumerable<tblNhanvien> SearchByEmpID(int ID);
