@@ -25,10 +25,10 @@ namespace TEACHER.Service
             return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.GetOneTeacher", pa).FirstOrDefault();
         }
 
-        public IEnumerable<tblNhanvien> GetAll()
+        public IEnumerable<AllField> GetAll()
         {
 
-            return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.GetAllTeacher").ToList();
+            return Helper.Query<AllField>(Helper.ConnectionString(), "QLGV.dbo.GetAllTeacher").ToList();
             
             
         }
@@ -160,6 +160,11 @@ namespace TEACHER.Service
                 }
             }
 
+        }
+
+        IEnumerable<tblNhanvien> ITeacher.GetAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }
