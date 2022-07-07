@@ -91,6 +91,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Donvi_tolamviec_junction.cs" />
+    <Compile Include="Model\tblAllField.cs" />
     <Compile Include="Model\tblBangcap.cs" />
     <Compile Include="Model\tblChucvu.cs" />
     <Compile Include="Model\tblDantoc.cs" />

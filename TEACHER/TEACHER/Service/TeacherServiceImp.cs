@@ -161,5 +161,10 @@ namespace TEACHER.Service
             }
 
         }
+
+        IEnumerable<tblNhanvien> ITeacher.GetAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

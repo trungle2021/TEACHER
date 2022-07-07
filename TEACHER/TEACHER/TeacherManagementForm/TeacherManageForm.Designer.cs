@@ -73,8 +73,33 @@
             this.btnExit_Relevant = new System.Windows.Forms.Button();
             this.btnDelete_Relevant = new System.Windows.Forms.Button();
             this.btnEdit_Relevant = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.Search_Relevant_TXT = new System.Windows.Forms.TextBox();
             this.TeacherList_RelevantInfo_dataGridView = new System.Windows.Forms.DataGridView();
+            this.manvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cMNDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaycapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhthanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nguyenquanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dctamtruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTriengDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTnhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhtranghonnhanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhtranglamviecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tentongiaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenchucvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendantocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenbangcapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenngoainguDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tentinhocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayvaolamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thamnienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.TeacherPosition_Relevant_CBX = new System.Windows.Forms.ComboBox();
             this.TeacherEthnic_Relevant_CBX = new System.Windows.Forms.ComboBox();
@@ -102,31 +127,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.manvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cMNDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaycapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhthanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nguyenquanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dctamtruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDTriengDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDTnhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhtranghonnhanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhtranglamviecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentongiaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenchucvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tendantocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenbangcapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenngoainguDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentinhocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayvaolamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thamnienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.allFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.PrimaryInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_PrimaryInfo_dataGridView)).BeginInit();
@@ -134,9 +134,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.RelevantInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_RelevantInfo_dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -527,7 +527,7 @@
             this.RelevantInfo.Controls.Add(this.btnExit_Relevant);
             this.RelevantInfo.Controls.Add(this.btnDelete_Relevant);
             this.RelevantInfo.Controls.Add(this.btnEdit_Relevant);
-            this.RelevantInfo.Controls.Add(this.textBox14);
+            this.RelevantInfo.Controls.Add(this.Search_Relevant_TXT);
             this.RelevantInfo.Controls.Add(this.TeacherList_RelevantInfo_dataGridView);
             this.RelevantInfo.Controls.Add(this.panel2);
             this.RelevantInfo.Location = new System.Drawing.Point(4, 22);
@@ -568,12 +568,13 @@
             this.btnEdit_Relevant.UseVisualStyleBackColor = true;
             this.btnEdit_Relevant.Click += new System.EventHandler(this.btnEdit_Relevant_Click);
             // 
-            // textBox14
+            // Search_Relevant_TXT
             // 
-            this.textBox14.Location = new System.Drawing.Point(86, 666);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(212, 20);
-            this.textBox14.TabIndex = 40;
+            this.Search_Relevant_TXT.Location = new System.Drawing.Point(86, 666);
+            this.Search_Relevant_TXT.Name = "Search_Relevant_TXT";
+            this.Search_Relevant_TXT.Size = new System.Drawing.Size(212, 20);
+            this.Search_Relevant_TXT.TabIndex = 40;
+            this.Search_Relevant_TXT.TextChanged += new System.EventHandler(this.Search_Relevant_TXT_TextChanged);
             // 
             // TeacherList_RelevantInfo_dataGridView
             // 
@@ -611,6 +612,154 @@
             this.TeacherList_RelevantInfo_dataGridView.Size = new System.Drawing.Size(972, 317);
             this.TeacherList_RelevantInfo_dataGridView.TabIndex = 39;
             this.TeacherList_RelevantInfo_dataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TeacherList_RelevantInfo_dataGridView_MouseClick);
+            // 
+            // manvDataGridViewTextBoxColumn
+            // 
+            this.manvDataGridViewTextBoxColumn.DataPropertyName = "Manv";
+            this.manvDataGridViewTextBoxColumn.HeaderText = "Manv";
+            this.manvDataGridViewTextBoxColumn.Name = "manvDataGridViewTextBoxColumn";
+            // 
+            // tenNVDataGridViewTextBoxColumn
+            // 
+            this.tenNVDataGridViewTextBoxColumn.DataPropertyName = "TenNV";
+            this.tenNVDataGridViewTextBoxColumn.HeaderText = "TenNV";
+            this.tenNVDataGridViewTextBoxColumn.Name = "tenNVDataGridViewTextBoxColumn";
+            // 
+            // cMNDDataGridViewTextBoxColumn
+            // 
+            this.cMNDDataGridViewTextBoxColumn.DataPropertyName = "CMND";
+            this.cMNDDataGridViewTextBoxColumn.HeaderText = "CMND";
+            this.cMNDDataGridViewTextBoxColumn.Name = "cMNDDataGridViewTextBoxColumn";
+            // 
+            // ngaycapDataGridViewTextBoxColumn
+            // 
+            this.ngaycapDataGridViewTextBoxColumn.DataPropertyName = "Ngaycap";
+            this.ngaycapDataGridViewTextBoxColumn.HeaderText = "Ngaycap";
+            this.ngaycapDataGridViewTextBoxColumn.Name = "ngaycapDataGridViewTextBoxColumn";
+            // 
+            // tinhthanhDataGridViewTextBoxColumn
+            // 
+            this.tinhthanhDataGridViewTextBoxColumn.DataPropertyName = "Tinhthanh";
+            this.tinhthanhDataGridViewTextBoxColumn.HeaderText = "Tinhthanh";
+            this.tinhthanhDataGridViewTextBoxColumn.Name = "tinhthanhDataGridViewTextBoxColumn";
+            // 
+            // ngaysinhDataGridViewTextBoxColumn
+            // 
+            this.ngaysinhDataGridViewTextBoxColumn.DataPropertyName = "Ngaysinh";
+            this.ngaysinhDataGridViewTextBoxColumn.HeaderText = "Ngaysinh";
+            this.ngaysinhDataGridViewTextBoxColumn.Name = "ngaysinhDataGridViewTextBoxColumn";
+            // 
+            // gioitinhDataGridViewTextBoxColumn
+            // 
+            this.gioitinhDataGridViewTextBoxColumn.DataPropertyName = "Gioitinh";
+            this.gioitinhDataGridViewTextBoxColumn.HeaderText = "Gioitinh";
+            this.gioitinhDataGridViewTextBoxColumn.Name = "gioitinhDataGridViewTextBoxColumn";
+            // 
+            // nguyenquanDataGridViewTextBoxColumn
+            // 
+            this.nguyenquanDataGridViewTextBoxColumn.DataPropertyName = "Nguyenquan";
+            this.nguyenquanDataGridViewTextBoxColumn.HeaderText = "Nguyenquan";
+            this.nguyenquanDataGridViewTextBoxColumn.Name = "nguyenquanDataGridViewTextBoxColumn";
+            // 
+            // dctamtruDataGridViewTextBoxColumn
+            // 
+            this.dctamtruDataGridViewTextBoxColumn.DataPropertyName = "Dctamtru";
+            this.dctamtruDataGridViewTextBoxColumn.HeaderText = "Dctamtru";
+            this.dctamtruDataGridViewTextBoxColumn.Name = "dctamtruDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // sDTriengDataGridViewTextBoxColumn
+            // 
+            this.sDTriengDataGridViewTextBoxColumn.DataPropertyName = "SDTrieng";
+            this.sDTriengDataGridViewTextBoxColumn.HeaderText = "SDTrieng";
+            this.sDTriengDataGridViewTextBoxColumn.Name = "sDTriengDataGridViewTextBoxColumn";
+            // 
+            // sDTnhaDataGridViewTextBoxColumn
+            // 
+            this.sDTnhaDataGridViewTextBoxColumn.DataPropertyName = "SDTnha";
+            this.sDTnhaDataGridViewTextBoxColumn.HeaderText = "SDTnha";
+            this.sDTnhaDataGridViewTextBoxColumn.Name = "sDTnhaDataGridViewTextBoxColumn";
+            // 
+            // tinhtranghonnhanDataGridViewTextBoxColumn
+            // 
+            this.tinhtranghonnhanDataGridViewTextBoxColumn.DataPropertyName = "Tinhtranghonnhan";
+            this.tinhtranghonnhanDataGridViewTextBoxColumn.HeaderText = "Tinhtranghonnhan";
+            this.tinhtranghonnhanDataGridViewTextBoxColumn.Name = "tinhtranghonnhanDataGridViewTextBoxColumn";
+            // 
+            // tinhtranglamviecDataGridViewTextBoxColumn
+            // 
+            this.tinhtranglamviecDataGridViewTextBoxColumn.DataPropertyName = "Tinhtranglamviec";
+            this.tinhtranglamviecDataGridViewTextBoxColumn.HeaderText = "Tinhtranglamviec";
+            this.tinhtranglamviecDataGridViewTextBoxColumn.Name = "tinhtranglamviecDataGridViewTextBoxColumn";
+            // 
+            // tentongiaoDataGridViewTextBoxColumn
+            // 
+            this.tentongiaoDataGridViewTextBoxColumn.DataPropertyName = "Tentongiao";
+            this.tentongiaoDataGridViewTextBoxColumn.HeaderText = "Tentongiao";
+            this.tentongiaoDataGridViewTextBoxColumn.Name = "tentongiaoDataGridViewTextBoxColumn";
+            // 
+            // tenchucvuDataGridViewTextBoxColumn
+            // 
+            this.tenchucvuDataGridViewTextBoxColumn.DataPropertyName = "Tenchucvu";
+            this.tenchucvuDataGridViewTextBoxColumn.HeaderText = "Tenchucvu";
+            this.tenchucvuDataGridViewTextBoxColumn.Name = "tenchucvuDataGridViewTextBoxColumn";
+            // 
+            // tendantocDataGridViewTextBoxColumn
+            // 
+            this.tendantocDataGridViewTextBoxColumn.DataPropertyName = "Tendantoc";
+            this.tendantocDataGridViewTextBoxColumn.HeaderText = "Tendantoc";
+            this.tendantocDataGridViewTextBoxColumn.Name = "tendantocDataGridViewTextBoxColumn";
+            // 
+            // tenbangcapDataGridViewTextBoxColumn
+            // 
+            this.tenbangcapDataGridViewTextBoxColumn.DataPropertyName = "Tenbangcap";
+            this.tenbangcapDataGridViewTextBoxColumn.HeaderText = "Tenbangcap";
+            this.tenbangcapDataGridViewTextBoxColumn.Name = "tenbangcapDataGridViewTextBoxColumn";
+            // 
+            // tenDVDataGridViewTextBoxColumn
+            // 
+            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
+            this.tenDVDataGridViewTextBoxColumn.HeaderText = "TenDV";
+            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
+            // 
+            // tentoDataGridViewTextBoxColumn
+            // 
+            this.tentoDataGridViewTextBoxColumn.DataPropertyName = "Tento";
+            this.tentoDataGridViewTextBoxColumn.HeaderText = "Tento";
+            this.tentoDataGridViewTextBoxColumn.Name = "tentoDataGridViewTextBoxColumn";
+            // 
+            // tenngoainguDataGridViewTextBoxColumn
+            // 
+            this.tenngoainguDataGridViewTextBoxColumn.DataPropertyName = "Tenngoaingu";
+            this.tenngoainguDataGridViewTextBoxColumn.HeaderText = "Tenngoaingu";
+            this.tenngoainguDataGridViewTextBoxColumn.Name = "tenngoainguDataGridViewTextBoxColumn";
+            // 
+            // tentinhocDataGridViewTextBoxColumn
+            // 
+            this.tentinhocDataGridViewTextBoxColumn.DataPropertyName = "Tentinhoc";
+            this.tentinhocDataGridViewTextBoxColumn.HeaderText = "Tentinhoc";
+            this.tentinhocDataGridViewTextBoxColumn.Name = "tentinhocDataGridViewTextBoxColumn";
+            // 
+            // ngayvaolamDataGridViewTextBoxColumn
+            // 
+            this.ngayvaolamDataGridViewTextBoxColumn.DataPropertyName = "Ngayvaolam";
+            this.ngayvaolamDataGridViewTextBoxColumn.HeaderText = "Ngayvaolam";
+            this.ngayvaolamDataGridViewTextBoxColumn.Name = "ngayvaolamDataGridViewTextBoxColumn";
+            // 
+            // thamnienDataGridViewTextBoxColumn
+            // 
+            this.thamnienDataGridViewTextBoxColumn.DataPropertyName = "Thamnien";
+            this.thamnienDataGridViewTextBoxColumn.HeaderText = "Thamnien";
+            this.thamnienDataGridViewTextBoxColumn.Name = "thamnienDataGridViewTextBoxColumn";
+            // 
+            // allFieldBindingSource
+            // 
+            this.allFieldBindingSource.DataSource = typeof(TEACHER.Model.AllField);
             // 
             // panel2
             // 
@@ -866,154 +1015,6 @@
             this.label28.TabIndex = 0;
             this.label28.Text = "Mã nhân viên";
             // 
-            // manvDataGridViewTextBoxColumn
-            // 
-            this.manvDataGridViewTextBoxColumn.DataPropertyName = "Manv";
-            this.manvDataGridViewTextBoxColumn.HeaderText = "Manv";
-            this.manvDataGridViewTextBoxColumn.Name = "manvDataGridViewTextBoxColumn";
-            // 
-            // tenNVDataGridViewTextBoxColumn
-            // 
-            this.tenNVDataGridViewTextBoxColumn.DataPropertyName = "TenNV";
-            this.tenNVDataGridViewTextBoxColumn.HeaderText = "TenNV";
-            this.tenNVDataGridViewTextBoxColumn.Name = "tenNVDataGridViewTextBoxColumn";
-            // 
-            // cMNDDataGridViewTextBoxColumn
-            // 
-            this.cMNDDataGridViewTextBoxColumn.DataPropertyName = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.HeaderText = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.Name = "cMNDDataGridViewTextBoxColumn";
-            // 
-            // ngaycapDataGridViewTextBoxColumn
-            // 
-            this.ngaycapDataGridViewTextBoxColumn.DataPropertyName = "Ngaycap";
-            this.ngaycapDataGridViewTextBoxColumn.HeaderText = "Ngaycap";
-            this.ngaycapDataGridViewTextBoxColumn.Name = "ngaycapDataGridViewTextBoxColumn";
-            // 
-            // tinhthanhDataGridViewTextBoxColumn
-            // 
-            this.tinhthanhDataGridViewTextBoxColumn.DataPropertyName = "Tinhthanh";
-            this.tinhthanhDataGridViewTextBoxColumn.HeaderText = "Tinhthanh";
-            this.tinhthanhDataGridViewTextBoxColumn.Name = "tinhthanhDataGridViewTextBoxColumn";
-            // 
-            // ngaysinhDataGridViewTextBoxColumn
-            // 
-            this.ngaysinhDataGridViewTextBoxColumn.DataPropertyName = "Ngaysinh";
-            this.ngaysinhDataGridViewTextBoxColumn.HeaderText = "Ngaysinh";
-            this.ngaysinhDataGridViewTextBoxColumn.Name = "ngaysinhDataGridViewTextBoxColumn";
-            // 
-            // gioitinhDataGridViewTextBoxColumn
-            // 
-            this.gioitinhDataGridViewTextBoxColumn.DataPropertyName = "Gioitinh";
-            this.gioitinhDataGridViewTextBoxColumn.HeaderText = "Gioitinh";
-            this.gioitinhDataGridViewTextBoxColumn.Name = "gioitinhDataGridViewTextBoxColumn";
-            // 
-            // nguyenquanDataGridViewTextBoxColumn
-            // 
-            this.nguyenquanDataGridViewTextBoxColumn.DataPropertyName = "Nguyenquan";
-            this.nguyenquanDataGridViewTextBoxColumn.HeaderText = "Nguyenquan";
-            this.nguyenquanDataGridViewTextBoxColumn.Name = "nguyenquanDataGridViewTextBoxColumn";
-            // 
-            // dctamtruDataGridViewTextBoxColumn
-            // 
-            this.dctamtruDataGridViewTextBoxColumn.DataPropertyName = "Dctamtru";
-            this.dctamtruDataGridViewTextBoxColumn.HeaderText = "Dctamtru";
-            this.dctamtruDataGridViewTextBoxColumn.Name = "dctamtruDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // sDTriengDataGridViewTextBoxColumn
-            // 
-            this.sDTriengDataGridViewTextBoxColumn.DataPropertyName = "SDTrieng";
-            this.sDTriengDataGridViewTextBoxColumn.HeaderText = "SDTrieng";
-            this.sDTriengDataGridViewTextBoxColumn.Name = "sDTriengDataGridViewTextBoxColumn";
-            // 
-            // sDTnhaDataGridViewTextBoxColumn
-            // 
-            this.sDTnhaDataGridViewTextBoxColumn.DataPropertyName = "SDTnha";
-            this.sDTnhaDataGridViewTextBoxColumn.HeaderText = "SDTnha";
-            this.sDTnhaDataGridViewTextBoxColumn.Name = "sDTnhaDataGridViewTextBoxColumn";
-            // 
-            // tinhtranghonnhanDataGridViewTextBoxColumn
-            // 
-            this.tinhtranghonnhanDataGridViewTextBoxColumn.DataPropertyName = "Tinhtranghonnhan";
-            this.tinhtranghonnhanDataGridViewTextBoxColumn.HeaderText = "Tinhtranghonnhan";
-            this.tinhtranghonnhanDataGridViewTextBoxColumn.Name = "tinhtranghonnhanDataGridViewTextBoxColumn";
-            // 
-            // tinhtranglamviecDataGridViewTextBoxColumn
-            // 
-            this.tinhtranglamviecDataGridViewTextBoxColumn.DataPropertyName = "Tinhtranglamviec";
-            this.tinhtranglamviecDataGridViewTextBoxColumn.HeaderText = "Tinhtranglamviec";
-            this.tinhtranglamviecDataGridViewTextBoxColumn.Name = "tinhtranglamviecDataGridViewTextBoxColumn";
-            // 
-            // tentongiaoDataGridViewTextBoxColumn
-            // 
-            this.tentongiaoDataGridViewTextBoxColumn.DataPropertyName = "Tentongiao";
-            this.tentongiaoDataGridViewTextBoxColumn.HeaderText = "Tentongiao";
-            this.tentongiaoDataGridViewTextBoxColumn.Name = "tentongiaoDataGridViewTextBoxColumn";
-            // 
-            // tenchucvuDataGridViewTextBoxColumn
-            // 
-            this.tenchucvuDataGridViewTextBoxColumn.DataPropertyName = "Tenchucvu";
-            this.tenchucvuDataGridViewTextBoxColumn.HeaderText = "Tenchucvu";
-            this.tenchucvuDataGridViewTextBoxColumn.Name = "tenchucvuDataGridViewTextBoxColumn";
-            // 
-            // tendantocDataGridViewTextBoxColumn
-            // 
-            this.tendantocDataGridViewTextBoxColumn.DataPropertyName = "Tendantoc";
-            this.tendantocDataGridViewTextBoxColumn.HeaderText = "Tendantoc";
-            this.tendantocDataGridViewTextBoxColumn.Name = "tendantocDataGridViewTextBoxColumn";
-            // 
-            // tenbangcapDataGridViewTextBoxColumn
-            // 
-            this.tenbangcapDataGridViewTextBoxColumn.DataPropertyName = "Tenbangcap";
-            this.tenbangcapDataGridViewTextBoxColumn.HeaderText = "Tenbangcap";
-            this.tenbangcapDataGridViewTextBoxColumn.Name = "tenbangcapDataGridViewTextBoxColumn";
-            // 
-            // tenDVDataGridViewTextBoxColumn
-            // 
-            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
-            this.tenDVDataGridViewTextBoxColumn.HeaderText = "TenDV";
-            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
-            // 
-            // tentoDataGridViewTextBoxColumn
-            // 
-            this.tentoDataGridViewTextBoxColumn.DataPropertyName = "Tento";
-            this.tentoDataGridViewTextBoxColumn.HeaderText = "Tento";
-            this.tentoDataGridViewTextBoxColumn.Name = "tentoDataGridViewTextBoxColumn";
-            // 
-            // tenngoainguDataGridViewTextBoxColumn
-            // 
-            this.tenngoainguDataGridViewTextBoxColumn.DataPropertyName = "Tenngoaingu";
-            this.tenngoainguDataGridViewTextBoxColumn.HeaderText = "Tenngoaingu";
-            this.tenngoainguDataGridViewTextBoxColumn.Name = "tenngoainguDataGridViewTextBoxColumn";
-            // 
-            // tentinhocDataGridViewTextBoxColumn
-            // 
-            this.tentinhocDataGridViewTextBoxColumn.DataPropertyName = "Tentinhoc";
-            this.tentinhocDataGridViewTextBoxColumn.HeaderText = "Tentinhoc";
-            this.tentinhocDataGridViewTextBoxColumn.Name = "tentinhocDataGridViewTextBoxColumn";
-            // 
-            // ngayvaolamDataGridViewTextBoxColumn
-            // 
-            this.ngayvaolamDataGridViewTextBoxColumn.DataPropertyName = "Ngayvaolam";
-            this.ngayvaolamDataGridViewTextBoxColumn.HeaderText = "Ngayvaolam";
-            this.ngayvaolamDataGridViewTextBoxColumn.Name = "ngayvaolamDataGridViewTextBoxColumn";
-            // 
-            // thamnienDataGridViewTextBoxColumn
-            // 
-            this.thamnienDataGridViewTextBoxColumn.DataPropertyName = "Thamnien";
-            this.thamnienDataGridViewTextBoxColumn.HeaderText = "Thamnien";
-            this.thamnienDataGridViewTextBoxColumn.Name = "thamnienDataGridViewTextBoxColumn";
-            // 
-            // allFieldBindingSource
-            // 
-            this.allFieldBindingSource.DataSource = typeof(TEACHER.Model.AllField);
-            // 
             // TeacherManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1033,10 +1034,10 @@
             this.RelevantInfo.ResumeLayout(false);
             this.RelevantInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_RelevantInfo_dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1087,7 +1088,7 @@
         private System.Windows.Forms.Button btnExit_Relevant;
         private System.Windows.Forms.Button btnDelete_Relevant;
         private System.Windows.Forms.Button btnEdit_Relevant;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox Search_Relevant_TXT;
         private System.Windows.Forms.DataGridView TeacherList_RelevantInfo_dataGridView;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox TeacherReligion_Relevant_CBX;
