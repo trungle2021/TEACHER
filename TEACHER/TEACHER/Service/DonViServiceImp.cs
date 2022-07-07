@@ -25,42 +25,49 @@ namespace TEACHER.Service
 
         public IEnumerable<tblDSDonvi> GetAll()
         {
-          return  Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.FindAllDonvi").ToList();
+          return  Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.FindAllDonvi");
         }
         
-        public tblDSDonvi GetOne(int MaDV)
+        public tblDSDonvi GetOne(string MaDV)
         {
             var pa = new
             {
                 MaDV = MaDV
             };
-          return Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.GetOneDonvi",pa).FirstOrDefault();
+          return Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.SearchDonvi",pa).FirstOrDefault();
 
         }
 
-        public void Remove(int MaDV)
+        public void Remove(string MaDV)
         {
             var pa = new
             {
                 MaDV = MaDV
             };
-            Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.GetOneDonvi", pa);
+            Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.DeleteDonvi", pa);
         }
-      
 
-        public IEnumerable<tblDSDonvi> SearchByEmpID(int ID)
+        public List<tblTolamviec> SearchToFromDonvi(string MaDV)
         {
-            throw new NotImplementedException();
-        }
+            var pa = new
+            {
+                MaDV = MaDV
+            };
 
-        public IEnumerable<tblDSDonvi> SearchByName(string name)
-        {
-            throw new NotImplementedException();
+         return  Helper.Query<tblTolamviec>(Helper.ConnectionString(), "QLGV.dbo.SearchToFromDonvi", pa).ToList();
         }
-
+        
         public void Update(tblDSDonvi entity)
         {
-            throw new NotImplementedException();
+            var pa = new
+            {
+                MaDV = entity.MaDV,
+                TenDV = entity.TenDV,
+                Ghichu = entity.Ghichu
+
+            };
+
+            Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.UpdateDonvi", pa);
         }
     }
 }
