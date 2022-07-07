@@ -118,17 +118,48 @@ namespace TEACHER.Service
             return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.SearchEmpByID", pa).ToList();
         }
 
-        public IEnumerable<tblNhanvien> SearchByCMND(string cmnd)
+     
+        public void Search(RadioButton raMaNV, RadioButton raTenNV, RadioButton raCMND, DataGridView dgv, TextBox search, Label notice)
         {
-            throw new NotImplementedException();
-        }
+            if (string.IsNullOrEmpty(search.Text))
+            {
+                MessageBox.Show("Mời Nhập Từ Khóa Cần tìm!");
+            }
+            else
+            {
+                if (raMaNV.Checked)
+                {
+                    var pa = new
+                    {
+                        MaNV = search.Text
+                    };
+                    var data = Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.SearchEmpByID", pa);
 
-        public IEnumerable<tblNhanvien> SearchByName(string name)
-        {
-            throw new NotImplementedException();
-        }
+                    notice.Text = "Kết Quả Tìm Thấy " + search.Text + " là :" + data.Count().ToString();
+                    dgv.DataSource = data;
+                }
+                else if (raTenNV.Checked)
+                {
+                    var pa = new
+                    {
+                        Name = search.Text
+                    };
+                    var data = Helper.Query<tblNhanvien>(Helper.ConnectionString(), "SearchEmpByName", pa);
+                    notice.Text = "Kết Quả Tìm Thấy " + search.Text + " là :" + data.Count().ToString();
+                    dgv.DataSource = data;
+                }
+                else
+                {
+                    var pa = new
+                    {
+                        CMND = search.Text
+                    };
+                    var data = Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.SearchEmpByCMND", pa);
+                    notice.Text = "Kết Quả Tìm Thấy " + search.Text + " là :" + data.Count().ToString();
+                    dgv.DataSource = data;
+                }
+            }
 
-       
-        
+        }
     }
 }

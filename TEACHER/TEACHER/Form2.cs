@@ -137,6 +137,7 @@ namespace TEACHER
                         tsThongtin2.Enabled = true;
                         tsThongtin3.Enabled = true;
                         tsThongtin4.Enabled = true;
+                        tsSearch.Enabled = true;
                     }
                     else {
                         tsNhanVien.Enabled = true;
@@ -146,6 +147,7 @@ namespace TEACHER
                         tsThongtin2.Enabled = false;
                         tsThongtin3.Enabled = false;
                         tsThongtin4.Enabled = false;
+                        tsSearch.Enabled = true;
                     }
                 }
                 catch (Exception)
@@ -206,6 +208,14 @@ namespace TEACHER
         private void Form2_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void tsSearch_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            SearchForm searchform = new SearchForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(searchform);
+            searchform.Show();
         }
     }
 }

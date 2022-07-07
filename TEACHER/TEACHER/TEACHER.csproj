@@ -98,7 +98,6 @@
     <Compile Include="Model\tblHopdong.cs" />
     <Compile Include="Model\tblNgoaingu.cs" />
     <Compile Include="Model\tblNguoidung.cs" />
-    <Compile Include="Model\tblAllField.cs" />
     <Compile Include="Model\tblNhanvien.cs" />
     <Compile Include="Model\tblTinhoc.cs" />
     <Compile Include="Model\tblTolamviec.cs" />
@@ -122,6 +121,12 @@
     <Compile Include="Repository\IHopdong.cs" />
     <Compile Include="Repository\ILogin.cs" />
     <Compile Include="Repository\ITeacher.cs" />
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service\DonViServiceImp.cs" />
     <Compile Include="Service\HopdongImp.cs" />
     <Compile Include="Service\LoginImp.cs" />
@@ -155,12 +160,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherManagementForm\TeacherManageForm.resx">
       <DependentUpon>TeacherManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\TEACHER.exe.config" />
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\TEACHER.Model.AllField.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
