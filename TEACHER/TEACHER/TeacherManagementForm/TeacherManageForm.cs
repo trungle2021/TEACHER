@@ -48,7 +48,6 @@ namespace TEACHER.TeacherManagementForm
             
             TeacherList_PrimaryInfo_dataGridView.DataSource = teacher_list;
             TeacherList_RelevantInfo_dataGridView.DataSource = teacher_list;
-            TeacherList_Relative_Datagridview.DataSource = teacher_list;
 
             LoadDataToCBX(TeacherDV_Relevant_CBX, donvi_list, "TenDV", "MaDV");
             LoadDataToCBX(TeacherPosition_Relevant_CBX, chucvu_list, "Tenchucvu", "Machucvu");
@@ -139,14 +138,7 @@ namespace TEACHER.TeacherManagementForm
             MaDanToc.Text = _Tendantoc;
 
         }
-        public void LoadDataFromDGVToRelativeInfo(DataGridView dgvRelative,TextBox Manv,TextBox Tennv)
-        {
-            int row = dgvRelative.CurrentCell.RowIndex;
-            string _Manv = dgvRelative.Rows[row].Cells[0].Value.ToString();
-            string _Tennv = dgvRelative.Rows[row].Cells[1].Value.ToString();
-            Manv.Text = _Manv;
-            Tennv.Text = _Tennv;
-        }
+        
         private void TeacherList_PrimaryInfo_dataGridView_MouseClick(object sender, MouseEventArgs e)
         {
             LoadDataFromDGVToPrimaryInfo(TeacherList_PrimaryInfo_dataGridView,
@@ -181,10 +173,7 @@ namespace TEACHER.TeacherManagementForm
                 TeacherReligion_Relevant_CBX,
                 TeacherEthnic_Relevant_CBX);
         }
-        private void TeacherList_Relative_Datagridview_MouseClick(object sender, MouseEventArgs e)
-        {
-            LoadDataFromDGVToRelativeInfo(TeacherList_Relative_Datagridview, TeacherID_Relative_TXT, TeacherName_Relative_TXT);
-        }
+       
         private void Search_PrimaryInfo_TXT_TextChanged(object sender, EventArgs e)
         {
             try
@@ -421,7 +410,6 @@ namespace TEACHER.TeacherManagementForm
             var teacher_list = teacher_service.GetAll();
             TeacherList_PrimaryInfo_dataGridView.DataSource = teacher_list;
             TeacherList_RelevantInfo_dataGridView.DataSource = teacher_list;
-            TeacherList_Relative_Datagridview.DataSource = teacher_list;
         }
 
         private void TeacherDV_Relevant_CBX_SelectionChangeCommitted(object sender, EventArgs e)
@@ -436,7 +424,41 @@ namespace TEACHER.TeacherManagementForm
             LoadDataToCBX(TeacherTO_Relevant_CBX, toByDonVi, "Tento", "Mato");
         }
 
-       
+        private void Search_Relevant_TXT_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string text_Search = Search_Relevant_TXT.Text.ToString();
+                if (string.IsNullOrEmpty(text_Search) && string.IsNullOrWhiteSpace(text_Search))
+                {
+                    IEnumerable<AllField> teacher = teacher_service.GetAll();
+                    TeacherList_RelevantInfo_dataGridView.DataSource = teacher;
+                }
+                else
+                {
+                    bool parseTextSearch = int.TryParse(text_Search, out int result);
+                    IEnumerable<tblNhanvien> teacher = teacher_service.SearchByEmpID(result);
+                    if (teacher.Count() < 1 || parseTextSearch == false)
+                    {
+                        IEnumerable<AllField> _teacher = teacher_service.GetAll();
+                        TeacherList_RelevantInfo_dataGridView.DataSource = _teacher;
+                        MessageBox.Show("Không Tìm Thấy Dữ Liệu Phù Hợp");
+
+                    }
+                    else
+                    {
+                        TeacherList_RelevantInfo_dataGridView.DataSource = teacher;
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
 
