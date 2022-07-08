@@ -8,9 +8,9 @@ using TEACHER.Repository;
 
 namespace TEACHER.Service
 {
-    public class DonViServiceImp : IDonVi
+    public class DonViServiceImp : IChucVu
     {
-        public void Add(tblDSDonvi entity)
+        public void Add(tblChucvu entity)
         {
             var pa = new
             {
@@ -20,21 +20,21 @@ namespace TEACHER.Service
 
             };
 
-            Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.AddDonvi", pa);
+            Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.AddDonvi", pa);
         }
 
-        public IEnumerable<tblDSDonvi> GetAll()
+        public IEnumerable<tblChucvu> GetAll()
         {
-          return  Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.FindAllDonvi").ToList();
+          return  Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.FindAllDonvi").ToList();
         }
         
-        public tblDSDonvi GetOne(int MaDV)
+        public tblChucvu GetOne(int MaDV)
         {
             var pa = new
             {
                 MaDV = MaDV
             };
-          return Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.GetOneDonvi",pa).FirstOrDefault();
+          return Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetOneDonvi",pa).FirstOrDefault();
 
         }
 
@@ -44,21 +44,21 @@ namespace TEACHER.Service
             {
                 MaDV = MaDV
             };
-            Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.GetOneDonvi", pa);
+            Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetOneDonvi", pa);
         }
       
 
-        public IEnumerable<tblDSDonvi> SearchByEmpID(int ID)
+        public IEnumerable<tblChucvu> SearchByEmpID(int ID)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<tblDSDonvi> SearchByName(string name)
+        public IEnumerable<tblChucvu> SearchByName(string name)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(tblDSDonvi entity)
+        public void Update(tblChucvu entity)
         {
             throw new NotImplementedException();
         }

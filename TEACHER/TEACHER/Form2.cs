@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TEACHER.Service;
+using TEACHER.TeacherManagementForm;
 
 namespace TEACHER
 {
@@ -216,6 +217,16 @@ namespace TEACHER
             this.pContainer.Panel2.Controls.Clear();
             this.pContainer.Panel2.Controls.Add(searchform);
             searchform.Show();
+        }
+
+        private void tsNhanVien_Click(object sender, EventArgs e)
+        {
+            TeacherManageForm teacher_manage_form = new TeacherManageForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(teacher_manage_form);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            teacher_manage_form.Show();
         }
     }
 }

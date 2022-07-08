@@ -18,7 +18,7 @@ namespace TEACHER
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new TeacherManageForm());
+            Application.Run(new Form2());
         }
     }
 }

@@ -10,7 +10,6 @@ namespace TEACHER.Model
     public partial class tblChucvu
     {
        
-
         [Key]
         [StringLength(10)]
         public string Machucvu { get; set; }

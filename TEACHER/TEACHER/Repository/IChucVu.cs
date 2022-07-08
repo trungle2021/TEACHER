@@ -7,15 +7,12 @@ using TEACHER.Model;
 
 namespace TEACHER.Repository
 {
-    public interface IDonvi
+    public interface IChucVu
     {
-        tblChucvu GetOne(int MaNV);
+        tblChucvu GetOne(string Machucvu);
         IEnumerable<tblChucvu> GetAll();
         void Add(tblChucvu entity);
-        void Remove(int MaDV);
+        void Remove(string Machucvu);
         void Update(tblChucvu entity);
-     
-        IEnumerable<tblChucvu> SearchByName(string name);
-        IEnumerable<tblChucvu> SearchByEmpID(int ID);
     }
 }
