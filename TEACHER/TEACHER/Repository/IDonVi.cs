@@ -13,9 +13,6 @@ namespace TEACHER.Repository
 
         void Add(tblDSDonvi entity);
 
-
-
-
        IEnumerable<tblDSDonvi> GetAll();
 
 

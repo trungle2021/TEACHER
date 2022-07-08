@@ -8,9 +8,9 @@ using TEACHER.Repository;
 
 namespace TEACHER.Service
 {
-    public class DonViServiceImp : IChucVu
+    public class DonViServiceImp : IDonVi
     {
-        public void Add(tblChucvu entity)
+        public void Add(tblDSDonvi entity)
         {
             var pa = new
             {
@@ -20,10 +20,12 @@ namespace TEACHER.Service
 
             };
 
-            Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.AddDonvi", pa);
+            Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.AddDonvi", pa);
         }
 
-        public IEnumerable<tblChucvu> GetAll()
+     
+
+        public IEnumerable<tblDSDonvi> GetAll()
         {
 
           return  Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.FindAllDonvi");
@@ -79,5 +81,7 @@ namespace TEACHER.Service
 
             Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.UpdateDonvi", pa);
         }
+
+       
     }
 }
