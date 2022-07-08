@@ -25,42 +25,59 @@ namespace TEACHER.Service
 
         public IEnumerable<tblChucvu> GetAll()
         {
-          return  Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.FindAllDonvi").ToList();
+
+          return  Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.FindAllDonvi");
         }
         
-        public tblChucvu GetOne(int MaDV)
+        public tblDSDonvi GetOne(string MaDV)
+
         {
             var pa = new
             {
                 MaDV = MaDV
             };
-          return Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetOneDonvi",pa).FirstOrDefault();
+
+          return Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.SearchDonvi",pa).FirstOrDefault();
+
 
         }
 
-        public void Remove(int MaDV)
+        public void Remove(string MaDV)
         {
             var pa = new
             {
                 MaDV = MaDV
             };
-            Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetOneDonvi", pa);
-        }
-      
 
-        public IEnumerable<tblChucvu> SearchByEmpID(int ID)
-        {
-            throw new NotImplementedException();
+            Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.DeleteDonvi", pa);
+
         }
 
-        public IEnumerable<tblChucvu> SearchByName(string name)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Update(tblChucvu entity)
+        public List<tblTolamviec> SearchToFromDonvi(string MaDV)
+
         {
-            throw new NotImplementedException();
+            var pa = new
+            {
+                MaDV = MaDV
+            };
+
+
+         return  Helper.Query<tblTolamviec>(Helper.ConnectionString(), "QLGV.dbo.SearchToFromDonvi", pa).ToList();
+        }
+        
+        public void Update(tblDSDonvi entity)
+
+        {
+            var pa = new
+            {
+                MaDV = entity.MaDV,
+                TenDV = entity.TenDV,
+                Ghichu = entity.Ghichu
+
+            };
+
+            Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.UpdateDonvi", pa);
         }
     }
 }

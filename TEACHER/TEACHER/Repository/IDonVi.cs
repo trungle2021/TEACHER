@@ -7,15 +7,26 @@ using TEACHER.Model;
 
 namespace TEACHER.Repository
 {
-    public interface IDonvi
+
+   public interface IDonVi
     {
-        tblChucvu GetOne(int MaNV);
-        IEnumerable<tblChucvu> GetAll();
-        void Add(tblChucvu entity);
-        void Remove(int MaDV);
-        void Update(tblChucvu entity);
-     
-        IEnumerable<tblChucvu> SearchByName(string name);
-        IEnumerable<tblChucvu> SearchByEmpID(int ID);
+
+        void Add(tblDSDonvi entity);
+
+
+
+
+       IEnumerable<tblDSDonvi> GetAll();
+
+
+       tblDSDonvi GetOne(string MaDV);
+
+
+         void Remove(string MaDV);
+
+        void Update(tblDSDonvi entity);
+
+        List<tblTolamviec> SearchToFromDonvi(string MaDV);
+
     }
 }

@@ -219,6 +219,7 @@ namespace TEACHER
             searchform.Show();
         }
 
+
         private void tsNhanVien_Click(object sender, EventArgs e)
         {
             TeacherManageForm teacher_manage_form = new TeacherManageForm() { TopLevel = false, TopMost = true };
@@ -227,6 +228,30 @@ namespace TEACHER
             this.pContainer.Panel2.Size = new Size(0, 0);
             this.pContainer.Panel2.AutoSize = true;
             teacher_manage_form.Show();
+
+        private void tsThongtin1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            HopDong hopdong = new HopDong() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(hopdong);
+            hopdong.Show();
+        }
+
+        private void tsThongtin2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            Donvi hopdong = new Donvi() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(hopdong);
+            hopdong.Show();
+        }
+
+        private void tsThongtin3_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            TeacherManagementForm.TeacherManageForm hopdong = new TeacherManagementForm.TeacherManageForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(hopdong);
+            hopdong.Show();
+
         }
     }
 }
