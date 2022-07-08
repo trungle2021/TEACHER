@@ -65,6 +65,12 @@
     <Compile Include="ChangePass.Designer.cs">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChucVuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChucVuForm.Designer.cs">
+      <DependentUpon>ChucVuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Donvi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repository\IChucVu.cs" />
     <Compile Include="Repository\IDonVi.cs" />
     <Compile Include="Repository\IDonVi_To.cs" />
     <Compile Include="Repository\IHopdong.cs" />
@@ -128,6 +135,7 @@
     <Compile Include="SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\ChucVuServiceImp.cs" />
     <Compile Include="Service\DonViServiceImp.cs" />
     <Compile Include="Service\HopdongImp.cs" />
     <Compile Include="Service\LoginImp.cs" />
@@ -140,6 +148,9 @@
     </Compile>
     <EmbeddedResource Include="ChangePass.resx">
       <DependentUpon>ChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChucVuForm.resx">
+      <DependentUpon>ChucVuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Donvi.resx">
       <DependentUpon>Donvi.cs</DependentUpon>
@@ -169,6 +180,8 @@
     </EmbeddedResource>
     <None Include="bin\Debug\TEACHER.exe.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\TEACHER.Model.AllField.datasource" />
+    <None Include="Properties\DataSources\TEACHER.Model.tblChucvu.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,17 +212,39 @@
     <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
     <Content Include="bin\Debug\EntityFramework.xml" />
     <None Include="bin\Debug\images\6195700 %281%29.png" />
+    <Content Include="bin\Debug\images\20x20\addicon.png" />
+    <Content Include="bin\Debug\images\20x20\AddUser.jpg" />
+    <Content Include="bin\Debug\images\20x20\deleteicon.jpg" />
+    <Content Include="bin\Debug\images\20x20\iconsearch.jpg" />
+    <Content Include="bin\Debug\images\20x20\refresh.jpg" />
+    <Content Include="bin\Debug\images\20x20\refreshicon.jpg" />
+    <Content Include="bin\Debug\images\20x20\saveicon.png" />
+    <Content Include="bin\Debug\images\add.png" />
+    <Content Include="bin\Debug\images\addicon.png" />
     <Content Include="bin\Debug\images\AddUser.jpg" />
     <Content Include="bin\Debug\images\Contract.png" />
     <None Include="bin\Debug\images\delete-icon-16x16-8.jpg" />
+    <Content Include="bin\Debug\images\delete.jpg" />
+    <Content Include="bin\Debug\images\deleteicon.jpg" />
     <Content Include="bin\Debug\images\Exit.png" />
+    <Content Include="bin\Debug\images\exiticon.jpg" />
+    <Content Include="bin\Debug\images\iconsearch.jpg" />
+    <None Include="bin\Debug\images\images.jpg" />
+    <Content Include="bin\Debug\images\login - Copy.png" />
     <Content Include="bin\Debug\images\login-big %281%29.png" />
     <Content Include="bin\Debug\images\login-big %282%29.png" />
     <Content Include="bin\Debug\images\login-big.png" />
     <Content Include="bin\Debug\images\login.png" />
     <None Include="bin\Debug\images\multi-user-man-and-girl-27082.jpg" />
+    <Content Include="bin\Debug\images\loginicon.png" />
     <Content Include="bin\Debug\images\MultiEmp.jpg" />
     <Content Include="bin\Debug\images\Position_Level.png" />
+    <Content Include="bin\Debug\images\refresh.jpg" />
+    <Content Include="bin\Debug\images\refreshicon.jpg" />
+    <Content Include="bin\Debug\images\save.png" />
+    <Content Include="bin\Debug\images\saveicon.png" />
+    <Content Include="bin\Debug\images\search.jpg" />
+    <Content Include="bin\Debug\images\searchbutton.jpg" />
     <Content Include="bin\Debug\images\user_add.png" />
     <None Include="bin\Debug\images\windows-error-icon.jpg" />
     <None Include="bin\Debug\images\windows-error-icon-24.jpg" />

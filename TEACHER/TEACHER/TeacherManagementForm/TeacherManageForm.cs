@@ -17,6 +17,7 @@ namespace TEACHER.TeacherManagementForm
         private TeacherServiceImp teacher_service = new TeacherServiceImp();
         private DonViServiceImp donvi_service = new DonViServiceImp();
 
+
         public TeacherManageForm()
         {
             WindowState = FormWindowState.Maximized;
@@ -25,37 +26,54 @@ namespace TEACHER.TeacherManagementForm
 
         public bool checkGenderChecked(RadioButton rdMale, RadioButton rdFemale)
         {
-            if (rdMale.Checked)
+            try
             {
-                return true;
+                if (rdMale.Checked)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+               
             }
-            else
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }
 
         private void TeacherManageForm_Load(object sender, EventArgs e)
         {
-            var teacher_list = teacher_service.GetAll();
-            var donvi_list = donvi_service.GetAll();
-            var chucvu_list = Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetAllChucvu").ToList();
-            var ngoaingu_list = Helper.Query<tblNgoaingu>(Helper.ConnectionString(), "QLGV.dbo.GetAllNgoaingu").ToList();
-            var tinhoc_list = Helper.Query<tblTinhoc>(Helper.ConnectionString(), "QLGV.dbo.GetAllTinhoc").ToList();
-            var tongiao_list = Helper.Query<tblTongiao>(Helper.ConnectionString(), "QLGV.dbo.GetAllTongiao").ToList();
-            var dantoc_list = Helper.Query<tblDantoc>(Helper.ConnectionString(), "QLGV.dbo.GetAllDantoc").ToList();
-            var bangcap_list = Helper.Query<tblBangcap>(Helper.ConnectionString(), "QLGV.dbo.GetAllBangcap").ToList();
-            
-            TeacherList_PrimaryInfo_dataGridView.DataSource = teacher_list;
-            TeacherList_RelevantInfo_dataGridView.DataSource = teacher_list;
+            try
+            {
+                var teacher_list = teacher_service.GetAll();
+                var donvi_list = donvi_service.GetAll();
+                var chucvu_list = Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetAllChucvu").ToList();
+                var ngoaingu_list = Helper.Query<tblNgoaingu>(Helper.ConnectionString(), "QLGV.dbo.GetAllNgoaingu").ToList();
+                var tinhoc_list = Helper.Query<tblTinhoc>(Helper.ConnectionString(), "QLGV.dbo.GetAllTinhoc").ToList();
+                var tongiao_list = Helper.Query<tblTongiao>(Helper.ConnectionString(), "QLGV.dbo.GetAllTongiao").ToList();
+                var dantoc_list = Helper.Query<tblDantoc>(Helper.ConnectionString(), "QLGV.dbo.GetAllDantoc").ToList();
+                var bangcap_list = Helper.Query<tblBangcap>(Helper.ConnectionString(), "QLGV.dbo.GetAllBangcap").ToList();
 
-            LoadDataToCBX(TeacherDV_Relevant_CBX, donvi_list, "TenDV", "MaDV");
-            LoadDataToCBX(TeacherPosition_Relevant_CBX, chucvu_list, "Tenchucvu", "Machucvu");
-            LoadDataToCBX(TeacherLanguageCer_Relevant_CBX, ngoaingu_list, "Tenngoaingu", "Mangoaingu");
-            LoadDataToCBX(TeacherOfficeSkillCer_Relevant_CBX, tinhoc_list, "Tentinhoc", "Matinhoc");
-            LoadDataToCBX(TeacherReligion_Relevant_CBX, tongiao_list, "Tentongiao", "Matongiao");
-            LoadDataToCBX(TeacherEthnic_Relevant_CBX, dantoc_list, "Tendantoc", "Madantoc");
-            LoadDataToCBX(TeacherCer_Relevant_CBX, bangcap_list, "Tenbangcap", "Mabangcap");
+                TeacherList_PrimaryInfo_dataGridView.DataSource = teacher_list;
+                TeacherList_RelevantInfo_dataGridView.DataSource = teacher_list;
+
+                LoadDataToCBX(TeacherDV_Relevant_CBX, donvi_list, "TenDV", "MaDV");
+                LoadDataToCBX(TeacherPosition_Relevant_CBX, chucvu_list, "Tenchucvu", "Machucvu");
+                LoadDataToCBX(TeacherLanguageCer_Relevant_CBX, ngoaingu_list, "Tenngoaingu", "Mangoaingu");
+                LoadDataToCBX(TeacherOfficeSkillCer_Relevant_CBX, tinhoc_list, "Tentinhoc", "Matinhoc");
+                LoadDataToCBX(TeacherReligion_Relevant_CBX, tongiao_list, "Tentongiao", "Matongiao");
+                LoadDataToCBX(TeacherEthnic_Relevant_CBX, dantoc_list, "Tendantoc", "Madantoc");
+                LoadDataToCBX(TeacherCer_Relevant_CBX, bangcap_list, "Tenbangcap", "Mabangcap");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void LoadDataToCBX<T>(ComboBox combobox, IEnumerable<T> list, string displayMember, string valueMember)
@@ -66,82 +84,98 @@ namespace TEACHER.TeacherManagementForm
         }
         public void LoadDataFromDGVToPrimaryInfo(DataGridView dgvPrimaryInfo,TextBox Manv,TextBox Tennv,TextBox CMND,DateTimePicker NgayCap,TextBox Tinhthanh,DateTimePicker Ngaysinh,TextBox NguyenQuan,TextBox DCTamTru,TextBox Email,TextBox SDTRieng,TextBox SDTNha,TextBox TinhTrangHonNhan,TextBox TinhTrangLamViec)
         {
-            int row = dgvPrimaryInfo.CurrentCell.RowIndex;
-            string _Manv = dgvPrimaryInfo.Rows[row].Cells[0].Value.ToString();
-            string _Tennv = dgvPrimaryInfo.Rows[row].Cells[1].Value.ToString();
-            string _CMND = dgvPrimaryInfo.Rows[row].Cells[2].Value.ToString();
-            string _NgayCap = dgvPrimaryInfo.Rows[row].Cells[3].Value.ToString();
-            string _Tinhthanh = dgvPrimaryInfo.Rows[row].Cells[4].Value.ToString();
-            string _Ngaysinh = dgvPrimaryInfo.Rows[row].Cells[5].Value.ToString();
-            string _Gioitinh = dgvPrimaryInfo.Rows[row].Cells[6].Value.ToString();
-            string _NguyenQuan = dgvPrimaryInfo.Rows[row].Cells[7].Value.ToString();
-            string _DCTamTru = dgvPrimaryInfo.Rows[row].Cells[8].Value.ToString();
-            string _Email = dgvPrimaryInfo.Rows[row].Cells[9].Value.ToString();
-            string _SDTRieng = dgvPrimaryInfo.Rows[row].Cells[10].Value.ToString();
-            string _SDTNha = dgvPrimaryInfo.Rows[row].Cells[11].Value.ToString();
-            string _TinhTrangHonNhan = dgvPrimaryInfo.Rows[row].Cells[12].Value.ToString();
-            string _TinhTrangLamViec = dgvPrimaryInfo.Rows[row].Cells[13].Value.ToString();
-
-            Manv.Text = _Manv;
-            Tennv.Text = _Tennv;
-            CMND.Text = _CMND;
-            NgayCap.Text = _NgayCap;
-            Tinhthanh.Text = _Tinhthanh;
-            Ngaysinh.Text = _Ngaysinh;
-
-            if (_Gioitinh == "Nam")
+            try
             {
-                rdMale_PrimaryInfo.Checked = true;
-                rdFemale_PrimaryInfo.Checked = false;
+                int row = dgvPrimaryInfo.CurrentCell.RowIndex;
+                string _Manv = dgvPrimaryInfo.Rows[row].Cells[0].Value.ToString();
+                string _Tennv = dgvPrimaryInfo.Rows[row].Cells[1].Value.ToString();
+                string _CMND = dgvPrimaryInfo.Rows[row].Cells[2].Value.ToString();
+                string _NgayCap = dgvPrimaryInfo.Rows[row].Cells[3].Value.ToString();
+                string _Tinhthanh = dgvPrimaryInfo.Rows[row].Cells[4].Value.ToString();
+                string _Ngaysinh = dgvPrimaryInfo.Rows[row].Cells[5].Value.ToString();
+                string _Gioitinh = dgvPrimaryInfo.Rows[row].Cells[6].Value.ToString();
+                string _NguyenQuan = dgvPrimaryInfo.Rows[row].Cells[7].Value.ToString();
+                string _DCTamTru = dgvPrimaryInfo.Rows[row].Cells[8].Value.ToString();
+                string _Email = dgvPrimaryInfo.Rows[row].Cells[9].Value.ToString();
+                string _SDTRieng = dgvPrimaryInfo.Rows[row].Cells[10].Value.ToString();
+                string _SDTNha = dgvPrimaryInfo.Rows[row].Cells[11].Value.ToString();
+                string _TinhTrangHonNhan = dgvPrimaryInfo.Rows[row].Cells[12].Value.ToString();
+                string _TinhTrangLamViec = dgvPrimaryInfo.Rows[row].Cells[13].Value.ToString();
+
+                Manv.Text = _Manv;
+                Tennv.Text = _Tennv;
+                CMND.Text = _CMND;
+                NgayCap.Text = _NgayCap;
+                Tinhthanh.Text = _Tinhthanh;
+                Ngaysinh.Text = _Ngaysinh;
+
+                if (_Gioitinh == "Nam")
+                {
+                    rdMale_PrimaryInfo.Checked = true;
+                    rdFemale_PrimaryInfo.Checked = false;
+                }
+                else
+                {
+                    rdMale_PrimaryInfo.Checked = false;
+                    rdFemale_PrimaryInfo.Checked = true;
+                }
+                NguyenQuan.Text = _NguyenQuan;
+                DCTamTru.Text = _DCTamTru;
+                Email.Text = _Email;
+                SDTRieng.Text = _SDTRieng;
+                SDTNha.Text = _SDTNha;
+                TinhTrangHonNhan.Text = _TinhTrangHonNhan;
+                TinhTrangLamViec.Text = _TinhTrangLamViec;
             }
-            else
+            catch (Exception ex)
             {
-                rdMale_PrimaryInfo.Checked = false;
-                rdFemale_PrimaryInfo.Checked = true;
+                MessageBox.Show(ex.Message);
             }
-            NguyenQuan.Text = _NguyenQuan;
-            DCTamTru.Text = _DCTamTru;
-            Email.Text = _Email;
-            SDTRieng.Text = _SDTRieng;
-            SDTNha.Text = _SDTNha;
-            TinhTrangHonNhan.Text = _TinhTrangHonNhan;
-            TinhTrangLamViec.Text = _TinhTrangLamViec;
 
         }
         public void LoadDataFromDGVToRelevantInfo(DataGridView dgvRelevant,TextBox Manv,TextBox Tennv,ComboBox MaDV,ComboBox MaTo,ComboBox MaChucVu,DateTimePicker NgayVaoLam,TextBox ThamNien,ComboBox MaTinHoc,ComboBox MaNgoaiNgu,ComboBox MaBangCap,ComboBox MaTonGiao,ComboBox MaDanToc)
         {
-            int row = dgvRelevant.CurrentCell.RowIndex;
-            string _Manv = dgvRelevant.Rows[row].Cells[0].Value.ToString();
-            string _Tennv = dgvRelevant.Rows[row].Cells[1].Value.ToString();
-            string _Tentongiao = dgvRelevant.Rows[row].Cells[14].Value.ToString();
-            string _Tenchucvu = dgvRelevant.Rows[row].Cells[15].Value.ToString();
-            string _Tendantoc = dgvRelevant.Rows[row].Cells[16].Value.ToString();
-            string _Tenbangcap = dgvRelevant.Rows[row].Cells[17].Value.ToString();
-            string _Tendonvi = dgvRelevant.Rows[row].Cells[18].Value.ToString();
-            string _Tento = dgvRelevant.Rows[row].Cells[19].Value.ToString();
-            string _Tenngoaingu = dgvRelevant.Rows[row].Cells[20].Value.ToString();
-            string _Tentinhoc = dgvRelevant.Rows[row].Cells[21].Value.ToString();
-            string _Ngayvaolam = dgvRelevant.Rows[row].Cells[22].Value.ToString();
-            string _Thamnien = dgvRelevant.Rows[row].Cells[23].Value.ToString();
+            try
+            {
+                int row = dgvRelevant.CurrentCell.RowIndex;
+                string _Manv = dgvRelevant.Rows[row].Cells[0].Value.ToString();
+                string _Tennv = dgvRelevant.Rows[row].Cells[1].Value.ToString();
+                string _Tentongiao = dgvRelevant.Rows[row].Cells[14].Value.ToString();
+                string _Tenchucvu = dgvRelevant.Rows[row].Cells[15].Value.ToString();
+                string _Tendantoc = dgvRelevant.Rows[row].Cells[16].Value.ToString();
+                string _Tenbangcap = dgvRelevant.Rows[row].Cells[17].Value.ToString();
+                string _Tendonvi = dgvRelevant.Rows[row].Cells[18].Value.ToString();
+                string _Tento = dgvRelevant.Rows[row].Cells[19].Value.ToString();
+                string _Tenngoaingu = dgvRelevant.Rows[row].Cells[20].Value.ToString();
+                string _Tentinhoc = dgvRelevant.Rows[row].Cells[21].Value.ToString();
+                string _Ngayvaolam = dgvRelevant.Rows[row].Cells[22].Value.ToString();
+                string _Thamnien = dgvRelevant.Rows[row].Cells[23].Value.ToString();
 
-            Manv.Text = _Manv;
-            Tennv.Text = _Tennv;
-            MaDV.Text = _Tendonvi;
-            MaTo.Text = _Tento;
-            MaChucVu.Text = _Tenchucvu;
-            NgayVaoLam.Value = DateTime.Parse(_Ngayvaolam);
-            ThamNien.Text = _Thamnien;
-            MaTinHoc.Text = _Tentinhoc;
-            MaNgoaiNgu.Text = _Tenngoaingu;
-            MaBangCap.Text = _Tenbangcap;
-            MaTonGiao.Text = _Tentongiao;
-            MaDanToc.Text = _Tendantoc;
+                Manv.Text = _Manv;
+                Tennv.Text = _Tennv;
+                MaDV.Text = _Tendonvi;
+                MaTo.Text = _Tento;
+                MaChucVu.Text = _Tenchucvu;
+                NgayVaoLam.Value = DateTime.Parse(_Ngayvaolam);
+                ThamNien.Text = _Thamnien;
+                MaTinHoc.Text = _Tentinhoc;
+                MaNgoaiNgu.Text = _Tenngoaingu;
+                MaBangCap.Text = _Tenbangcap;
+                MaTonGiao.Text = _Tentongiao;
+                MaDanToc.Text = _Tendantoc;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
         
         private void TeacherList_PrimaryInfo_dataGridView_MouseClick(object sender, MouseEventArgs e)
         {
-            LoadDataFromDGVToPrimaryInfo(TeacherList_PrimaryInfo_dataGridView,
+            try
+            {
+                LoadDataFromDGVToPrimaryInfo(TeacherList_PrimaryInfo_dataGridView,
                TeacherID_PrimaryInfo_TXT,
                TeacherName_PrimaryInfo_TXT,
                CMND_PrimaryInfo_TXT,
@@ -156,22 +190,34 @@ namespace TEACHER.TeacherManagementForm
                Relationship_PrimaryInfo_TXT,
                WorkingState_PrimaryInfo_TXT
               );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void TeacherList_RelevantInfo_dataGridView_MouseClick(object sender, MouseEventArgs e)
         {
-            LoadDataFromDGVToRelevantInfo(TeacherList_RelevantInfo_dataGridView,
-                TeacherID_Relevant_TXT,
-                TeacherName_Relevant_TXT,
-                TeacherDV_Relevant_CBX,
-                TeacherTO_Relevant_CBX,
-                TeacherPosition_Relevant_CBX,
-                Teacher_Relevant_DateStartWork_Datetime,
-                TeacherWorkAge_Relevant_TXT,
-                TeacherOfficeSkillCer_Relevant_CBX,
-                TeacherLanguageCer_Relevant_CBX,
-                TeacherCer_Relevant_CBX,
-                TeacherReligion_Relevant_CBX,
-                TeacherEthnic_Relevant_CBX);
+            try
+            {
+                LoadDataFromDGVToRelevantInfo(TeacherList_RelevantInfo_dataGridView,
+               TeacherID_Relevant_TXT,
+               TeacherName_Relevant_TXT,
+               TeacherDV_Relevant_CBX,
+               TeacherTO_Relevant_CBX,
+               TeacherPosition_Relevant_CBX,
+               Teacher_Relevant_DateStartWork_Datetime,
+               TeacherWorkAge_Relevant_TXT,
+               TeacherOfficeSkillCer_Relevant_CBX,
+               TeacherLanguageCer_Relevant_CBX,
+               TeacherCer_Relevant_CBX,
+               TeacherReligion_Relevant_CBX,
+               TeacherEthnic_Relevant_CBX);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
        
         private void Search_PrimaryInfo_TXT_TextChanged(object sender, EventArgs e)
@@ -216,7 +262,10 @@ namespace TEACHER.TeacherManagementForm
             {
                 if (!string.IsNullOrEmpty(TeacherID_PrimaryInfo_TXT.Text.ToString()))
                 {
-                    throw new Exception("Vui lòng để trống Mã Nhân Viên Khi Thêm Mới");
+                    throw new Exception("Mã Nhân Viên sẽ được đặt tự động! Vui lòng để trống Mã Nhân Viên khi thêm mới");
+                }else if (string.IsNullOrEmpty(CMND_PrimaryInfo_TXT.Text.ToString()))
+                {
+                    throw new Exception("Chứng Minh Nhân Dân không được để trống!");
                 }
                 var teacher = new tblNhanvien
                 {
@@ -245,8 +294,12 @@ namespace TEACHER.TeacherManagementForm
                 };
                 teacher_service.Add(teacher);
                 MessageBox.Show("Thêm mới thành công");
+                
                 var result = teacher_service.GetAll();
                 TeacherList_PrimaryInfo_dataGridView.DataSource = result;
+                int index_last_row = TeacherList_PrimaryInfo_dataGridView.Rows.Count - 1;
+                string _Manv = TeacherList_PrimaryInfo_dataGridView.Rows[index_last_row].Cells[0].Value.ToString();
+                TeacherID_PrimaryInfo_TXT.Text = _Manv;
             }
             catch (Exception ex)
             {
@@ -304,7 +357,7 @@ namespace TEACHER.TeacherManagementForm
             {
                 if (string.IsNullOrEmpty(TeacherID_PrimaryInfo_TXT.Text.ToString()))
                 {
-                    throw new Exception("Vui lòng chọn Mã Nhân Viên để xóa!");
+                    throw new Exception("Vui lòng chọn Nhân Viên muốn xóa!");
                 }
                 int Manv = int.Parse(TeacherID_PrimaryInfo_TXT.Text);
 
@@ -407,28 +460,41 @@ namespace TEACHER.TeacherManagementForm
 
         private void tabControl1_Click(object sender, EventArgs e)
         {
-            var teacher_list = teacher_service.GetAll();
-            TeacherList_PrimaryInfo_dataGridView.DataSource = teacher_list;
-            TeacherList_RelevantInfo_dataGridView.DataSource = teacher_list;
+            try
+            {
+                var teacher_list = teacher_service.GetAll();
+                TeacherList_PrimaryInfo_dataGridView.DataSource = teacher_list;
+                TeacherList_RelevantInfo_dataGridView.DataSource = teacher_list;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void TeacherDV_Relevant_CBX_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            var pa = new
+            try
             {
-                MaDV = TeacherDV_Relevant_CBX.SelectedValue.ToString(),
-            };
+                var pa = new
+                {
+                    MaDV = TeacherDV_Relevant_CBX.SelectedValue.ToString(),
+                };
 
-            var toByDonVi = Helper.Query<Donvi_tolamviec_junction>(Helper.ConnectionString(), "QLGV.dbo.FindAllToByDonVi", pa).ToList();
+                var toByDonVi = Helper.Query<Donvi_tolamviec_junction>(Helper.ConnectionString(), "QLGV.dbo.FindAllToByDonVi", pa).ToList();
 
-            LoadDataToCBX(TeacherTO_Relevant_CBX, toByDonVi, "Tento", "Mato");
+                LoadDataToCBX(TeacherTO_Relevant_CBX, toByDonVi, "Tento", "Mato");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Search_Relevant_TXT_TextChanged(object sender, EventArgs e)
         {
             try
             {
-
                 string text_Search = Search_Relevant_TXT.Text.ToString();
                 if (string.IsNullOrEmpty(text_Search) && string.IsNullOrWhiteSpace(text_Search))
                 {

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TEACHER.Service;
+using TEACHER.TeacherManagementForm;
 
 namespace TEACHER
 {
@@ -116,7 +117,7 @@ namespace TEACHER
         //getname phan quyen
         internal void getName()
         {
-            lblUserName.Text = name;
+            lblUserName.Text = "Xin chào " + name;
             if (string.IsNullOrEmpty(lblUserName.Text))
             {
                 MessageBox.Show("Xảy Ra Lỗi Khi Truyền Dữ Liệu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -138,6 +139,7 @@ namespace TEACHER
                         tsThongtin3.Enabled = true;
                         tsThongtin4.Enabled = true;
                         tsSearch.Enabled = true;
+                        tsDonVi.Enabled = true;
                     }
                     else {
                         tsNhanVien.Enabled = true;
@@ -148,6 +150,8 @@ namespace TEACHER
                         tsThongtin3.Enabled = false;
                         tsThongtin4.Enabled = false;
                         tsSearch.Enabled = true;
+                        tsDonVi.Enabled = true;
+
                     }
                 }
                 catch (Exception)
@@ -218,28 +222,36 @@ namespace TEACHER
             searchform.Show();
         }
 
-        private void tsThongtin1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void tsNhanVien_Click(object sender, EventArgs e)
         {
-            HopDong hopdong = new HopDong() { TopLevel = false, TopMost = true };
+            TeacherManageForm teacher_manage_form = new TeacherManageForm() { TopLevel = false, TopMost = true };
             this.pContainer.Panel2.Controls.Clear();
-            this.pContainer.Panel2.Controls.Add(hopdong);
-            hopdong.Show();
+            this.pContainer.Panel2.Controls.Add(teacher_manage_form);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            teacher_manage_form.Show();
         }
 
-        private void tsThongtin2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void tsChucVu_Click(object sender, EventArgs e)
         {
-            Donvi hopdong = new Donvi() { TopLevel = false, TopMost = true };
+            ChucVuForm chucVuForm = new ChucVuForm() { TopLevel = false, TopMost = true };
             this.pContainer.Panel2.Controls.Clear();
-            this.pContainer.Panel2.Controls.Add(hopdong);
-            hopdong.Show();
+            this.pContainer.Panel2.Controls.Add(chucVuForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            chucVuForm.Show();
         }
 
-        private void tsThongtin3_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        
+
+        private void tsDonVi_Click(object sender, EventArgs e)
         {
-            TeacherManagementForm.TeacherManageForm hopdong = new TeacherManagementForm.TeacherManageForm() { TopLevel = false, TopMost = true };
+            Donvi donviForm = new Donvi() { TopLevel = false, TopMost = true };
             this.pContainer.Panel2.Controls.Clear();
-            this.pContainer.Panel2.Controls.Add(hopdong);
-            hopdong.Show();
+            this.pContainer.Panel2.Controls.Add(donviForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            donviForm.Show();
         }
     }
 }

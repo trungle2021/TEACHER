@@ -56,3 +56,4 @@ C:\Users\Lance\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.TeacherManageme
 C:\Users\Lance\Desktop\TEACHER\TEACHER\TEACHER\obj\Debug\TEACHER.SearchForm.resources
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.csproj.AssemblyReference.cache
 C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.SearchForm.resources
+C:\Users\Trung Le\OneDrive\Desktop\TEACHER2\TEACHER\TEACHER\obj\Debug\TEACHER.ChucVuForm.resources

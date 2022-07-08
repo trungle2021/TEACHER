@@ -23,18 +23,24 @@ namespace TEACHER.Service
             Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.AddDonvi", pa);
         }
 
+     
+
         public IEnumerable<tblDSDonvi> GetAll()
         {
+
           return  Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.FindAllDonvi");
         }
         
         public tblDSDonvi GetOne(string MaDV)
+
         {
             var pa = new
             {
                 MaDV = MaDV
             };
+
           return Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.SearchDonvi",pa).FirstOrDefault();
+
 
         }
 
@@ -44,20 +50,26 @@ namespace TEACHER.Service
             {
                 MaDV = MaDV
             };
+
             Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.DeleteDonvi", pa);
+
         }
 
+
         public List<tblTolamviec> SearchToFromDonvi(string MaDV)
+
         {
             var pa = new
             {
                 MaDV = MaDV
             };
 
+
          return  Helper.Query<tblTolamviec>(Helper.ConnectionString(), "QLGV.dbo.SearchToFromDonvi", pa).ToList();
         }
         
         public void Update(tblDSDonvi entity)
+
         {
             var pa = new
             {
@@ -69,5 +81,7 @@ namespace TEACHER.Service
 
             Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.UpdateDonvi", pa);
         }
+
+       
     }
 }
