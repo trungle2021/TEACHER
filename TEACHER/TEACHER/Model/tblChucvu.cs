@@ -17,9 +17,9 @@ namespace TEACHER.Model
         [StringLength(50)]
         public string Tenchucvu { get; set; }
 
-        public float? Hesochucvu { get; set; }
+        public float? Hesochucvu { get; set; } = 0;
 
-        public string Ghichu { get; set; }
+        public string Ghichu { get; set; } = "";
 
        
     }

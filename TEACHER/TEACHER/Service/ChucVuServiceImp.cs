@@ -33,9 +33,19 @@ namespace TEACHER.Service
             var pa = new
             {
                 Machucvu = Machucvu
+                
             };
           return Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetOneChucVu", pa).FirstOrDefault();
 
+        }
+
+        public tblChucvu GetTenChucVu(string Tenchucvu)
+        {
+            var pa = new
+            {
+                Tenchucvu = Tenchucvu
+            };
+            return Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetTenChucVu", pa).FirstOrDefault();
         }
 
         public void Remove(string Machucvu)

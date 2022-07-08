@@ -124,14 +124,14 @@
   <data name="deleteicon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\20x20\deleteicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exiticon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="61957001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\6195700.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exiticon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\exiticon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Position_Level" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\Position_Level.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login-big" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\login-big.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="deleteicon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\20x20\deleteicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="6195700 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\6195700 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,17 +145,20 @@
   <data name="saveicon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\20x20\saveicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="windows-error-icon-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\windows-error-icon-24.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="saveicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\20x20\saveicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MultiEmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\MultiEmp.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saveicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\20x20\saveicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exiticon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\exiticon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\user_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Contract" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\Contract.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +169,8 @@
   <data name="AddUser1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\AddUser.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="deleteicon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\20x20\deleteicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Position_Level" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\Position_Level.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login-big (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\login-big (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +178,8 @@
   <data name="deleteicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\deleteicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="61957001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\6195700.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="windows-error-icon-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\windows-error-icon-24.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login-big (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\login-big (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,10 +187,10 @@
   <data name="6195700" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\6195700.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login-big" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\login-big.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exiticon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\exiticon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

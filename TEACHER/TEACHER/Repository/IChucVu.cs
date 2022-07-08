@@ -9,6 +9,7 @@ namespace TEACHER.Repository
 {
     public interface IChucVu
     {
+        tblChucvu GetTenChucVu(string Tenchucvu);
         tblChucvu GetOne(string Machucvu);
         IEnumerable<tblChucvu> GetAll();
         void Add(tblChucvu entity);
