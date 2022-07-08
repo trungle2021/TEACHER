@@ -181,6 +181,7 @@
     <None Include="bin\Debug\TEACHER.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\TEACHER.Model.AllField.datasource" />
+    <None Include="Properties\DataSources\TEACHER.Model.tblChucvu.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -228,6 +229,7 @@
     <Content Include="bin\Debug\images\Exit.png" />
     <Content Include="bin\Debug\images\exiticon.jpg" />
     <Content Include="bin\Debug\images\iconsearch.jpg" />
+    <None Include="bin\Debug\images\images.jpg" />
     <Content Include="bin\Debug\images\login - Copy.png" />
     <Content Include="bin\Debug\images\login-big %281%29.png" />
     <Content Include="bin\Debug\images\login-big %282%29.png" />

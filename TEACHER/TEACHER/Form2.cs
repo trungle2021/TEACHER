@@ -117,7 +117,7 @@ namespace TEACHER
         //getname phan quyen
         internal void getName()
         {
-            lblUserName.Text = name;
+            lblUserName.Text = "Xin chào " + name;
             if (string.IsNullOrEmpty(lblUserName.Text))
             {
                 MessageBox.Show("Xảy Ra Lỗi Khi Truyền Dữ Liệu!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -139,6 +139,7 @@ namespace TEACHER
                         tsThongtin3.Enabled = true;
                         tsThongtin4.Enabled = true;
                         tsSearch.Enabled = true;
+                        tsDonVi.Enabled = true;
                     }
                     else {
                         tsNhanVien.Enabled = true;
@@ -149,6 +150,8 @@ namespace TEACHER
                         tsThongtin3.Enabled = false;
                         tsThongtin4.Enabled = false;
                         tsSearch.Enabled = true;
+                        tsDonVi.Enabled = true;
+
                     }
                 }
                 catch (Exception)
@@ -227,6 +230,28 @@ namespace TEACHER
             this.pContainer.Panel2.Size = new Size(0, 0);
             this.pContainer.Panel2.AutoSize = true;
             teacher_manage_form.Show();
+        }
+
+        private void tsChucVu_Click(object sender, EventArgs e)
+        {
+            ChucVuForm chucVuForm = new ChucVuForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(chucVuForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            chucVuForm.Show();
+        }
+
+        
+
+        private void tsDonVi_Click(object sender, EventArgs e)
+        {
+            Donvi donviForm = new Donvi() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(donviForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            donviForm.Show();
         }
     }
 }

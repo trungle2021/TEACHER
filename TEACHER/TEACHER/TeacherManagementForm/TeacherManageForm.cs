@@ -262,8 +262,8 @@ namespace TEACHER.TeacherManagementForm
             {
                 if (!string.IsNullOrEmpty(TeacherID_PrimaryInfo_TXT.Text.ToString()))
                 {
-                    throw new Exception("Vui lòng để trống Mã Nhân Viên khi thêm mới");
-                }else if (string.IsNullOrEmpty(TeacherID_PrimaryInfo_TXT.Text.ToString()))
+                    throw new Exception("Mã Nhân Viên sẽ được đặt tự động! Vui lòng để trống Mã Nhân Viên khi thêm mới");
+                }else if (string.IsNullOrEmpty(CMND_PrimaryInfo_TXT.Text.ToString()))
                 {
                     throw new Exception("Chứng Minh Nhân Dân không được để trống!");
                 }
@@ -294,8 +294,12 @@ namespace TEACHER.TeacherManagementForm
                 };
                 teacher_service.Add(teacher);
                 MessageBox.Show("Thêm mới thành công");
+                
                 var result = teacher_service.GetAll();
                 TeacherList_PrimaryInfo_dataGridView.DataSource = result;
+                int index_last_row = TeacherList_PrimaryInfo_dataGridView.Rows.Count - 1;
+                string _Manv = TeacherList_PrimaryInfo_dataGridView.Rows[index_last_row].Cells[0].Value.ToString();
+                TeacherID_PrimaryInfo_TXT.Text = _Manv;
             }
             catch (Exception ex)
             {
@@ -353,7 +357,7 @@ namespace TEACHER.TeacherManagementForm
             {
                 if (string.IsNullOrEmpty(TeacherID_PrimaryInfo_TXT.Text.ToString()))
                 {
-                    throw new Exception("Vui lòng chọn Mã Nhân Viên để xóa!");
+                    throw new Exception("Vui lòng chọn Nhân Viên muốn xóa!");
                 }
                 int Manv = int.Parse(TeacherID_PrimaryInfo_TXT.Text);
 
