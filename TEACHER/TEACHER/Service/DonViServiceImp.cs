@@ -8,9 +8,9 @@ using TEACHER.Repository;
 
 namespace TEACHER.Service
 {
-    public class DonViServiceImp : IDonVi
+    public class DonViServiceImp : IChucVu
     {
-        public void Add(tblDSDonvi entity)
+        public void Add(tblChucvu entity)
         {
             var pa = new
             {
@@ -20,21 +20,25 @@ namespace TEACHER.Service
 
             };
 
-            Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.AddDonvi", pa);
+            Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.AddDonvi", pa);
         }
 
-        public IEnumerable<tblDSDonvi> GetAll()
+        public IEnumerable<tblChucvu> GetAll()
         {
+
           return  Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.FindAllDonvi");
         }
         
         public tblDSDonvi GetOne(string MaDV)
+
         {
             var pa = new
             {
                 MaDV = MaDV
             };
+
           return Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.SearchDonvi",pa).FirstOrDefault();
+
 
         }
 
@@ -44,20 +48,26 @@ namespace TEACHER.Service
             {
                 MaDV = MaDV
             };
+
             Helper.Query<tblDSDonvi>(Helper.ConnectionString(), "QLGV.dbo.DeleteDonvi", pa);
+
         }
 
+
         public List<tblTolamviec> SearchToFromDonvi(string MaDV)
+
         {
             var pa = new
             {
                 MaDV = MaDV
             };
 
+
          return  Helper.Query<tblTolamviec>(Helper.ConnectionString(), "QLGV.dbo.SearchToFromDonvi", pa).ToList();
         }
         
         public void Update(tblDSDonvi entity)
+
         {
             var pa = new
             {
