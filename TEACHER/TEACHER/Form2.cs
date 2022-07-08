@@ -140,9 +140,11 @@ namespace TEACHER
                         tsThongtin4.Enabled = true;
                         tsSearch.Enabled = true;
                         tsDonVi.Enabled = true;
+                        thôngTinToolStripMenuItem.Enabled = true;
+                        tìmKiếmToolStripMenuItem.Enabled = true;
                     }
                     else {
-                        tsNhanVien.Enabled = true;
+                        tsNhanVien.Enabled = false;
                         tsChucVu.Enabled = false;
                         tsHopDong.Enabled = false;
                         tsThongtin1.Enabled = false;
@@ -150,8 +152,8 @@ namespace TEACHER
                         tsThongtin3.Enabled = false;
                         tsThongtin4.Enabled = false;
                         tsSearch.Enabled = true;
-                        tsDonVi.Enabled = true;
-
+                        tsDonVi.Enabled = false;
+                        tìmKiếmToolStripMenuItem.Enabled = true;
                     }
                 }
                 catch (Exception)
@@ -252,6 +254,137 @@ namespace TEACHER
             this.pContainer.Panel2.Size = new Size(0, 0);
             this.pContainer.Panel2.AutoSize = true;
             donviForm.Show();
+        }
+
+        private void tsThongtin1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            HopDong hopdong = new HopDong() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(hopdong);
+            hopdong.Show();
+        }
+
+        private void tsThongtin2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            ChucVuForm chucVuForm = new ChucVuForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(chucVuForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            chucVuForm.Show();
+        }
+
+        private void tsThongtin3_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            Donvi donviForm = new Donvi() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(donviForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            donviForm.Show();
+        }
+
+        private void tsThongtin4_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            TeacherManageForm teacher_manage_form = new TeacherManageForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(teacher_manage_form);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            teacher_manage_form.Show();
+        }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchForm searchform = new SearchForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(searchform);
+            searchform.Show();
+        }
+
+        private void quảnLýHợpĐồngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HopDong hopdong = new HopDong() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(hopdong);
+            hopdong.Show();
+        }
+
+        private void quảnLýChứcVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChucVuForm chucVuForm = new ChucVuForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(chucVuForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            chucVuForm.Show();
+        }
+
+        private void quảnLýĐơnVịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Donvi donviForm = new Donvi() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(donviForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            donviForm.Show();
+        }
+
+        private void quảnLýGiáoViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TeacherManageForm teacher_manage_form = new TeacherManageForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(teacher_manage_form);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            teacher_manage_form.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login(this) { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(login);
+            login.Show();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void tsThongtin1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+            HopDong hopdong = new HopDong() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(hopdong);
+            hopdong.Show();
+        }
+
+        private void tsThongtin2_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+            ChucVuForm chucVuForm = new ChucVuForm() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(chucVuForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            chucVuForm.Show();
+        }
+
+        private void tsThongtin3_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+            Donvi donviForm = new Donvi() { TopLevel = false, TopMost = true };
+            this.pContainer.Panel2.Controls.Clear();
+            this.pContainer.Panel2.Controls.Add(donviForm);
+            this.pContainer.Panel2.Size = new Size(0, 0);
+            this.pContainer.Panel2.AutoSize = true;
+            donviForm.Show();
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help help = new Help();
+            help.ShowDialog();
         }
     }
 }
