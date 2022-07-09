@@ -158,7 +158,7 @@ namespace TEACHER
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "NewAccount";
-            this.Text = "NewAccount";
+            this.Text = "Tạo Tài Khoản";
             this.Load += new System.EventHandler(this.NewAccount_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
