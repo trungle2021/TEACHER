@@ -375,7 +375,7 @@ namespace TEACHER.TeacherManagementForm
 
         private void btnExit_PrimaryInfo_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnEdit_Relevant_Click(object sender, EventArgs e)
@@ -391,7 +391,7 @@ namespace TEACHER.TeacherManagementForm
                     Tendonvi = TeacherDV_Relevant_CBX.Text,
                     Tento = TeacherTO_Relevant_CBX.Text,
                 };
-            var MaDV_TO = Helper.Query<int>(Helper.ConnectionString(), "QLGV.dbo.Ge_DV_TO_ByDVname",pa).FirstOrDefault();
+            var MaDV_TO = Helper.Query<int>(Helper.ConnectionString(), "QLGV.dbo.GetID_Donvi_To_ByName", pa).FirstOrDefault();
             var parseThamNien = int.TryParse(TeacherWorkAge_Relevant_TXT.Text, out int outThamnien);
             var teacher_current_update = teacher_service.GetOne(int.Parse(TeacherID_Relevant_TXT.Text));
             var teacher = new tblNhanvien
@@ -455,7 +455,7 @@ namespace TEACHER.TeacherManagementForm
 
         private void btnExit_Relevant_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void tabControl1_Click(object sender, EventArgs e)

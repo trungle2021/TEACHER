@@ -150,6 +150,18 @@ namespace TEACHER
                 MaDV.Text = _MaDV;
                 TenDV.Text = _TenDV;
                 Ghichu.Text = _Ghichu;
+
+                if (string.IsNullOrEmpty(txtMaDV.Text))
+                {
+                    MessageBox.Show("Mã Đơn Vị Không Được Để Trống", "LỖi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtMaDV.Focus();
+                }
+                else
+                {
+                    dataGridView2.DataSource = service.SearchToFromDonvi(txtMaDV.Text.ToString());
+
+
+                }
             }
             catch (Exception ex)
             {
