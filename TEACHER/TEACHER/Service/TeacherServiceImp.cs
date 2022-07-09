@@ -109,13 +109,13 @@ namespace TEACHER.Service
         }
 
 
-        public IEnumerable<tblNhanvien> SearchByEmpID(int MaNV)
+        public IEnumerable<AllField> SearchByEmpID(int MaNV)
         {
             var pa = new
             {
                 MaNV = MaNV
             };
-            return Helper.Query<tblNhanvien>(Helper.ConnectionString(), "QLGV.dbo.SearchEmpByID", pa).ToList();
+            return Helper.Query<AllField>(Helper.ConnectionString(), "QLGV.dbo.SearchEmpByID", pa).ToList();
         }
 
      

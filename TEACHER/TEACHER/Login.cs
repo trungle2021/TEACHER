@@ -16,8 +16,8 @@ namespace TEACHER
     {
 
         //pass du lieu qua main form
-        Form2 originalForm2;
-        public Login(Form2 incomingForm2)
+        MainForm originalForm2;
+        public Login(MainForm incomingForm2)
         {
             originalForm2 = incomingForm2;
             InitializeComponent();

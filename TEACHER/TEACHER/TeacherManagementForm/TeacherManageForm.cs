@@ -234,7 +234,7 @@ namespace TEACHER.TeacherManagementForm
                 else
                 {
                     bool parseTextSearch = int.TryParse(text_Search, out int result);
-                    IEnumerable<tblNhanvien> teacher = teacher_service.SearchByEmpID(result);
+                    IEnumerable<AllField> teacher = teacher_service.SearchByEmpID(result);
                     if (teacher.Count() < 1 || parseTextSearch == false)
                     {
                         IEnumerable<AllField> _teacher = teacher_service.GetAll();
@@ -496,7 +496,7 @@ namespace TEACHER.TeacherManagementForm
             try
             {
                 string text_Search = Search_Relevant_TXT.Text.ToString();
-                if (string.IsNullOrEmpty(text_Search) && string.IsNullOrWhiteSpace(text_Search))
+                if (string.IsNullOrEmpty(text_Search) || string.IsNullOrWhiteSpace(text_Search))
                 {
                     IEnumerable<AllField> teacher = teacher_service.GetAll();
                     TeacherList_RelevantInfo_dataGridView.DataSource = teacher;
@@ -504,8 +504,8 @@ namespace TEACHER.TeacherManagementForm
                 else
                 {
                     bool parseTextSearch = int.TryParse(text_Search, out int result);
-                    IEnumerable<tblNhanvien> teacher = teacher_service.SearchByEmpID(result);
-                    if (teacher.Count() < 1 || parseTextSearch == false)
+                    IEnumerable<AllField> teacher = teacher_service.SearchByEmpID(result);
+                    if (teacher == null || parseTextSearch == false)
                     {
                         IEnumerable<AllField> _teacher = teacher_service.GetAll();
                         TeacherList_RelevantInfo_dataGridView.DataSource = _teacher;

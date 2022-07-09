@@ -17,7 +17,7 @@ namespace TEACHER.Repository
         void Remove(int MaNV);
         void Update(tblNhanvien entity);
       
-        IEnumerable<tblNhanvien> SearchByEmpID(int ID);
+        IEnumerable<AllField> SearchByEmpID(int ID);
 
         void Search(RadioButton raMaNV, RadioButton raTenNV, RadioButton raCMND, DataGridView dgv, TextBox search, Label notice);
     }

@@ -12,20 +12,20 @@ using TEACHER.TeacherManagementForm;
 
 namespace TEACHER
 {
-    public partial class Form2 : Form
+    public partial class MainForm : Form
     {
         private bool SystemIsCollapsed;
         private bool InfoIsCollapsed;
         private bool SearchIsCollapsed;
         public string name;
         private LoginImp service = new LoginImp();
-        public Form2()
+        public MainForm()
         {
             WindowState = FormWindowState.Maximized;
             InitializeComponent();
 
         }
-        public Form2(string user)
+        public MainForm(string user)
         {
             WindowState = FormWindowState.Maximized;
             InitializeComponent();

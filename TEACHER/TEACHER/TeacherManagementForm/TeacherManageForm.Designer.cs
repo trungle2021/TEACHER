@@ -31,10 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PrimaryInfo = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnExit_PrimaryInfo = new System.Windows.Forms.Button();
+            this.btnDelete_PrimaryInfo = new System.Windows.Forms.Button();
+            this.btnEdit_PrimaryInfo = new System.Windows.Forms.Button();
+            this.btnAdd_PrimaryInfo = new System.Windows.Forms.Button();
             this.Search_PrimaryInfo_TXT = new System.Windows.Forms.TextBox();
             this.TeacherList_PrimaryInfo_dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CMND_PrimaryInfo_DateCreated_TXT = new System.Windows.Forms.DateTimePicker();
             this.Teacher_PrimaryInfo_BirthdayPicker = new System.Windows.Forms.DateTimePicker();
             this.rdFemale_PrimaryInfo = new System.Windows.Forms.RadioButton();
@@ -65,8 +71,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.RelevantInfo = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnExit_Relevant = new System.Windows.Forms.Button();
+            this.btnDelete_Relevant = new System.Windows.Forms.Button();
+            this.btnEdit_Relevant = new System.Windows.Forms.Button();
             this.Search_Relevant_TXT = new System.Windows.Forms.TextBox();
             this.TeacherList_RelevantInfo_dataGridView = new System.Windows.Forms.DataGridView();
+            this.allFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.TeacherPosition_Relevant_CBX = new System.Windows.Forms.ComboBox();
             this.TeacherEthnic_Relevant_CBX = new System.Windows.Forms.ComboBox();
@@ -80,6 +91,7 @@
             this.TeacherTO_Relevant_CBX = new System.Windows.Forms.ComboBox();
             this.TeacherDV_Relevant_CBX = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TeacherWorkAge_Relevant_TXT = new System.Windows.Forms.TextBox();
             this.TeacherName_Relevant_TXT = new System.Windows.Forms.TextBox();
             this.TeacherID_Relevant_TXT = new System.Windows.Forms.TextBox();
@@ -92,52 +104,16 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.btnExit_PrimaryInfo = new System.Windows.Forms.Button();
-            this.btnDelete_PrimaryInfo = new System.Windows.Forms.Button();
-            this.btnEdit_PrimaryInfo = new System.Windows.Forms.Button();
-            this.btnAdd_PrimaryInfo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit_Relevant = new System.Windows.Forms.Button();
-            this.btnDelete_Relevant = new System.Windows.Forms.Button();
-            this.btnEdit_Relevant = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.manvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cMNDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaycapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhthanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nguyenquanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dctamtruDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDTriengDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDTnhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhtranghonnhanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhtranglamviecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentongiaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenchucvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tendantocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenbangcapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenngoainguDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentinhocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayvaolamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thamnienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.allFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.PrimaryInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_PrimaryInfo_dataGridView)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.RelevantInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_RelevantInfo_dataGridView)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -169,6 +145,73 @@
             this.PrimaryInfo.TabIndex = 0;
             this.PrimaryInfo.Text = "Thông Tin Chung";
             this.PrimaryInfo.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(58, 571);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(175, 15);
+            this.label21.TabIndex = 47;
+            this.label21.Text = "Tìm Kiếm Theo Mã Nhân Viên:";
+            // 
+            // btnExit_PrimaryInfo
+            // 
+            this.btnExit_PrimaryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit_PrimaryInfo.Image = global::TEACHER.Properties.Resources.exiticon;
+            this.btnExit_PrimaryInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit_PrimaryInfo.Location = new System.Drawing.Point(790, 563);
+            this.btnExit_PrimaryInfo.Name = "btnExit_PrimaryInfo";
+            this.btnExit_PrimaryInfo.Size = new System.Drawing.Size(64, 31);
+            this.btnExit_PrimaryInfo.TabIndex = 38;
+            this.btnExit_PrimaryInfo.Text = "Thoát";
+            this.btnExit_PrimaryInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExit_PrimaryInfo.UseVisualStyleBackColor = true;
+            this.btnExit_PrimaryInfo.Click += new System.EventHandler(this.btnExit_PrimaryInfo_Click);
+            // 
+            // btnDelete_PrimaryInfo
+            // 
+            this.btnDelete_PrimaryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete_PrimaryInfo.Image = global::TEACHER.Properties.Resources.deleteicon1;
+            this.btnDelete_PrimaryInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete_PrimaryInfo.Location = new System.Drawing.Point(702, 563);
+            this.btnDelete_PrimaryInfo.Name = "btnDelete_PrimaryInfo";
+            this.btnDelete_PrimaryInfo.Size = new System.Drawing.Size(64, 31);
+            this.btnDelete_PrimaryInfo.TabIndex = 37;
+            this.btnDelete_PrimaryInfo.Text = "Xóa";
+            this.btnDelete_PrimaryInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete_PrimaryInfo.UseVisualStyleBackColor = true;
+            this.btnDelete_PrimaryInfo.Click += new System.EventHandler(this.btnDelete_PrimaryInfo_Click);
+            // 
+            // btnEdit_PrimaryInfo
+            // 
+            this.btnEdit_PrimaryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit_PrimaryInfo.Image = global::TEACHER.Properties.Resources.saveicon;
+            this.btnEdit_PrimaryInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit_PrimaryInfo.Location = new System.Drawing.Point(614, 563);
+            this.btnEdit_PrimaryInfo.Name = "btnEdit_PrimaryInfo";
+            this.btnEdit_PrimaryInfo.Size = new System.Drawing.Size(64, 30);
+            this.btnEdit_PrimaryInfo.TabIndex = 35;
+            this.btnEdit_PrimaryInfo.Text = "Sửa";
+            this.btnEdit_PrimaryInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit_PrimaryInfo.UseVisualStyleBackColor = true;
+            this.btnEdit_PrimaryInfo.Click += new System.EventHandler(this.btnEdit_PrimaryInfo_Click);
+            // 
+            // btnAdd_PrimaryInfo
+            // 
+            this.btnAdd_PrimaryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd_PrimaryInfo.Image = global::TEACHER.Properties.Resources.AddUser2;
+            this.btnAdd_PrimaryInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd_PrimaryInfo.Location = new System.Drawing.Point(526, 563);
+            this.btnAdd_PrimaryInfo.Name = "btnAdd_PrimaryInfo";
+            this.btnAdd_PrimaryInfo.Size = new System.Drawing.Size(64, 31);
+            this.btnAdd_PrimaryInfo.TabIndex = 34;
+            this.btnAdd_PrimaryInfo.Text = "Thêm";
+            this.btnAdd_PrimaryInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd_PrimaryInfo.UseMnemonic = false;
+            this.btnAdd_PrimaryInfo.UseVisualStyleBackColor = true;
+            this.btnAdd_PrimaryInfo.Click += new System.EventHandler(this.btnAdd_PrimaryInfo_Click);
             // 
             // Search_PrimaryInfo_TXT
             // 
@@ -232,6 +275,18 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(227, 61);
             this.textBox3.TabIndex = 32;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::TEACHER.Properties.Resources.multi_user_man_and_girl_27082;
+            this.pictureBox1.InitialImage = global::TEACHER.Properties.Resources.MultiEmp;
+            this.pictureBox1.Location = new System.Drawing.Point(742, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(226, 238);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
             // 
             // CMND_PrimaryInfo_DateCreated_TXT
             // 
@@ -490,6 +545,59 @@
             this.RelevantInfo.Text = "Thông Tin Liên Quan";
             this.RelevantInfo.UseVisualStyleBackColor = true;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(48, 567);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(175, 15);
+            this.label16.TabIndex = 46;
+            this.label16.Text = "Tìm Kiếm Theo Mã Nhân Viên:";
+            // 
+            // btnExit_Relevant
+            // 
+            this.btnExit_Relevant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit_Relevant.Image = global::TEACHER.Properties.Resources.exiticon1;
+            this.btnExit_Relevant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit_Relevant.Location = new System.Drawing.Point(720, 559);
+            this.btnExit_Relevant.Name = "btnExit_Relevant";
+            this.btnExit_Relevant.Size = new System.Drawing.Size(75, 31);
+            this.btnExit_Relevant.TabIndex = 45;
+            this.btnExit_Relevant.Text = "Thoát";
+            this.btnExit_Relevant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExit_Relevant.UseVisualStyleBackColor = true;
+            this.btnExit_Relevant.Click += new System.EventHandler(this.btnExit_Relevant_Click);
+            // 
+            // btnDelete_Relevant
+            // 
+            this.btnDelete_Relevant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete_Relevant.Image = global::TEACHER.Properties.Resources.deleteicon2;
+            this.btnDelete_Relevant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete_Relevant.Location = new System.Drawing.Point(607, 559);
+            this.btnDelete_Relevant.Name = "btnDelete_Relevant";
+            this.btnDelete_Relevant.Size = new System.Drawing.Size(75, 31);
+            this.btnDelete_Relevant.TabIndex = 44;
+            this.btnDelete_Relevant.Text = "Xóa";
+            this.btnDelete_Relevant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete_Relevant.UseVisualStyleBackColor = true;
+            this.btnDelete_Relevant.Click += new System.EventHandler(this.btnDelete_Relevant_Click);
+            // 
+            // btnEdit_Relevant
+            // 
+            this.btnEdit_Relevant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit_Relevant.Image = global::TEACHER.Properties.Resources.saveicon1;
+            this.btnEdit_Relevant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit_Relevant.Location = new System.Drawing.Point(494, 559);
+            this.btnEdit_Relevant.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEdit_Relevant.Name = "btnEdit_Relevant";
+            this.btnEdit_Relevant.Size = new System.Drawing.Size(75, 31);
+            this.btnEdit_Relevant.TabIndex = 42;
+            this.btnEdit_Relevant.Text = "Sửa";
+            this.btnEdit_Relevant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit_Relevant.UseVisualStyleBackColor = true;
+            this.btnEdit_Relevant.Click += new System.EventHandler(this.btnEdit_Relevant_Click);
+            // 
             // Search_Relevant_TXT
             // 
             this.Search_Relevant_TXT.Location = new System.Drawing.Point(240, 564);
@@ -501,39 +609,16 @@
             // TeacherList_RelevantInfo_dataGridView
             // 
             this.TeacherList_RelevantInfo_dataGridView.AllowUserToOrderColumns = true;
-            this.TeacherList_RelevantInfo_dataGridView.AutoGenerateColumns = false;
             this.TeacherList_RelevantInfo_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TeacherList_RelevantInfo_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.manvDataGridViewTextBoxColumn,
-            this.tenNVDataGridViewTextBoxColumn,
-            this.cMNDDataGridViewTextBoxColumn,
-            this.ngaycapDataGridViewTextBoxColumn,
-            this.tinhthanhDataGridViewTextBoxColumn,
-            this.ngaysinhDataGridViewTextBoxColumn,
-            this.gioitinhDataGridViewTextBoxColumn,
-            this.nguyenquanDataGridViewTextBoxColumn,
-            this.dctamtruDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.sDTriengDataGridViewTextBoxColumn,
-            this.sDTnhaDataGridViewTextBoxColumn,
-            this.tinhtranghonnhanDataGridViewTextBoxColumn,
-            this.tinhtranglamviecDataGridViewTextBoxColumn,
-            this.tentongiaoDataGridViewTextBoxColumn,
-            this.tenchucvuDataGridViewTextBoxColumn,
-            this.tendantocDataGridViewTextBoxColumn,
-            this.tenbangcapDataGridViewTextBoxColumn,
-            this.tenDVDataGridViewTextBoxColumn,
-            this.tentoDataGridViewTextBoxColumn,
-            this.tenngoainguDataGridViewTextBoxColumn,
-            this.tentinhocDataGridViewTextBoxColumn,
-            this.ngayvaolamDataGridViewTextBoxColumn,
-            this.thamnienDataGridViewTextBoxColumn});
-            this.TeacherList_RelevantInfo_dataGridView.DataSource = this.allFieldBindingSource;
             this.TeacherList_RelevantInfo_dataGridView.Location = new System.Drawing.Point(3, 298);
             this.TeacherList_RelevantInfo_dataGridView.Name = "TeacherList_RelevantInfo_dataGridView";
             this.TeacherList_RelevantInfo_dataGridView.Size = new System.Drawing.Size(972, 244);
             this.TeacherList_RelevantInfo_dataGridView.TabIndex = 39;
             this.TeacherList_RelevantInfo_dataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TeacherList_RelevantInfo_dataGridView_MouseClick);
+            // 
+            // allFieldBindingSource
+            // 
+            this.allFieldBindingSource.DataSource = typeof(TEACHER.Model.AllField);
             // 
             // panel2
             // 
@@ -666,6 +751,18 @@
             this.label15.TabIndex = 33;
             this.label15.Text = "Chức Vụ";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = global::TEACHER.Properties.Resources.multi_user_man_and_girl_27082;
+            this.pictureBox2.InitialImage = global::TEACHER.Properties.Resources.MultiEmp;
+            this.pictureBox2.Location = new System.Drawing.Point(742, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(226, 238);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            // 
             // TeacherWorkAge_Relevant_TXT
             // 
             this.TeacherWorkAge_Relevant_TXT.Location = new System.Drawing.Point(491, 35);
@@ -768,298 +865,6 @@
             this.label28.TabIndex = 0;
             this.label28.Text = "Mã nhân viên";
             // 
-            // btnExit_PrimaryInfo
-            // 
-            this.btnExit_PrimaryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit_PrimaryInfo.Image = global::TEACHER.Properties.Resources.exiticon;
-            this.btnExit_PrimaryInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit_PrimaryInfo.Location = new System.Drawing.Point(790, 563);
-            this.btnExit_PrimaryInfo.Name = "btnExit_PrimaryInfo";
-            this.btnExit_PrimaryInfo.Size = new System.Drawing.Size(64, 31);
-            this.btnExit_PrimaryInfo.TabIndex = 38;
-            this.btnExit_PrimaryInfo.Text = "Thoát";
-            this.btnExit_PrimaryInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit_PrimaryInfo.UseVisualStyleBackColor = true;
-            this.btnExit_PrimaryInfo.Click += new System.EventHandler(this.btnExit_PrimaryInfo_Click);
-            // 
-            // btnDelete_PrimaryInfo
-            // 
-            this.btnDelete_PrimaryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete_PrimaryInfo.Image = global::TEACHER.Properties.Resources.deleteicon1;
-            this.btnDelete_PrimaryInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete_PrimaryInfo.Location = new System.Drawing.Point(702, 563);
-            this.btnDelete_PrimaryInfo.Name = "btnDelete_PrimaryInfo";
-            this.btnDelete_PrimaryInfo.Size = new System.Drawing.Size(64, 31);
-            this.btnDelete_PrimaryInfo.TabIndex = 37;
-            this.btnDelete_PrimaryInfo.Text = "Xóa";
-            this.btnDelete_PrimaryInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete_PrimaryInfo.UseVisualStyleBackColor = true;
-            this.btnDelete_PrimaryInfo.Click += new System.EventHandler(this.btnDelete_PrimaryInfo_Click);
-            // 
-            // btnEdit_PrimaryInfo
-            // 
-            this.btnEdit_PrimaryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit_PrimaryInfo.Image = global::TEACHER.Properties.Resources.saveicon;
-            this.btnEdit_PrimaryInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit_PrimaryInfo.Location = new System.Drawing.Point(614, 563);
-            this.btnEdit_PrimaryInfo.Name = "btnEdit_PrimaryInfo";
-            this.btnEdit_PrimaryInfo.Size = new System.Drawing.Size(64, 30);
-            this.btnEdit_PrimaryInfo.TabIndex = 35;
-            this.btnEdit_PrimaryInfo.Text = "Sửa";
-            this.btnEdit_PrimaryInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit_PrimaryInfo.UseVisualStyleBackColor = true;
-            this.btnEdit_PrimaryInfo.Click += new System.EventHandler(this.btnEdit_PrimaryInfo_Click);
-            // 
-            // btnAdd_PrimaryInfo
-            // 
-            this.btnAdd_PrimaryInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd_PrimaryInfo.Image = global::TEACHER.Properties.Resources.AddUser2;
-            this.btnAdd_PrimaryInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd_PrimaryInfo.Location = new System.Drawing.Point(526, 563);
-            this.btnAdd_PrimaryInfo.Name = "btnAdd_PrimaryInfo";
-            this.btnAdd_PrimaryInfo.Size = new System.Drawing.Size(64, 31);
-            this.btnAdd_PrimaryInfo.TabIndex = 34;
-            this.btnAdd_PrimaryInfo.Text = "Thêm";
-            this.btnAdd_PrimaryInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd_PrimaryInfo.UseMnemonic = false;
-            this.btnAdd_PrimaryInfo.UseVisualStyleBackColor = true;
-            this.btnAdd_PrimaryInfo.Click += new System.EventHandler(this.btnAdd_PrimaryInfo_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::TEACHER.Properties.Resources.multi_user_man_and_girl_27082;
-            this.pictureBox1.InitialImage = global::TEACHER.Properties.Resources.MultiEmp;
-            this.pictureBox1.Location = new System.Drawing.Point(742, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(226, 238);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnExit_Relevant
-            // 
-            this.btnExit_Relevant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit_Relevant.Image = global::TEACHER.Properties.Resources.exiticon1;
-            this.btnExit_Relevant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit_Relevant.Location = new System.Drawing.Point(720, 559);
-            this.btnExit_Relevant.Name = "btnExit_Relevant";
-            this.btnExit_Relevant.Size = new System.Drawing.Size(75, 31);
-            this.btnExit_Relevant.TabIndex = 45;
-            this.btnExit_Relevant.Text = "Thoát";
-            this.btnExit_Relevant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit_Relevant.UseVisualStyleBackColor = true;
-            this.btnExit_Relevant.Click += new System.EventHandler(this.btnExit_Relevant_Click);
-            // 
-            // btnDelete_Relevant
-            // 
-            this.btnDelete_Relevant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete_Relevant.Image = global::TEACHER.Properties.Resources.deleteicon2;
-            this.btnDelete_Relevant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete_Relevant.Location = new System.Drawing.Point(607, 559);
-            this.btnDelete_Relevant.Name = "btnDelete_Relevant";
-            this.btnDelete_Relevant.Size = new System.Drawing.Size(75, 31);
-            this.btnDelete_Relevant.TabIndex = 44;
-            this.btnDelete_Relevant.Text = "Xóa";
-            this.btnDelete_Relevant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete_Relevant.UseVisualStyleBackColor = true;
-            this.btnDelete_Relevant.Click += new System.EventHandler(this.btnDelete_Relevant_Click);
-            // 
-            // btnEdit_Relevant
-            // 
-            this.btnEdit_Relevant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit_Relevant.Image = global::TEACHER.Properties.Resources.saveicon1;
-            this.btnEdit_Relevant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit_Relevant.Location = new System.Drawing.Point(494, 559);
-            this.btnEdit_Relevant.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEdit_Relevant.Name = "btnEdit_Relevant";
-            this.btnEdit_Relevant.Size = new System.Drawing.Size(75, 31);
-            this.btnEdit_Relevant.TabIndex = 42;
-            this.btnEdit_Relevant.Text = "Sửa";
-            this.btnEdit_Relevant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit_Relevant.UseVisualStyleBackColor = true;
-            this.btnEdit_Relevant.Click += new System.EventHandler(this.btnEdit_Relevant_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Image = global::TEACHER.Properties.Resources.multi_user_man_and_girl_27082;
-            this.pictureBox2.InitialImage = global::TEACHER.Properties.Resources.MultiEmp;
-            this.pictureBox2.Location = new System.Drawing.Point(742, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(226, 238);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(48, 567);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(175, 15);
-            this.label16.TabIndex = 46;
-            this.label16.Text = "Tìm Kiếm Theo Mã Nhân Viên:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(58, 571);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(175, 15);
-            this.label21.TabIndex = 47;
-            this.label21.Text = "Tìm Kiếm Theo Mã Nhân Viên:";
-            // 
-            // manvDataGridViewTextBoxColumn
-            // 
-            this.manvDataGridViewTextBoxColumn.DataPropertyName = "Manv";
-            this.manvDataGridViewTextBoxColumn.HeaderText = "Manv";
-            this.manvDataGridViewTextBoxColumn.Name = "manvDataGridViewTextBoxColumn";
-            // 
-            // tenNVDataGridViewTextBoxColumn
-            // 
-            this.tenNVDataGridViewTextBoxColumn.DataPropertyName = "TenNV";
-            this.tenNVDataGridViewTextBoxColumn.HeaderText = "TenNV";
-            this.tenNVDataGridViewTextBoxColumn.Name = "tenNVDataGridViewTextBoxColumn";
-            // 
-            // cMNDDataGridViewTextBoxColumn
-            // 
-            this.cMNDDataGridViewTextBoxColumn.DataPropertyName = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.HeaderText = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.Name = "cMNDDataGridViewTextBoxColumn";
-            // 
-            // ngaycapDataGridViewTextBoxColumn
-            // 
-            this.ngaycapDataGridViewTextBoxColumn.DataPropertyName = "Ngaycap";
-            this.ngaycapDataGridViewTextBoxColumn.HeaderText = "Ngaycap";
-            this.ngaycapDataGridViewTextBoxColumn.Name = "ngaycapDataGridViewTextBoxColumn";
-            // 
-            // tinhthanhDataGridViewTextBoxColumn
-            // 
-            this.tinhthanhDataGridViewTextBoxColumn.DataPropertyName = "Tinhthanh";
-            this.tinhthanhDataGridViewTextBoxColumn.HeaderText = "Tinhthanh";
-            this.tinhthanhDataGridViewTextBoxColumn.Name = "tinhthanhDataGridViewTextBoxColumn";
-            // 
-            // ngaysinhDataGridViewTextBoxColumn
-            // 
-            this.ngaysinhDataGridViewTextBoxColumn.DataPropertyName = "Ngaysinh";
-            this.ngaysinhDataGridViewTextBoxColumn.HeaderText = "Ngaysinh";
-            this.ngaysinhDataGridViewTextBoxColumn.Name = "ngaysinhDataGridViewTextBoxColumn";
-            // 
-            // gioitinhDataGridViewTextBoxColumn
-            // 
-            this.gioitinhDataGridViewTextBoxColumn.DataPropertyName = "Gioitinh";
-            this.gioitinhDataGridViewTextBoxColumn.HeaderText = "Gioitinh";
-            this.gioitinhDataGridViewTextBoxColumn.Name = "gioitinhDataGridViewTextBoxColumn";
-            // 
-            // nguyenquanDataGridViewTextBoxColumn
-            // 
-            this.nguyenquanDataGridViewTextBoxColumn.DataPropertyName = "Nguyenquan";
-            this.nguyenquanDataGridViewTextBoxColumn.HeaderText = "Nguyenquan";
-            this.nguyenquanDataGridViewTextBoxColumn.Name = "nguyenquanDataGridViewTextBoxColumn";
-            // 
-            // dctamtruDataGridViewTextBoxColumn
-            // 
-            this.dctamtruDataGridViewTextBoxColumn.DataPropertyName = "Dctamtru";
-            this.dctamtruDataGridViewTextBoxColumn.HeaderText = "Dctamtru";
-            this.dctamtruDataGridViewTextBoxColumn.Name = "dctamtruDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // sDTriengDataGridViewTextBoxColumn
-            // 
-            this.sDTriengDataGridViewTextBoxColumn.DataPropertyName = "SDTrieng";
-            this.sDTriengDataGridViewTextBoxColumn.HeaderText = "SDTrieng";
-            this.sDTriengDataGridViewTextBoxColumn.Name = "sDTriengDataGridViewTextBoxColumn";
-            // 
-            // sDTnhaDataGridViewTextBoxColumn
-            // 
-            this.sDTnhaDataGridViewTextBoxColumn.DataPropertyName = "SDTnha";
-            this.sDTnhaDataGridViewTextBoxColumn.HeaderText = "SDTnha";
-            this.sDTnhaDataGridViewTextBoxColumn.Name = "sDTnhaDataGridViewTextBoxColumn";
-            // 
-            // tinhtranghonnhanDataGridViewTextBoxColumn
-            // 
-            this.tinhtranghonnhanDataGridViewTextBoxColumn.DataPropertyName = "Tinhtranghonnhan";
-            this.tinhtranghonnhanDataGridViewTextBoxColumn.HeaderText = "Tinhtranghonnhan";
-            this.tinhtranghonnhanDataGridViewTextBoxColumn.Name = "tinhtranghonnhanDataGridViewTextBoxColumn";
-            // 
-            // tinhtranglamviecDataGridViewTextBoxColumn
-            // 
-            this.tinhtranglamviecDataGridViewTextBoxColumn.DataPropertyName = "Tinhtranglamviec";
-            this.tinhtranglamviecDataGridViewTextBoxColumn.HeaderText = "Tinhtranglamviec";
-            this.tinhtranglamviecDataGridViewTextBoxColumn.Name = "tinhtranglamviecDataGridViewTextBoxColumn";
-            // 
-            // tentongiaoDataGridViewTextBoxColumn
-            // 
-            this.tentongiaoDataGridViewTextBoxColumn.DataPropertyName = "Tentongiao";
-            this.tentongiaoDataGridViewTextBoxColumn.HeaderText = "Tentongiao";
-            this.tentongiaoDataGridViewTextBoxColumn.Name = "tentongiaoDataGridViewTextBoxColumn";
-            // 
-            // tenchucvuDataGridViewTextBoxColumn
-            // 
-            this.tenchucvuDataGridViewTextBoxColumn.DataPropertyName = "Tenchucvu";
-            this.tenchucvuDataGridViewTextBoxColumn.HeaderText = "Tenchucvu";
-            this.tenchucvuDataGridViewTextBoxColumn.Name = "tenchucvuDataGridViewTextBoxColumn";
-            // 
-            // tendantocDataGridViewTextBoxColumn
-            // 
-            this.tendantocDataGridViewTextBoxColumn.DataPropertyName = "Tendantoc";
-            this.tendantocDataGridViewTextBoxColumn.HeaderText = "Tendantoc";
-            this.tendantocDataGridViewTextBoxColumn.Name = "tendantocDataGridViewTextBoxColumn";
-            // 
-            // tenbangcapDataGridViewTextBoxColumn
-            // 
-            this.tenbangcapDataGridViewTextBoxColumn.DataPropertyName = "Tenbangcap";
-            this.tenbangcapDataGridViewTextBoxColumn.HeaderText = "Tenbangcap";
-            this.tenbangcapDataGridViewTextBoxColumn.Name = "tenbangcapDataGridViewTextBoxColumn";
-            // 
-            // tenDVDataGridViewTextBoxColumn
-            // 
-            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
-            this.tenDVDataGridViewTextBoxColumn.HeaderText = "TenDV";
-            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
-            // 
-            // tentoDataGridViewTextBoxColumn
-            // 
-            this.tentoDataGridViewTextBoxColumn.DataPropertyName = "Tento";
-            this.tentoDataGridViewTextBoxColumn.HeaderText = "Tento";
-            this.tentoDataGridViewTextBoxColumn.Name = "tentoDataGridViewTextBoxColumn";
-            // 
-            // tenngoainguDataGridViewTextBoxColumn
-            // 
-            this.tenngoainguDataGridViewTextBoxColumn.DataPropertyName = "Tenngoaingu";
-            this.tenngoainguDataGridViewTextBoxColumn.HeaderText = "Tenngoaingu";
-            this.tenngoainguDataGridViewTextBoxColumn.Name = "tenngoainguDataGridViewTextBoxColumn";
-            // 
-            // tentinhocDataGridViewTextBoxColumn
-            // 
-            this.tentinhocDataGridViewTextBoxColumn.DataPropertyName = "Tentinhoc";
-            this.tentinhocDataGridViewTextBoxColumn.HeaderText = "Tentinhoc";
-            this.tentinhocDataGridViewTextBoxColumn.Name = "tentinhocDataGridViewTextBoxColumn";
-            // 
-            // ngayvaolamDataGridViewTextBoxColumn
-            // 
-            this.ngayvaolamDataGridViewTextBoxColumn.DataPropertyName = "Ngayvaolam";
-            this.ngayvaolamDataGridViewTextBoxColumn.HeaderText = "Ngayvaolam";
-            this.ngayvaolamDataGridViewTextBoxColumn.Name = "ngayvaolamDataGridViewTextBoxColumn";
-            // 
-            // thamnienDataGridViewTextBoxColumn
-            // 
-            this.thamnienDataGridViewTextBoxColumn.DataPropertyName = "Thamnien";
-            this.thamnienDataGridViewTextBoxColumn.HeaderText = "Thamnien";
-            this.thamnienDataGridViewTextBoxColumn.Name = "thamnienDataGridViewTextBoxColumn";
-            // 
-            // allFieldBindingSource
-            // 
-            this.allFieldBindingSource.DataSource = typeof(TEACHER.Model.AllField);
-            // 
             // TeacherManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1075,14 +880,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_PrimaryInfo_dataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.RelevantInfo.ResumeLayout(false);
             this.RelevantInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_RelevantInfo_dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1161,31 +966,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox TeacherEthnic_Relevant_CBX;
         private System.Windows.Forms.ComboBox TeacherPosition_Relevant_CBX;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manvDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenNVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cMNDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaycapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tinhthanhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nguyenquanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dctamtruDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sDTriengDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sDTnhaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tinhtranghonnhanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tinhtranglamviecDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tentongiaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenchucvuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tendantocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenbangcapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenDVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenngoainguDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tentinhocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayvaolamDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hesoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thamnienDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource allFieldBindingSource;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label16;

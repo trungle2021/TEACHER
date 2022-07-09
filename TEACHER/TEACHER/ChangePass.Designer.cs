@@ -153,7 +153,7 @@ namespace TEACHER
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ChangePass";
-            this.Text = "ChangePass";
+            this.Text = "Đổi Mật Khẩu";
             this.Load += new System.EventHandler(this.ChangePass_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
