@@ -33,18 +33,29 @@ namespace TEACHER
         }
         private void SystemBtnLeftPanel_Click(object sender, EventArgs e)
         {
+            if (SystemDropDownPanel.Size == SystemDropDownPanel.MinimumSize)
+            {
+
+            }
             timerSystemDropDown.Start();
+      
+                SystemBtnLeftPanel.BackColor = Color.Orange;
+
+           
+
         }
 
         private void timerSystemDropDown_Tick(object sender, EventArgs e)
         {
             if (SystemIsCollapsed)
             {
+                SystemBtnLeftPanel.BackColor = Color.Orange;
                 SystemDropDownPanel.Height += 10;
                 if (SystemDropDownPanel.Size == SystemDropDownPanel.MaximumSize)
                 {
                     timerSystemDropDown.Stop();
                     SystemIsCollapsed = false;
+
                 }
             }
             else
@@ -54,6 +65,8 @@ namespace TEACHER
                 {
                     timerSystemDropDown.Stop();
                     SystemIsCollapsed = true;
+                    SystemBtnLeftPanel.BackColor = Color.Transparent;
+
                 }
             }
         }
@@ -67,6 +80,8 @@ namespace TEACHER
         {
             if (InfoIsCollapsed)
             {
+                InfoBtnLeftPanel.BackColor = Color.Orange;
+
                 InfoDropDownPanel.Height += 10;
                 if (InfoDropDownPanel.Size == InfoDropDownPanel.MaximumSize)
                 {
@@ -81,6 +96,8 @@ namespace TEACHER
                 {
                     timerInfoDropDown.Stop();
                     InfoIsCollapsed = true;
+                    InfoBtnLeftPanel.BackColor = Color.Transparent;
+
                 }
             }
         }
@@ -94,6 +111,8 @@ namespace TEACHER
         {
             if (SearchIsCollapsed)
             {
+                SearchBtnLeftPanel.BackColor = Color.Orange;
+
                 SearchDropDownPanel.Height += 10;
                 if (SearchDropDownPanel.Size == SearchDropDownPanel.MaximumSize)
                 {
@@ -108,6 +127,8 @@ namespace TEACHER
                 {
                     timerSearchDropDown.Stop();
                     SearchIsCollapsed = true;
+                    SearchBtnLeftPanel.BackColor = Color.Transparent;
+
                 }
             }
         }
@@ -206,16 +227,7 @@ namespace TEACHER
             hopdong.Show();
         }
 
-        private void pContainer_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Form2_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void tsSearch_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             SearchForm searchform = new SearchForm() { TopLevel = false, TopMost = true };
@@ -385,6 +397,43 @@ namespace TEACHER
         {
             Help help = new Help();
             help.ShowDialog();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblUserName.Text = "";
+           
+           
+                try
+                {
+                    tsLogin.Enabled = Enabled;
+                    Login login = new Login(this) { TopLevel = false, TopMost = true };
+                    this.pContainer.Panel2.Controls.Clear();
+                    this.pContainer.Panel2.Controls.Add(login);
+                    login.Show();
+
+                if (string.IsNullOrEmpty(lblUserName.Text))
+                    {
+                      
+                        tsNhanVien.Enabled = false;
+                        tsChucVu.Enabled = false;
+                        tsHopDong.Enabled = false;
+                        tsThongtin1.Enabled = false;
+                        tsThongtin2.Enabled = false;
+                        tsThongtin3.Enabled = false;
+                        tsThongtin4.Enabled = false;
+                        tsSearch.Enabled = true;
+                        tsDonVi.Enabled = false;
+                        tìmKiếmToolStripMenuItem.Enabled = true;
+                    }
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("xảy ra lỗi khi Liên Kết dữ Liệu!");
+                }
+
+            
         }
     }
 }
