@@ -77,7 +77,6 @@
             this.btnEdit_Relevant = new System.Windows.Forms.Button();
             this.Search_Relevant_TXT = new System.Windows.Forms.TextBox();
             this.TeacherList_RelevantInfo_dataGridView = new System.Windows.Forms.DataGridView();
-            this.allFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.TeacherPosition_Relevant_CBX = new System.Windows.Forms.ComboBox();
             this.TeacherEthnic_Relevant_CBX = new System.Windows.Forms.ComboBox();
@@ -104,6 +103,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.allFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.PrimaryInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_PrimaryInfo_dataGridView)).BeginInit();
@@ -111,9 +111,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.RelevantInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_RelevantInfo_dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -616,10 +616,6 @@
             this.TeacherList_RelevantInfo_dataGridView.TabIndex = 39;
             this.TeacherList_RelevantInfo_dataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TeacherList_RelevantInfo_dataGridView_MouseClick);
             // 
-            // allFieldBindingSource
-            // 
-            this.allFieldBindingSource.DataSource = typeof(TEACHER.Model.AllField);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.TeacherPosition_Relevant_CBX);
@@ -741,6 +737,7 @@
             this.TeacherDV_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherDV_Relevant_CBX.TabIndex = 35;
             this.TeacherDV_Relevant_CBX.SelectionChangeCommitted += new System.EventHandler(this.TeacherDV_Relevant_CBX_SelectionChangeCommitted);
+            this.TeacherDV_Relevant_CBX.TextChanged += new System.EventHandler(this.TeacherDV_Relevant_CBX_TextChanged);
             // 
             // label15
             // 
@@ -865,6 +862,10 @@
             this.label28.TabIndex = 0;
             this.label28.Text = "Mã nhân viên";
             // 
+            // allFieldBindingSource
+            // 
+            this.allFieldBindingSource.DataSource = typeof(TEACHER.Model.AllField);
+            // 
             // TeacherManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -884,10 +885,10 @@
             this.RelevantInfo.ResumeLayout(false);
             this.RelevantInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherList_RelevantInfo_dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allFieldBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

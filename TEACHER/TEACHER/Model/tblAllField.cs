@@ -19,6 +19,7 @@ namespace TEACHER.Model
 
         [Required]
         [StringLength(20)]
+        
         public string CMND { get; set; }
 
         public DateTime? Ngaycap { get; set; }

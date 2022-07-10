@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TEACHER.Model;
@@ -72,6 +73,22 @@ namespace TEACHER.TeacherManagementForm
             catch (Exception ex)
             {
 
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+                var pa = new
+                {
+                    MaDV = TeacherDV_Relevant_CBX.SelectedValue.ToString(),
+                };
+
+                var toByDonVi = Helper.Query<Donvi_tolamviec_junction>(Helper.ConnectionString(), "QLGV.dbo.FindAllToByDonVi", pa).ToList();
+
+                LoadDataToCBX(TeacherTO_Relevant_CBX, toByDonVi, "Tento", "Mato");
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
         }
@@ -258,14 +275,23 @@ namespace TEACHER.TeacherManagementForm
 
         private void btnAdd_PrimaryInfo_Click(object sender, EventArgs e)
         {
+            string regex_cmnd_pattern = "^[0-9]{9}$";
+            Regex reg = new Regex(regex_cmnd_pattern);
+            // Get all matches  
+            MatchCollection isMatched = reg.Matches(CMND_PrimaryInfo_TXT.Text.ToString());
             try
             {
                 if (!string.IsNullOrEmpty(TeacherID_PrimaryInfo_TXT.Text.ToString()))
                 {
-                    throw new Exception("Mã Nhân Viên sẽ được đặt tự động! Vui lòng để trống Mã Nhân Viên khi thêm mới");
-                }else if (string.IsNullOrEmpty(CMND_PrimaryInfo_TXT.Text.ToString()))
+                    throw new Exception("Mã Nhân Viên sẽ được đặt tự động! Vui lòng để trống Mã Nhân Viên khi thêm mới!");
+                }
+                else if (string.IsNullOrEmpty(TeacherName_PrimaryInfo_TXT.Text.ToString()))
                 {
-                    throw new Exception("Chứng Minh Nhân Dân không được để trống!");
+                    throw new Exception("Tên Nhân Viên không được để trống!");
+                }
+                else if (string.IsNullOrEmpty(CMND_PrimaryInfo_TXT.Text.ToString()) || isMatched.Count == 0)
+                {
+                    throw new Exception("Chứng Minh Nhân Dân không được để trống và có độ dài từ 0-9 số");
                 }
                 var teacher = new tblNhanvien
                 {
@@ -310,10 +336,19 @@ namespace TEACHER.TeacherManagementForm
 
         private void btnEdit_PrimaryInfo_Click(object sender, EventArgs e)
         {
+        
             try
             {
-                var teacher_current_update = teacher_service.GetOne(int.Parse(TeacherID_PrimaryInfo_TXT.Text.ToString()));
 
+                if (!string.IsNullOrEmpty(TeacherID_Relevant_TXT.Text.ToString()))
+                {
+                    throw new Exception("Mã Nhân Viên sẽ được đặt tự động! Vui lòng để trống Mã Nhân Viên khi thêm mới!");
+                }
+                
+                var teacher_current_update = teacher_service.GetOne(int.Parse(TeacherID_PrimaryInfo_TXT.Text.ToString()));
+                if(teacher_current_update == null) { 
+                    throw new Exception("Không Tìm thấy Nhân Viên có Mã " + TeacherID_PrimaryInfo_TXT.Text.ToString());
+                }
                 var teacher = new tblNhanvien
                 {
                     Manv = int.Parse(TeacherID_PrimaryInfo_TXT.Text.ToString()),
@@ -360,7 +395,11 @@ namespace TEACHER.TeacherManagementForm
                     throw new Exception("Vui lòng chọn Nhân Viên muốn xóa!");
                 }
                 int Manv = int.Parse(TeacherID_PrimaryInfo_TXT.Text);
-
+                var teacher_current_update = teacher_service.GetOne(Manv);
+                if (teacher_current_update == null)
+                {
+                    throw new Exception("Không Tìm thấy Nhân Viên có Mã " + TeacherID_PrimaryInfo_TXT.Text.ToString());
+                }
                 teacher_service.Remove(Manv);
                 MessageBox.Show("Xóa Giáo Viên Thành Công");
                 var result = teacher_service.GetAll();
@@ -386,7 +425,7 @@ namespace TEACHER.TeacherManagementForm
                 {
                     throw new Exception("Vui lòng chọn Đơn Vị trước khi chọn Tổ");
                 }
-                    var pa = new
+                var pa = new
                 {
                     Tendonvi = TeacherDV_Relevant_CBX.Text,
                     Tento = TeacherTO_Relevant_CBX.Text,
@@ -394,7 +433,11 @@ namespace TEACHER.TeacherManagementForm
             var MaDV_TO = Helper.Query<int>(Helper.ConnectionString(), "QLGV.dbo.GetID_Donvi_To_ByName", pa).FirstOrDefault();
             var parseThamNien = int.TryParse(TeacherWorkAge_Relevant_TXT.Text, out int outThamnien);
             var teacher_current_update = teacher_service.GetOne(int.Parse(TeacherID_Relevant_TXT.Text));
-            var teacher = new tblNhanvien
+                if (teacher_current_update == null)
+                {
+                    throw new Exception("Không Tìm thấy Nhân Viên có Mã " + TeacherID_Relevant_TXT.Text.ToString());
+                }
+                var teacher = new tblNhanvien
             {
                     Manv = int.Parse(TeacherID_Relevant_TXT.Text.ToString()),
                     TenNV = TeacherName_Relevant_TXT.Text,
@@ -440,7 +483,11 @@ namespace TEACHER.TeacherManagementForm
                     throw new Exception("Vui lòng chọn Mã Nhân Viên để xóa!");
                 }
                 int Manv = int.Parse(TeacherID_Relevant_TXT.Text);
-
+                var teacher_current_update = teacher_service.GetOne(Manv);
+                if (teacher_current_update == null)
+                {
+                    throw new Exception("Không Tìm thấy Nhân Viên có Mã " + TeacherID_Relevant_TXT.Text.ToString());
+                }
                 teacher_service.Remove(Manv);
                 MessageBox.Show("Xóa Giáo Viên Thành Công");
                 var result = teacher_service.GetAll();
@@ -524,6 +571,11 @@ namespace TEACHER.TeacherManagementForm
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void TeacherDV_Relevant_CBX_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
