@@ -66,14 +66,15 @@ namespace TEACHER
                     Ghichu = _Ghichu
                 };
                 var chucvu =  chucVuService.GetOne(_Machucvu);
-                var tenchucvu_exist = chucVuService.GetTenChucVu(_Tenchucvu);
-                if(chucvu != null)
+                //var tenchucvu_exist = chucVuService.GetTenChucVu(_Tenchucvu);
+                if (chucvu != null)
                 {
                     throw new Exception("Mã Chức Vụ đã tồn tại! Vui lòng nhập mã khác!");
-                }else if(tenchucvu_exist != null)
-                {
-                    throw new Exception("Tên Chức Vụ đã tồn tại! Vui lòng nhập tên khác!");
                 }
+                //else if (tenchucvu_exist != null)
+                //{
+                //    throw new Exception("Tên Chức Vụ đã tồn tại! Vui lòng nhập tên khác!");
+                //}
 
                 Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.AddChucVu", pa);
                 MessageBox.Show("Thêm chức vụ thành công!");
@@ -104,15 +105,12 @@ namespace TEACHER
                     Ghichu = _Ghichu
                 };
                 var chucvu = chucVuService.GetOne(_Machucvu);
-                var tenchucvu_exist = chucVuService.GetTenChucVu(_Tenchucvu);
+                //var tenchucvu_exist = chucVuService.GetTenChucVu(_Tenchucvu);
                 if (chucvu == null)
                 {
                     throw new Exception("Không tìm thấy dữ liệu phù hợp");
                 }
-                else if (tenchucvu_exist != null)
-                {
-                    throw new Exception("Tên Chức Vụ đã tồn tại! Vui lòng nhập tên khác!");
-                }
+                
                 Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.UpdateChucVu", pa);
                 MessageBox.Show("Sửa chức vụ thành công!");
                 var chucvu_list = chucVuService.GetAll();

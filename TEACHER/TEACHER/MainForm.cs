@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,8 @@ namespace TEACHER
         {
             WindowState = FormWindowState.Maximized;
             InitializeComponent();
+         
+
 
         }
         public MainForm(string user)
@@ -435,5 +438,17 @@ namespace TEACHER
 
             
         }
+
+        private void label1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            Pen pen = new Pen(Color.FromArgb(96, 155, 173),1);
+            Rectangle area = new Rectangle(0, 0, this.Width, this.Height);
+            LinearGradientBrush lgb = new LinearGradientBrush(area, Color.FromArgb(96, 155, 173), Color.FromArgb(245, 251, 251),LinearGradientMode.Vertical);
+            graphics.FillRectangle(lgb, area);
+            graphics.DrawRectangle(pen, area);
+        }
     }
+
+
 }
