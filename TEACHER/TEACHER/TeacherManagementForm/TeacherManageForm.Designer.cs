@@ -655,6 +655,7 @@
             this.TeacherPosition_Relevant_CBX.Name = "TeacherPosition_Relevant_CBX";
             this.TeacherPosition_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherPosition_Relevant_CBX.TabIndex = 46;
+            this.TeacherPosition_Relevant_CBX.Click += new System.EventHandler(this.TeacherPosition_Relevant_CBX_Click);
             // 
             // TeacherEthnic_Relevant_CBX
             // 
@@ -663,6 +664,7 @@
             this.TeacherEthnic_Relevant_CBX.Name = "TeacherEthnic_Relevant_CBX";
             this.TeacherEthnic_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherEthnic_Relevant_CBX.TabIndex = 45;
+            this.TeacherEthnic_Relevant_CBX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TeacherEthnic_Relevant_CBX_MouseClick);
             // 
             // TeacherOfficeSkillCer_Relevant_CBX
             // 
@@ -671,6 +673,7 @@
             this.TeacherOfficeSkillCer_Relevant_CBX.Name = "TeacherOfficeSkillCer_Relevant_CBX";
             this.TeacherOfficeSkillCer_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherOfficeSkillCer_Relevant_CBX.TabIndex = 44;
+            this.TeacherOfficeSkillCer_Relevant_CBX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TeacherOfficeSkillCer_Relevant_CBX_MouseClick);
             // 
             // label24
             // 
@@ -704,6 +707,7 @@
             this.TeacherReligion_Relevant_CBX.Name = "TeacherReligion_Relevant_CBX";
             this.TeacherReligion_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherReligion_Relevant_CBX.TabIndex = 39;
+            this.TeacherReligion_Relevant_CBX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TeacherReligion_Relevant_CBX_MouseClick);
             // 
             // TeacherCer_Relevant_CBX
             // 
@@ -712,6 +716,7 @@
             this.TeacherCer_Relevant_CBX.Name = "TeacherCer_Relevant_CBX";
             this.TeacherCer_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherCer_Relevant_CBX.TabIndex = 38;
+            this.TeacherCer_Relevant_CBX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TeacherCer_Relevant_CBX_MouseClick);
             // 
             // TeacherLanguageCer_Relevant_CBX
             // 
@@ -720,6 +725,7 @@
             this.TeacherLanguageCer_Relevant_CBX.Name = "TeacherLanguageCer_Relevant_CBX";
             this.TeacherLanguageCer_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherLanguageCer_Relevant_CBX.TabIndex = 37;
+            this.TeacherLanguageCer_Relevant_CBX.Click += new System.EventHandler(this.TeacherLanguageCer_Relevant_CBX_Click);
             // 
             // TeacherTO_Relevant_CBX
             // 
@@ -737,7 +743,6 @@
             this.TeacherDV_Relevant_CBX.Size = new System.Drawing.Size(176, 21);
             this.TeacherDV_Relevant_CBX.TabIndex = 35;
             this.TeacherDV_Relevant_CBX.SelectionChangeCommitted += new System.EventHandler(this.TeacherDV_Relevant_CBX_SelectionChangeCommitted);
-            this.TeacherDV_Relevant_CBX.TextChanged += new System.EventHandler(this.TeacherDV_Relevant_CBX_TextChanged);
             // 
             // label15
             // 
