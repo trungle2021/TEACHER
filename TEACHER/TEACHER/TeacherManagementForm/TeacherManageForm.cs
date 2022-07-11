@@ -52,23 +52,11 @@ namespace TEACHER.TeacherManagementForm
             {
                 var teacher_list = teacher_service.GetAll();
                 var donvi_list = donvi_service.GetAll();
-                var chucvu_list = Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetAllChucvu").ToList();
-                var ngoaingu_list = Helper.Query<tblNgoaingu>(Helper.ConnectionString(), "QLGV.dbo.GetAllNgoaingu").ToList();
-                var tinhoc_list = Helper.Query<tblTinhoc>(Helper.ConnectionString(), "QLGV.dbo.GetAllTinhoc").ToList();
-                var tongiao_list = Helper.Query<tblTongiao>(Helper.ConnectionString(), "QLGV.dbo.GetAllTongiao").ToList();
-                var dantoc_list = Helper.Query<tblDantoc>(Helper.ConnectionString(), "QLGV.dbo.GetAllDantoc").ToList();
-                var bangcap_list = Helper.Query<tblBangcap>(Helper.ConnectionString(), "QLGV.dbo.GetAllBangcap").ToList();
 
                 TeacherList_PrimaryInfo_dataGridView.DataSource = teacher_list;
                 TeacherList_RelevantInfo_dataGridView.DataSource = teacher_list;
 
                 LoadDataToCBX(TeacherDV_Relevant_CBX, donvi_list, "TenDV", "MaDV");
-                LoadDataToCBX(TeacherPosition_Relevant_CBX, chucvu_list, "Tenchucvu", "Machucvu");
-                LoadDataToCBX(TeacherLanguageCer_Relevant_CBX, ngoaingu_list, "Tenngoaingu", "Mangoaingu");
-                LoadDataToCBX(TeacherOfficeSkillCer_Relevant_CBX, tinhoc_list, "Tentinhoc", "Matinhoc");
-                LoadDataToCBX(TeacherReligion_Relevant_CBX, tongiao_list, "Tentongiao", "Matongiao");
-                LoadDataToCBX(TeacherEthnic_Relevant_CBX, dantoc_list, "Tendantoc", "Madantoc");
-                LoadDataToCBX(TeacherCer_Relevant_CBX, bangcap_list, "Tenbangcap", "Mabangcap");
             }
             catch (Exception ex)
             {
@@ -76,21 +64,21 @@ namespace TEACHER.TeacherManagementForm
                 MessageBox.Show(ex.Message);
             }
 
-            try
-            {
-                var pa = new
-                {
-                    MaDV = TeacherDV_Relevant_CBX.SelectedValue.ToString(),
-                };
+            //try
+            //{
+            //    var pa = new
+            //    {
+            //        MaDV = TeacherDV_Relevant_CBX.SelectedValue.ToString(),
+            //    };
 
-                var toByDonVi = Helper.Query<Donvi_tolamviec_junction>(Helper.ConnectionString(), "QLGV.dbo.FindAllToByDonVi", pa).ToList();
+            //    var toByDonVi = Helper.Query<Donvi_tolamviec_junction>(Helper.ConnectionString(), "QLGV.dbo.FindAllToByDonVi", pa).ToList();
 
-                LoadDataToCBX(TeacherTO_Relevant_CBX, toByDonVi, "Tento", "Mato");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //    LoadDataToCBX(TeacherTO_Relevant_CBX, toByDonVi, "Tento", "Mato");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         public void LoadDataToCBX<T>(ComboBox combobox, IEnumerable<T> list, string displayMember, string valueMember)
@@ -433,6 +421,14 @@ namespace TEACHER.TeacherManagementForm
             var MaDV_TO = Helper.Query<int>(Helper.ConnectionString(), "QLGV.dbo.GetID_Donvi_To_ByName", pa).FirstOrDefault();
             var parseThamNien = int.TryParse(TeacherWorkAge_Relevant_TXT.Text, out int outThamnien);
             var teacher_current_update = teacher_service.GetOne(int.Parse(TeacherID_Relevant_TXT.Text));
+
+                var Machucvu = TeacherPosition_Relevant_CBX.SelectedValue;
+                var Matinhoc = TeacherOfficeSkillCer_Relevant_CBX.SelectedValue;
+                var Mangoaingu = TeacherLanguageCer_Relevant_CBX.SelectedValue;
+                var Mabangcap = TeacherCer_Relevant_CBX.SelectedValue;
+                var Matongiao = TeacherReligion_Relevant_CBX.SelectedValue;
+                var Madantoc = TeacherEthnic_Relevant_CBX.SelectedValue;
+            
                 if (teacher_current_update == null)
                 {
                     throw new Exception("Không Tìm thấy Nhân Viên có Mã " + TeacherID_Relevant_TXT.Text.ToString());
@@ -454,15 +450,15 @@ namespace TEACHER.TeacherManagementForm
                     Tinhtranghonnhan = teacher_current_update.Tinhtranghonnhan,
                     Tinhtranglamviec = teacher_current_update.Tinhtranglamviec,
                     MaDV_To = MaDV_TO,
-                    Machucvu = TeacherPosition_Relevant_CBX.SelectedValue.ToString(),
+                    Machucvu = (string)Machucvu,
                     Ngayvaolam = Teacher_Relevant_DateStartWork_Datetime.Value,
                     Thamnien = outThamnien,
-                    Matinhoc = TeacherOfficeSkillCer_Relevant_CBX.SelectedValue.ToString(),
-                    Mangoaingu = TeacherLanguageCer_Relevant_CBX.SelectedValue.ToString(),
-                    Mabangcap = TeacherCer_Relevant_CBX.SelectedValue.ToString(),
-                    Matongiao = TeacherReligion_Relevant_CBX.SelectedValue.ToString(),
-                    Madantoc = TeacherEthnic_Relevant_CBX.SelectedValue.ToString()
-            };
+                    Matinhoc = (string)Matinhoc,
+                    Mangoaingu = (string)Mangoaingu,
+                    Mabangcap = (string)Mabangcap,
+                    Matongiao = (string)Matongiao,
+                    Madantoc = (string)Madantoc
+                };
                 teacher_service.Update(teacher);
                 MessageBox.Show("Sửa Thông Tin Thành Công");
                 var result = teacher_service.GetAll();
@@ -573,9 +569,49 @@ namespace TEACHER.TeacherManagementForm
             }
         }
 
-        private void TeacherDV_Relevant_CBX_TextChanged(object sender, EventArgs e)
+
+        private void TeacherPosition_Relevant_CBX_Click(object sender, EventArgs e)
         {
-            
+            var chucvu_list = Helper.Query<tblChucvu>(Helper.ConnectionString(), "QLGV.dbo.GetAllChucvu").ToList();
+            LoadDataToCBX(TeacherPosition_Relevant_CBX, chucvu_list, "Tenchucvu", "Machucvu");
+
+        }
+
+        private void TeacherLanguageCer_Relevant_CBX_Click(object sender, EventArgs e)
+        {
+            var ngoaingu_list = Helper.Query<tblNgoaingu>(Helper.ConnectionString(), "QLGV.dbo.GetAllNgoaingu").ToList();
+            LoadDataToCBX(TeacherLanguageCer_Relevant_CBX, ngoaingu_list, "Tenngoaingu", "Mangoaingu");
+
+        }
+
+
+
+        private void TeacherCer_Relevant_CBX_MouseClick(object sender, MouseEventArgs e)
+        {
+            var bangcap_list = Helper.Query<tblBangcap>(Helper.ConnectionString(), "QLGV.dbo.GetAllBangcap").ToList();
+            LoadDataToCBX(TeacherCer_Relevant_CBX, bangcap_list, "Tenbangcap", "Mabangcap");
+
+        }
+
+        private void TeacherOfficeSkillCer_Relevant_CBX_MouseClick(object sender, MouseEventArgs e)
+        {
+            var tinhoc_list = Helper.Query<tblTinhoc>(Helper.ConnectionString(), "QLGV.dbo.GetAllTinhoc").ToList();
+            LoadDataToCBX(TeacherOfficeSkillCer_Relevant_CBX, tinhoc_list, "Tentinhoc", "Matinhoc");
+
+        }
+
+        private void TeacherReligion_Relevant_CBX_MouseClick(object sender, MouseEventArgs e)
+        {
+            var tongiao_list = Helper.Query<tblTongiao>(Helper.ConnectionString(), "QLGV.dbo.GetAllTongiao").ToList();
+            LoadDataToCBX(TeacherReligion_Relevant_CBX, tongiao_list, "Tentongiao", "Matongiao");
+
+        }
+
+        private void TeacherEthnic_Relevant_CBX_MouseClick(object sender, MouseEventArgs e)
+        {
+            var dantoc_list = Helper.Query<tblDantoc>(Helper.ConnectionString(), "QLGV.dbo.GetAllDantoc").ToList();
+            LoadDataToCBX(TeacherEthnic_Relevant_CBX, dantoc_list, "Tendantoc", "Madantoc");
+
         }
     }
 }
