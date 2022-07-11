@@ -64,21 +64,21 @@ namespace TEACHER.TeacherManagementForm
                 MessageBox.Show(ex.Message);
             }
 
-            //try
-            //{
-            //    var pa = new
-            //    {
-            //        MaDV = TeacherDV_Relevant_CBX.SelectedValue.ToString(),
-            //    };
+            try
+            {
+                var pa = new
+                {
+                    MaDV = TeacherDV_Relevant_CBX.SelectedValue.ToString(),
+                };
 
-            //    var toByDonVi = Helper.Query<Donvi_tolamviec_junction>(Helper.ConnectionString(), "QLGV.dbo.FindAllToByDonVi", pa).ToList();
+                var toByDonVi = Helper.Query<Donvi_tolamviec_junction>(Helper.ConnectionString(), "QLGV.dbo.FindAllToByDonVi", pa).ToList();
 
-            //    LoadDataToCBX(TeacherTO_Relevant_CBX, toByDonVi, "Tento", "Mato");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+                LoadDataToCBX(TeacherTO_Relevant_CBX, toByDonVi, "Tento", "Mato");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void LoadDataToCBX<T>(ComboBox combobox, IEnumerable<T> list, string displayMember, string valueMember)
@@ -409,10 +409,15 @@ namespace TEACHER.TeacherManagementForm
         {
             try
             {
+                if (string.IsNullOrEmpty(TeacherID_Relevant_TXT.Text.ToString()))
+                {
+                    throw new Exception("Vui lòng chọn Nhân Viên muốn chỉnh sửa!");
+                }
                 if (string.IsNullOrEmpty(TeacherDV_Relevant_CBX.Text.ToString()))
                 {
                     throw new Exception("Vui lòng chọn Đơn Vị trước khi chọn Tổ");
                 }
+              
                 var pa = new
                 {
                     Tendonvi = TeacherDV_Relevant_CBX.Text,
